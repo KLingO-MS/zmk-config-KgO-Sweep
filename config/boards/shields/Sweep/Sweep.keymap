@@ -427,14 +427,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  B  |  Y  |  O  |  U  |  X  |    |  Q  |  L  |  D  |  W  |  V  |
-// |  C  |  I  |  E  |  A  | , ; |    | . : |  H  |  T  |  S  |  N  |
-// |  G  |  Z  |  J  |  K  |  "  |    |  '  |  R  |  M  |  F  |  P  |
+// |  Q  |  F  |  V  |  P  |  B  |    |  K  |  L  |  U  |  Y  |  J  |
+// |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
+// |  '  |  Z  |  C  |  D  |  W  |    |  X  |  H  | , ; | . : |  "  |
 //         | _NAVI | SHIFT(BSPC) |    | _SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp B        &kp Y       &kp O        &kp U       &kp X     &kp Q    &kp L       &kp D        &kp W       &kp V
-   &hml LSHFT C &hml LALT I &hml LCTRL E &hml LGUI A &com_sem  &dot_col &hmr LGUI H &hmr LCTRL T &hmr LALT S &hmr LSHFT N
-   &kp G        &kp Z       &kp J        &kp K       &kp DQT   &kp SQT  &kp R       &kp M        &kp F       &kp P
+   &kp Q        &kp F       &kp V        &kp P       &kp B     &kp K  &kp L       &kp U        &kp Y       &kp J
+   &hml LSHFT A &hml LALT R &hml LCTRL S &hml LGUI T &kp G     &kp M  &hmr LGUI N &hmr LCTRL E &hmr LALT I &hmr LSHFT O
+   &kp SQT      &kp Z       &kp C        &kp D       &kp W     &kp X  &kp H       &com_sem     &dot_col    &kp DQT
                                  &tdl &bspctap LSHIFT BSPC     &spctap X SPACE &tdr
                         >;
                 };
@@ -454,15 +454,15 @@
                 };
 
                 f_nav_layer {
-// -------------------------------    -------------------------------------
-// | ESC  | F1 | F2  | F3  | F4  |    | PGUP | HOME  |  UP   | END  | DEL |
-// | TAB  | F5 | F6  | F7  | F8  |    | PGDN | LEFT  | DOWN  | RGHT | RET |
-// | CALC | F9 | F10 | F11 | F12 |    | PRN  | c,v,x | c,v,x | APP  | INS |
+// ------------------------------    -------------------------------------
+// | ESC | F1 | F2  | F3  | F4  |    | PGUP | HOME  |  UP   | END  | DEL |
+// | TAB | F5 | F6  | F7  | F8  |    | PGDN | LEFT  | DOWN  | RGHT | RET |
+// | PRN | F9 | F10 | F11 | F12 |    | CALC | c,v,x | c,v,x | APP  | INS |
 //               | _BASE | BSPC |    | SPACE | _BASE |
                         bindings = <
    &kp ESC        &kp F1       &kp F2        &kp F3       &kp F4      &kp PG_UP     &kp HOME       &kp UP          &kp END         &kp DEL
    &hml LSHFT TAB &hml LALT F5 &hml LCTRL F6 &hml LGUI F7 &kp F8      &kp PG_DN     &hmr LGUI LEFT &hmr LCTRL DOWN &hmr LALT RIGHT &hmr LSHFT RET
-   &kp C_AL_CALC  &kp F9       &kp F10       &kp F11      &kp F12     &kp PSCRN &gui_x LG(X) X &ctrl_x LC(X) X &kp K_APP       &kp INS
+   &kp PSCRN      &kp F9       &kp F10       &kp F11      &kp F12     &kp C_AL_CALC &gui_x LG(X) X &ctrl_x LC(X) X &kp K_APP       &kp INS
                                              &to_BASE     &kp BSPC    &kp SPACE     &to_BASE
                         >;
                 };
