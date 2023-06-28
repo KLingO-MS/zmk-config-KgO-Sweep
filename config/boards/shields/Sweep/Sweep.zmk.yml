@@ -1,0 +1,11 @@
+file_format: "1"
+id: Sweep
+name: Sweep
+type: shield
+url: Sweep 2.2
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - Sweep_left
+  - Sweep_right
