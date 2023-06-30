@@ -352,24 +352,24 @@
 
         bspctap: backsapce-tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "BSPC_TAP_LSHIFT_HOLD";
+            label = "BSPC_TAP_MO_SYM_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
             quick-tap-ms = <170>;
             // global-quick-tap;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo_SYM>, <&kp>;
         };
 
         spctap: space-tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_TAP_MO_SYM_HOLD";
+            label = "SPACE_TAP_SHIFT_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             // global-quick-tap;
-            bindings = <&mo_SYM>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         rch: reset-combo-hold {
@@ -430,12 +430,12 @@
 // |  Q  |  F  |  V  |  P  |  B  |    |  K  |  L  |  U  |  Y  |  J  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
 // |  '  |  Z  |  C  |  D  |  W  |    |  X  |  H  | , ; | . : |  "  |
-//         | _NAVI | SHIFT(BSPC) |    | _SYM(SPC) | _FKEYS(_NUMPAD) |
+//         | _NAV_F | _SYM(BSPC) |    | SHFT(SPC) | _BT_NUMPAD |
                         bindings = <
    &kp Q        &kp F       &kp V        &kp P       &kp B     &kp K  &kp L       &kp U        &kp Y       &kp J
    &hml LSHFT A &hml LALT R &hml LCTRL S &hml LGUI T &kp G     &kp M  &hmr LGUI N &hmr LCTRL E &hmr LALT I &hmr LSHFT O
    &kp SQT      &kp Z       &kp C        &kp D       &kp W     &kp X  &kp H       &com_sem     &dot_col    &kp DQT
-                                 &tdl &bspctap LSHIFT BSPC     &spctap X SPACE &tdr
+                                      &tdl &bspctap X BSPC     &spctap LSHFT SPACE &tdr
                         >;
                 };
 
@@ -449,7 +449,7 @@
    &kp EXCL      &kp AT       &kp HASH      &kp DLLR     &kp PRCNT      &kp CARET &kp AMPS     &kp ASTRK     &kp LPAR     &kp RPAR
    &hml LSHFT N1 &hml LALT N2 &hml LCTRL N3 &hml LGUI N4 &kp N5         &kp N6    &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &hmr LSHFT N0
    &kp BSLH      &kp QMARK    &kp UNDER     &kp MINUS    &kp GRAVE      &kp TILDE &kp PLUS     &kp EQUAL     &kp PIPE     &kp FSLH
-                                            &kp SPACE    &kp BSPC       &none &caps_word
+                                            &caps_word   &none          &kp SPACE &kp BSPC
                         >;
                 };
 
