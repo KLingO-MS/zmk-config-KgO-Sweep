@@ -443,12 +443,12 @@
 // -------------------------------    -------------------------------
 // |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
 // |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
-// |  \  |  ?  |  _  |  -  |  `  |    |  ~  |  +  |  =  |  |  |  /  |
+// |  ?  |  \  |  _  |  -  |  `  |    |  ~  |  +  |  =  |  /  |  |  |
 //                  | SPC | BSPC |    |     |  CW  |
                         bindings = <
    &kp EXCL      &kp AT       &kp HASH      &kp DLLR     &kp PRCNT      &kp CARET &kp AMPS     &kp ASTRK     &kp LPAR     &kp RPAR
    &hml LSHFT N1 &hml LALT N2 &hml LCTRL N3 &hml LGUI N4 &kp N5         &kp N6    &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &hmr LSHFT N0
-   &kp BSLH      &kp QMARK    &kp UNDER     &kp MINUS    &kp GRAVE      &kp TILDE &kp PLUS     &kp EQUAL     &kp PIPE     &kp FSLH
+   &kp QMARK     &kp BSLH     &kp UNDER     &kp MINUS    &kp GRAVE      &kp TILDE &kp PLUS     &kp EQUAL     &kp FSLH     &kp PIPE
                                             &caps_word   &none          &kp SPACE &kp BSPC
                         >;
                 };
