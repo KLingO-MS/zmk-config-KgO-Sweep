@@ -180,7 +180,19 @@
             layers = <_BASE _SYM>;
         };
           
-        combo_LPAR {
+        combo_FNAV_lock {
+            timeout-ms = <50>;
+            key-positions = <RHI RHO>;
+            bindings = <&to_F_NAV>;
+        };
+
+        combo_BTNP_lock {
+            timeout-ms = <50>;
+            key-positions = <LHI LHO>;
+            bindings = <&to_BT_NP>;
+        };
+          
+          combo_LPAR {
             timeout-ms = <45>;
             key-positions = <LMM LMI>;
             bindings = <&kp LPAR>;
@@ -268,25 +280,25 @@
             bindings = <&mo_BT_NP>, <&to_BT_NP>;
         };
 
-//        fnavtap: fnav-tap {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "LOCK_F_NAV";
-//            #binding-cells = <2>;
-//            flavor = "balanced";
-//            tapping-term-ms = <180>;
-//            quick-tap-ms = <180>;
-//            bindings = <&mo_F_NAV>, <&to_F_NAV>;
-//        };
+       ht_fnav: hold_tap_fnav {
+           compatible = "zmk,behavior-hold-tap";
+           label = "SL_F_NAV";
+           #binding-cells = <2>;
+           flavor = "balanced";
+           tapping-term-ms = <180>;
+           quick-tap-ms = <180>;
+           bindings = <&mo_F_NAV>, <&sl>;
+       };
 
-//        btnptap: btnp-tap {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "LOCK_BT_NP";
-//            #binding-cells = <2>;
-//            flavor = "balanced";
-//            tapping-term-ms = <180>;
-//            quick-tap-ms = <180>;
-//            bindings = <&mo_BT_NP>, <&to_BT_NP>;
-//        };
+       ht_btnp: hold_tap_btnp {
+           compatible = "zmk,behavior-hold-tap";
+           label = "SL_BT_NP";
+           #binding-cells = <2>;
+           flavor = "balanced";
+           tapping-term-ms = <180>;
+           quick-tap-ms = <180>;
+           bindings = <&mo_BT_NP>, <&sl>;
+       };
 
         win_cp: win_cp {
             compatible = "zmk,behavior-tap-dance";
@@ -429,13 +441,13 @@
 // -------------------------------    -------------------------------
 // |  Q  |  F  |  V  |  P  |  B  |    |  K  |  L  |  U  |  Y  |  J  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-// |  '  |  Z  |  C  |  D  |  W  |    |  X  |  H  | , ; | . : |  "  |
-//         | _NAV_F | _SYM(BSPC) |    | SHFT(SPC) | _BT_NUMPAD |
+// | ' " |  Z  |  C  |  D  |  W  |    |  X  |  H  | , ; | . : | ? ! |
+//     | _BT_NUMPAD | _SYM(BSPC) |    | SHFT(SPC) | _F_NAV |
                         bindings = <
    &kp Q        &kp F       &kp V        &kp P       &kp B     &kp K  &kp L       &kp U        &kp Y       &kp J
    &hml LSHFT A &hml LALT R &hml LCTRL S &hml LGUI T &kp G     &kp M  &hmr LGUI N &hmr LCTRL E &hmr LALT I &hmr LSHFT O
    &kp SQT      &kp Z       &kp C        &kp D       &kp W     &kp X  &kp H       &com_sem     &dot_col    &qmk_exc
-                                  &td_btnp &bspctap X BSPC     &spctap LSHFT SPACE &td_fnav
+                         &ht_btnp X _BT_NP &bspctap X BSPC     &spctap LSHFT SPACE &mo_F_NAV
                         >;
                 };
 
