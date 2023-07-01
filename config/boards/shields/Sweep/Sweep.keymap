@@ -139,124 +139,138 @@
         };
 
         combo_ESC {
-            timeout-ms = <50>;
-            key-positions = <LTR LTM>;
+            timeout-ms = <40>;
+            key-positions = <LTP LTR>;
             bindings = <&kp ESC>;
             layers = <_BASE _SYM>;
         };
 
         combo_TAB {
-            timeout-ms = <50>;
-            key-positions = <LMR LMM>;
+            timeout-ms = <40>;
+            key-positions = <LMP LMR>;
             bindings = <&kp TAB>;
             layers = <_BASE _SYM>;
         };
 
         combo_DEL {
-            timeout-ms = <50>;
-            key-positions = <RTM RTR>;
+            timeout-ms = <40>;
+            key-positions = <RTR RTP>;
             bindings = <&kp DEL>;
             layers = <_BASE _SYM _BT_NP>;
         };
             
         combo_RET {
-            timeout-ms = <50>;
-            key-positions = <RMM RMR>;
+            timeout-ms = <40>;
+            key-positions = <RMR RMP>;
             bindings = <&kp RET>;
             layers = <_BASE _SYM _BT_NP>;
         };
             
         combo_lAltGr {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <LBP LBR>;
             bindings = <&kp RALT>;
             layers = <_BASE _SYM>;
         };
 
         combo_rAltGr {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <RBR RBP>;
             bindings = <&kp RALT>;
             layers = <_BASE _SYM>;
         };
           
         combo_FNAV_lock {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <RHI RHO>;
             bindings = <&to_F_NAV>;
         };
 
         combo_BTNP_lock {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <LHI LHO>;
             bindings = <&to_BT_NP>;
         };
           
-          combo_LPAR {
-            timeout-ms = <45>;
+        combo_LPAR {
+            timeout-ms = <40>;
             key-positions = <LMM LMI>;
             bindings = <&kp LPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_RPAR {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <RMI RMM>;
             bindings = <&kp RPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBRC {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <LTM LTI>;
             bindings = <&kp LBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBRC {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <RTI RTM>;
             bindings = <&kp RBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBKT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <LBM LBI>;
             bindings = <&kp LBKT>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBKT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <RBI RBM>;
             bindings = <&kp RBKT>;
             layers = <_BASE _SYM>;
         };
 
-//        combo_FSLH {
-//            timeout-ms = <45>;
-//            key-positions = <7 8>;
-//            bindings = <&kp FSLH>;
-//            layers = <_BASE _SYM>;
-//        };
+       combo_FSLH {
+           timeout-ms = <40>;
+           key-positions = <RTM RTR>;
+           bindings = <&kp FSLH>;
+           layers = <_BASE _SYM>;
+       };
 
-//        combo_BSLH {
-//            timeout-ms = <45>;
-//            key-positions = <1 2>;
-//            bindings = <&kp BSLH>;
-//            layers = <_BASE _SYM>;
-//        };
+       combo_BSLH {
+           timeout-ms = <40>;
+           key-positions = <LTR LTM>;
+           bindings = <&kp BSLH>;
+           layers = <_BASE _SYM>;
+       };
 
+        combo_SQT {
+            timeout-ms = <40>;
+            key-positions = <RMM RMR>;
+            bindings = <&kp SQT>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_DQT {
+            timeout-ms = <40>;
+            key-positions = <LMR LMM>;
+            bindings = <&kp DQT>;
+            layers = <_BASE _SYM _BT_NP>;
+        };
+            
         combo_GT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <RBR RBM>;
             bindings = <&kp GT>;
             layers = <_BASE _SYM>;
         };
 
         combo_LT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <LBM LBR>;
             bindings = <&kp LT>;
             layers = <_BASE _SYM>;
@@ -367,8 +381,8 @@
             label = "BSPC_TAP_MO_SYM_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <250>;
             // global-quick-tap;
             bindings = <&mo_SYM>, <&kp>;
         };
@@ -378,8 +392,8 @@
             label = "SPACE_TAP_SHIFT_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <220>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <250>;
             // global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -417,21 +431,21 @@
             mods = <(MOD_LSFT)>;
         };
 
-        // plus_multi: plus_multiply {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "PLUS_MULTIPLY";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
-        // };
+        plus_multi: plus_multiply {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PLUS_MULTIPLY";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
+        };
 
-        // minus_div: minus_divide {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "MINUS_DIVIDE";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
-        // };
+        minus_div: minus_divide {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MINUS_DIVIDE";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
+        };
     };
 
     keymap {
@@ -455,21 +469,21 @@
 // -------------------------------    -------------------------------
 // |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
 // |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
-// |  ?  |  \  |  _  |  -  |  `  |    |  ~  |  +  |  =  |  /  |  |  |
+// |  \  |  ?  |  _  |  -  |  `  |    |  ~  |  +  |  =  |  |  |  /  |
 //                   | CW |      |    | SPC | BSPC |
                         bindings = <
    &kp EXCL      &kp AT       &kp HASH      &kp DLLR     &kp PRCNT      &kp CARET &kp AMPS     &kp ASTRK     &kp LPAR     &kp RPAR
    &hml LSHFT N1 &hml LALT N2 &hml LCTRL N3 &hml LGUI N4 &kp N5         &kp N6    &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &hmr LSHFT N0
-   &kp QMARK     &kp BSLH     &kp UNDER     &kp MINUS    &kp GRAVE      &kp TILDE &kp PLUS     &kp EQUAL     &kp FSLH     &kp PIPE
+   &kp BSLH      &kp QMARK    &kp UNDER     &kp MINUS    &kp GRAVE      &kp TILDE &kp PLUS     &kp EQUAL     &kp PIPE     &kp FSLH
                                             &caps_word   &none          &kp SPACE &kp BSPC
                         >;
                 };
 
                 f_nav_layer {
-// ------------------------------    -------------------------------------
-// | ESC | F1 | F2  | F3  | F4  |    | PGUP | HOME  |  UP   | END  | DEL |
-// | TAB | F5 | F6  | F7  | F8  |    | PGDN | LEFT  | DOWN  | RGHT | RET |
-// | PRN | F9 | F10 | F11 | F12 |    | CALC | c,v,x | c,v,x | APP  | INS |
+// -------------------------------    -------------------------------------
+// | ESC  | F1 | F2  | F3  | F4  |    | PGUP | HOME  |  UP   | END  | DEL |
+// | TAB  | F5 | F6  | F7  | F8  |    | PGDN | LEFT  | DOWN  | RGHT | RET |
+// | CALC | F9 | F10 | F11 | F12 |    | PRN  | c,v,x | c,v,x | APP  | INS |
 //               | _BASE | BSPC |    | SHFT(SPC) | _BASE |
                         bindings = <
    &kp ESC        &kp F1       &kp F2        &kp F3       &kp F4      &kp PG_UP     &kp HOME       &kp UP          &kp END         &kp DEL
@@ -481,15 +495,15 @@
                 
                 bt_np_layer {
 // ---------------------------------------    -------------------------------
-// | ESC | PREV | PLAYP | NEXT | BT CLR  |    |  *  |  7  |  8  |  9  |  +  |
-// | TAB | VOL- | MUTE  | VOL+ | OUT_TOG |    |  .  |  4  |  5  |  6  |  0  |
-// | BT1 | BT2  | BT3   | BT4  | BT5     |    |  /  |  1  |  2  |  3  |  -  |
+// | ESC | PREV | PLAYP | NEXT | BT CLR  |    | + *  |  7  |  8  |  9  |  .  |
+// | TAB | VOL- | MUTE  | VOL+ | OUT_TOG |    | - /  |  4  |  5  |  6  |  0  |
+// | BT1 | BT2  | BT3   | BT4  | BT5     |    | CALC |  1  |  2  |  3  | RET |
 //                        | _BASE | BSPC |    | SPACE | BSPC |
                         bindings = <
-   &kp ESC      &kp C_PREV   &kp C_PP     &kp C_NEXT   &bt BT_CLR        &kp KP_MULTIPLY &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS
-   &kp TAB      &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &out OUT_TOG      &kp KP_DOT      &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N0
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp KP_DIVIDE   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MINUS
-                                          &to_BASE     &kp BSPC          &kp SPACE       &kp BSPC
+   &kp ESC      &kp C_PREV   &kp C_PP     &kp C_NEXT   &bt BT_CLR        &plus_multi   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_DOT
+   &kp TAB      &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &out OUT_TOG      &minus_div    &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N0
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp C_AL_CALC &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER
+                                          &to_BASE     &kp BSPC          &kp SPACE     &kp BSPC
                         >;
                 };                
     };
