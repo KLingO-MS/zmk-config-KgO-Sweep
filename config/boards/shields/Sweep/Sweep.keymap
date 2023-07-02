@@ -234,17 +234,31 @@
             layers = <_BASE _SYM>;
         };
 
-       combo_FSLH {
+    //    combo_FSLH {
+    //        timeout-ms = <40>;
+    //        key-positions = <RTM RTR>;
+    //        bindings = <&kp FSLH>;
+    //        layers = <_BASE _SYM>;
+    //    };
+
+    //    combo_BSLH {
+    //        timeout-ms = <40>;
+    //        key-positions = <LTR LTM>;
+    //        bindings = <&kp BSLH>;
+    //        layers = <_BASE _SYM>;
+    //    };
+
+       combo_X {
            timeout-ms = <40>;
            key-positions = <RTM RTR>;
-           bindings = <&kp FSLH>;
+           bindings = <&kp X>;
            layers = <_BASE _SYM>;
        };
 
-       combo_BSLH {
+       combo_W {
            timeout-ms = <40>;
            key-positions = <LTR LTM>;
-           bindings = <&kp BSLH>;
+           bindings = <&kp W>;
            layers = <_BASE _SYM>;
        };
 
