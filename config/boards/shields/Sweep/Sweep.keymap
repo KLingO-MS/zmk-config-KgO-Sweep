@@ -14,8 +14,7 @@
 #define _BASE    0
 #define _SYM     1
 #define _NAV     2
-#define _NAV_L   3
-#define _BTF     4
+#define _BTF     3
 
 #define RGB_BASE RGB_COLOR_HSB(15,100,2)
 #define RGB_SYM RGB_COLOR_HSB(0,90,2)
@@ -75,7 +74,7 @@
             tap-ms = <0>;
             bindings
                 = <&rgb_ug RGB_NAV>
-                , <&to _NAV_L>
+                , <&to _NAV>
                 ;
         };
 
@@ -146,6 +145,20 @@
             timeout-ms = <50>;
             key-positions = <LHI RHI>;
             bindings = <&mo_BTF>;
+        };
+
+        combo_NAV_L {
+            timeout-ms = <50>;
+            key-positions = <RMI RMM RMR>;
+            bindings = <&to_NAV>;
+            layers = <_BASE>;
+        };
+
+        combo_NAV_U {
+            timeout-ms = <50>;
+            key-positions = <RMI RMM RMR>;
+            bindings = <&to_BASE>;
+            layers = <_NAV>;
         };
 
         // combo_ESC {
@@ -534,18 +547,7 @@
    &kp ESC        &kp C_PREV         &kp C_PP          &kp C_NEXT         &kp C_AL_CALC      &kp INS   &kp HOME       &kp UP          &kp END         &kp DEL
    &hml LSHFT TAB &hml LALT C_VOL_DN &hml LCTRL C_MUTE &hml LGUI C_VOL_UP &kp PSCRN          &kp BSPC  &hmr LGUI LEFT &hmr LCTRL DOWN &hmr LALT RIGHT &hmr LSHFT RET
    &none          &kp K_APP          &ctrl_x LC(X) X   &gui_x LG(X) X     &none              &none     &kp PG_UP      &kp SPACE       &kp PG_DN       &none
-                                                                    &none &to_NAV              &kp LSHFT &none
-                        >;
-                };
-                
-                nav_l_layer {
-// -----------------------------------------------------------------
-// acting as lock for NAV, almost fully transparent
-                        bindings = <
-   &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans
-   &none  &trans &trans &trans &none      &none  &trans &trans &trans &none
-                        &none &to_BASE    &none &none
+                                                                    &none &to_BASE           &kp LSHFT &none
                         >;
                 };
                 
