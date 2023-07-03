@@ -393,7 +393,7 @@
     //        bindings = <&mo_BT_NP>, <&sl>;
     //    };
 
-        c_c: copy_cut {
+        copy_cut: copy_cut {
             compatible = "zmk,behavior-tap-dance";
             label = "COPY_CUT";
             #binding-cells = <0>;
