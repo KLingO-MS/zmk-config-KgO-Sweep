@@ -31,13 +31,13 @@
 };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <4>;
-        };
-    };
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //     tri_layer {
+    //         if-layers = <1 2>;
+    //         then-layer = <4>;
+    //     };
+    // };
 
     macros {
         to_BASE: to_BASE {
@@ -142,10 +142,10 @@
             layers = <_BTF>;
         };
 
-        combo_L_NAV {
+        combo_BTF {
             timeout-ms = <50>;
             key-positions = <LHI RHI>;
-            bindings = <&to_NAV>;
+            bindings = <&mo_BTF>;
         };
 
         // combo_ESC {
@@ -176,6 +176,13 @@
         //     layers = <_BASE _SYM _BT_NP>;
         // };
             
+        combo_CAPS {
+            timeout-ms = <40>;
+            key-positions = <LMI RMI>;
+            bindings = <&caps_word>;
+            layers = <_BASE _SYM>;
+        };
+
         combo_lAltGr {
             timeout-ms = <40>;
             key-positions = <LBM LBR>;
@@ -527,7 +534,7 @@
    &kp ESC        &kp C_PREV         &kp C_PP          &kp C_NEXT         &kp C_AL_CALC      &kp INS   &kp HOME       &kp UP          &kp END         &kp DEL
    &hml LSHFT TAB &hml LALT C_VOL_DN &hml LCTRL C_MUTE &hml LGUI C_VOL_UP &kp PSCRN          &kp BSPC  &hmr LGUI LEFT &hmr LCTRL DOWN &hmr LALT RIGHT &hmr LSHFT RET
    &none          &kp K_APP          &ctrl_x LC(X) X   &gui_x LG(X) X     &none              &none     &kp PG_UP      &kp SPACE       &kp PG_DN       &none
-                                                                    &none &none              &kp LSHFT &none
+                                                                    &none &to_NAV              &kp LSHFT &none
                         >;
                 };
                 
