@@ -480,7 +480,7 @@
         // };
 
         com_sem: comma_semicolon {
-            compatible = "z mk,behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             label = "COMMA_SEMI";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
