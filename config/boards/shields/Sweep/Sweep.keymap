@@ -309,7 +309,7 @@
 
         combo_LT {
             timeout-ms = <40>;
-            key-positions = <LTI LTMq>;
+            key-positions = <LTI LTM>;
             bindings = <&kp LT>;
             layers = <_BASE _SYM>;
         };
