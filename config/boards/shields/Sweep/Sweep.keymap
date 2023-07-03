@@ -18,8 +18,8 @@
 
 #define RGB_BASE RGB_COLOR_HSB(15,100,2)
 #define RGB_SYM RGB_COLOR_HSB(0,90,2)
-#define RGB_NAV RGB_COLOR_HSB(300,90,2)
-#define RGB_BTF RGB_COLOR_HSB(230,90,2)
+#define RGB_NAV RGB_COLOR_HSB(280,90,2)
+#define RGB_BTF RGB_COLOR_HSB(200,90,2)
 
 &sk {
     quick-release;
@@ -285,10 +285,17 @@
             layers = <_BASE _SYM>;
         };
 
-        combo_W {
+        // combo_W {
+        //     timeout-ms = <40>;
+        //     key-positions = <RMR RMM>;
+        //     bindings = <&kp W>;
+        //     layers = <_BASE _SYM>;
+        // };
+
+        combo_SEMI_COL {
             timeout-ms = <40>;
             key-positions = <RMR RMM>;
-            bindings = <&kp W>;
+            bindings = <&sem_col>;
             layers = <_BASE _SYM>;
         };
 
@@ -487,11 +494,27 @@
             mods = <(MOD_LSFT)>;
         };
 
+        com_dot: comma_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_DOT";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp DOT>;
+            mods = <(MOD_LSFT)>;
+        };
+
         dot_col: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_COLON";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT)>;
+        };
+        
+        sem_col: semicolon_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp COLON>;
             mods = <(MOD_LSFT)>;
         };
         
@@ -527,12 +550,12 @@
 // -------------------------------    -------------------------------
 // |  Q  |  F  |  V  |  P  |  B  |    |  K  |  L  |  U  |  Y  |  J  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-// |     |  Z  |  C  |  D  |     |    |     |  H  | , ; | . : |     |
+// |     |  Z  |  C  |  D  |     |    |     |  H  | , . |  W  |     |
 //                  | _SYM(BSPC) |    | _NAV(SPC) |
                         bindings = <
    &kp Q       &kp F        &kp V       &kp P        &kp B     &kp K     &kp L        &kp U       &kp Y        &kp J
    &hml LALT A &hml LCTRL R &hml LGUI S &hml LSHFT T &kp G     &kp M     &hmr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
-   &none       &kp Z        &kp C       &kp D        &none     &none     &kp H        &com_sem    &dot_col     &none
+   &none       &kp Z        &kp C       &kp D        &none     &none     &kp H        &com_dot    &kp W        &none
                                      &none &bspctap X BSPC     &spctap X SPACE &none
                         >;
                 };
