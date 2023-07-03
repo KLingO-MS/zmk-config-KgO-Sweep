@@ -136,7 +136,7 @@
         compatible = "zmk,combos";
         combo_RESET {
             timeout-ms = <50>;
-            key-positions = <LMC RMC>;
+            key-positions = <LBR RBR>;
             bindings = <&to_BOOT>;
             layers = <_BTF>;
         };
@@ -547,21 +547,21 @@
    &kp ESC       &kp C_PREV          &kp C_PP         &kp C_NEXT          &kp C_AL_CALC      &kp INS   &kp HOME        &kp UP          &kp END          &kp DEL
    &hml LALT TAB &hml LCTRL C_VOL_DN &hml LGUI C_MUTE &hml LSHFT C_VOL_UP &kp PSCRN          &kp BSPC  &hmr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
    &none         &ctrl_x LC(X) X     &gui_x LG(X) X   &kp K_APP           &none              &none     &kp PG_UP       &kp DOWN        &kp PG_DN        &none
-                                                                    &none &none              &kp LSHFT &none
+                                                                    &none &kp BSPC           &kp LSHFT &none
                         >;
                 };
                 
                 btf_layer {
-// ----------------------------------    ---------------------------------
-// |     |     |     |     | BT CLR |    |  BT1  | BT2 | BT3 | BT4 | BT5 |
-// |     | F1  | F2  | F3  | RESET  |    | RESET | F7  | F8  | F9  |     |
-// |     | F4  | F5  | F6  |        |    |       | F10 | F11 | F12 |     |
-//                             |    |    |    |
+// --------------------------------    ------------------------------------
+// | F1 |  F2   | F3  | F4  | F5  |    |  BT1  | BT2  | BT3 |  BT4  | BT5 |
+// | F6 |  F7   | F8  | F9  | F10 |    | BTCLR | SHFT | GUI | CTRL  | ALT |
+// |    | RESET | F11 | F12 |     |    |       | USB  | RGB | RESET |     |
+//                           |    |    |    |
                         bindings = <
-   &none    &none         &none        &none         &bt BT_CLR      &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4
-   &kp LALT &hml LCTRL F1 &hml LGUI F2 &hml LSHFT F3 &sys_reset      &sys_reset   &hmr LSHFT F7 &hmr LGUI F8 &hmr LCTRL F9 &kp LALT
-   &none    &kp F4        &kp F5       &kp F6        &none           &none        &kp F10       &kp F11      &kp F12       &none
-                                               &none &none           &none &none
+   &kp F1 &kp F2     &kp F3  &kp F4  &kp F5        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4
+   &kp F6 &kp F7     &kp F8  &kp F9  &kp F10       &bt BT_CLR   &kp LSHFT    &kp LGUI        &kp LCTRL    &kp LALT
+   &none  &sys_reset &kp F11 &kp F12 &none         &none        &out OUT_TOG &rgb_ug RGB_TOG &sys_reset   &none
+                               &none &none         &none &none
                         >;
                 };                
     };
