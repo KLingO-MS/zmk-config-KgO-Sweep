@@ -393,6 +393,14 @@
     //        bindings = <&mo_BT_NP>, <&sl>;
     //    };
 
+        c_c: copy_cut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COPY_CUT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp X>;
+        };
+
         win_cp: win_cp {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_COPY_PASTA";
@@ -575,15 +583,15 @@
                 };
 
                 nav_layer {
-// -------------------------------------    -----------------------------------
-// | ESC | PREV  | PLAYP | NEXT | CALC |    | INS  | HOME |  UP  | END  | DEL |
-// | TAB | VOL-  | MUTE  | VOL+ | PRN  |    | BSPC | LEFT | DOWN | RGHT | RET |
-// |     | c,v,x | c,v,x | APP  |      |    |      | PGUP | SPC  | PGDN |     |
-//                              |      |    | LSFT |
+// ------------------------------------    -----------------------------------
+// | ESC | PREV | PLAYP | NEXT | CALC |    | INS  | HOME |  UP  | END  | DEL |
+// | TAB | VOL- | MUTE  | VOL+ | PRN  |    | BSPC | LEFT | DOWN | RGHT | RET |
+// |     | APP  | c, x  |  v   |      |    |      | PGUP | SPC  | PGDN |     |
+//                             |      |    | LSFT |
                         bindings = <
    &kp ESC       &kp C_PREV          &kp C_PP         &kp C_NEXT          &kp C_AL_CALC      &kp INS   &kp HOME        &kp UP         &kp END          &kp DEL
    &hml LALT TAB &hml LCTRL C_VOL_DN &hml LGUI C_MUTE &hml LSHFT C_VOL_UP &kp PSCRN          &kp BSPC  &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-   &none         &ctrl_x LC(X) X     &gui_x LG(X) X   &kp K_APP           &none              &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
+   &none         &kp K_APP           &copy_cut        &kp V               &none              &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
                                                                     &none &kp BSPC           &kp LSHFT &none
                         >;
                 };
