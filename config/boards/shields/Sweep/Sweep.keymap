@@ -196,19 +196,19 @@
             layers = <_BASE _SYM>;
         };
 
-        combo_lAltGr {
-            timeout-ms = <40>;
-            key-positions = <LTP LMP>;
-            bindings = <&kp RALT>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_lAltGr {
+        //     timeout-ms = <40>;
+        //     key-positions = <LTP LMP>;
+        //     bindings = <&kp RALT>;
+        //     layers = <_BASE _SYM>;
+        // };
 
-        combo_rAltGr {
-            timeout-ms = <40>;
-            key-positions = <RTP RMP>;
-            bindings = <&kp RALT>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_rAltGr {
+        //     timeout-ms = <40>;
+        //     key-positions = <RTP RMP>;
+        //     bindings = <&kp RALT>;
+        //     layers = <_BASE _SYM>;
+        // };
           
         // combo_FNAV_lock {
         //     timeout-ms = <40>;
@@ -553,7 +553,7 @@
 // |     |  Z  |  C  |  D  |     |    |     |  H  | , . |  W  |     |
 //                  | _SYM(BSPC) |    | _NAV(SPC) |
                         bindings = <
-   &kp Q       &kp F        &kp V       &kp P        &kp B     &kp K     &kp L        &kp U       &kp Y        &kp J
+   &hml RALT Q &kp F        &kp V       &kp P        &kp B     &kp K     &kp L        &kp U       &kp Y        &hmr RALT J
    &hml LALT A &hml LCTRL R &hml LGUI S &hml LSHFT T &kp G     &kp M     &hmr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
    &none       &kp Z        &kp C       &kp D        &none     &none     &kp H        &com_dot    &kp W        &none
                                      &none &bspctap X BSPC     &spctap X SPACE &none
@@ -567,8 +567,8 @@
 // |     |  |  |  _  |  =  |     |    |     |  1  |  2  |  3  |     |
 //                         |     |    | SPC |
                         bindings = <
-   &kp EXCL        &kp AT           &kp HASH        &kp DLLR         &kp AMPS      &kp GRAVE &kp N7 &kp N8 &kp N9 &kp KP_DOT
-   &hml LALT QMARK &hml LCTRL ASTRK &hml LGUI MINUS &hml LSHFT PLUS  &kp PRCNT     &kp CARET &kp N4 &kp N5 &kp N6 &kp N0
+   &hml RALT EXCL  &kp AT           &kp HASH        &kp DLLR         &kp AMPS      &kp GRAVE &kp N7 &kp N8 &kp N9 &hmr RALT KP_DOT
+   &hml LALT QMARK &hml LCTRL ASTRK &hml LGUI MINUS &hml LSHFT PLUS  &kp PRCNT     &kp CARET &kp N4 &kp N5 &kp N6 &hmr LALT N0
    &none           &kp PIPE         &kp UNDER       &kp EQUAL        &none         &none     &kp N1 &kp N2 &kp N3 &none
                                                                &none &none         &kp SPACE &none
                         >;
