@@ -415,21 +415,21 @@
         //     bindings = <&kp C>, <&kp X>;
         // };
 
-        // win_cp: win_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "CTRL_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LC(C)>, <&kp LC(V)>;
-        // };
+        win_cp: win_cp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_COPY_PASTA";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp LC(C)>, <&kp LC(V)>;
+        };
 
-        // mac_cp: mac_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "GUI_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LG(C)>, <&kp LG(V)>;
-        // };
+        mac_cp: mac_cp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GUI_COPY_PASTA";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>;
+        };
 
         // ctrl_x: ctrl_x {
         //     compatible = "zmk,behavior-hold-tap";
@@ -584,13 +584,13 @@
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  !  |  @  |  #  |  $  |  &  |    | ` ~ |  7  |  8  |  9  |  .  |
-// |  ?  |  *  |  -  |  +  |  %  |    |  ^  |  4  |  5  |  6  |  0  |
+// |  !  |  @  |  #  |  $  |  &  |    | ` ~ |  7  |  8  |  9  |  0  |
+// |  ?  |  *  |  -  |  +  |  %  |    |  ^  |  4  |  5  |  6  |  .  |
 // |     |  |  |  _  |  =  |     |    |     |  1  |  2  |  3  |     |
 //                         |     |    | SPC |
                         bindings = <
-   &hml RALT EXCL  &kp AT           &kp HASH        &kp DLLR         &kp AMPS      &kp GRAVE &kp N7        &kp N8       &kp N9        &hmr RALT KP_DOT
-   &hml LALT QMARK &hml LCTRL ASTRK &hml LGUI MINUS &hml LSHFT PLUS  &kp PRCNT     &kp CARET &hmr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
+   &hml RALT EXCL  &kp AT           &kp HASH        &kp DLLR         &kp AMPS      &kp GRAVE &kp N7        &kp N8       &kp N9        &hmr RALT N0
+   &hml LALT QMARK &hml LCTRL ASTRK &hml LGUI MINUS &hml LSHFT PLUS  &kp PRCNT     &kp CARET &hmr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT KP_DOT
    &none           &kp PIPE         &kp UNDER       &kp EQUAL        &none         &none     &kp N1        &kp N2       &kp N3        &none
                                                                &none &none         &kp SPACE &none
                         >;
@@ -600,12 +600,12 @@
 // -----------------------------------    -----------------------------------
 // | ESC | PREV | PLAYP | NEXT | APP |    | INS  | HOME |  UP  | END  | DEL |
 // | TAB | VOL- | MUTE  | VOL+ | PRN |    | BSPC | LEFT | DOWN | RGHT | RET |
-// |     |   X  |   C   |   V  |     |    |      | PGUP | SPC  | PGDN |     |
-//                             |     |    | LSFT |
+// |     | C_CP | G_CP  |  X   |     |    |      | PGUP | SPC  | PGDN |     |
+//                            | BSPC |    | LSFT |
                         bindings = <
    &kp ESC       &kp C_PREV          &kp C_PP         &kp C_NEXT          &kp K_APP          &kp INS   &kp HOME        &kp UP         &kp END          &kp DEL
    &hml LALT TAB &hml LCTRL C_VOL_DN &hml LGUI C_MUTE &hml LSHFT C_VOL_UP &kp PSCRN          &kp BSPC  &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-   &none         &kp X               &kp C            &kp V               &none              &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
+   &none         &win_cp             &mac_cp          &kp X               &none              &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
                                                                     &none &kp BSPC           &kp LSHFT &none
                         >;
                 };
