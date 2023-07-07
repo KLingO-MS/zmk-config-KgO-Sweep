@@ -455,7 +455,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HRM";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             global-quick-tap;
@@ -469,7 +469,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HRM";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             global-quick-tap;
@@ -493,7 +493,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_TAP_NAV_HOLD";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
             // global-quick-tap;
