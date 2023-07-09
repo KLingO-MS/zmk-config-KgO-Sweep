@@ -225,42 +225,42 @@
           
         combo_LPAR {
             timeout-ms = <40>;
-            key-positions = <LMM LMR>;
+            key-positions = <LMM LMI>;
             bindings = <&kp LPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_RPAR {
             timeout-ms = <40>;
-            key-positions = <RMR RMM>;
+            key-positions = <RMI RMM>;
             bindings = <&kp RPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBRC {
             timeout-ms = <40>;
-            key-positions = <LTM LTR>;
+            key-positions = <LTM LTI>;
             bindings = <&kp LBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBRC {
             timeout-ms = <40>;
-            key-positions = <RTR RTM>;
+            key-positions = <RTI RTM>;
             bindings = <&kp RBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBKT {
             timeout-ms = <40>;
-            key-positions = <LBM LBR>;
+            key-positions = <LBM LBI>;
             bindings = <&kp LBKT>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBKT {
             timeout-ms = <40>;
-            key-positions = <RBR RBM>;
+            key-positions = <RBI RBM>;
             bindings = <&kp RBKT>;
             layers = <_BASE _SYM>;
         };
@@ -316,42 +316,42 @@
 
         combo_COM_SEM {
             timeout-ms = <40>;
-            key-positions = <LMI LMM>;
+            key-positions = <LMR LMM>;
             bindings = <&com_sem>;
             layers = <_BASE _SYM>;
         };
 
         combo_DOT_COL {
             timeout-ms = <40>;
-            key-positions = <RMI RMM>;
+            key-positions = <RMR RMM>;
             bindings = <&dot_col>;
             layers = <_BASE _SYM>;
         };
 
         combo_FSLH {
             timeout-ms = <40>;
-            key-positions = <RBM RBI>;
+            key-positions = <RBM RBR>;
             bindings = <&kp FSLH>;
             layers = <_BASE _SYM _NAV>;
         };
 
         combo_BSLH {
             timeout-ms = <40>;
-            key-positions = <LBM LBI>;
+            key-positions = <LBM LBR>;
             bindings = <&kp BSLH>;
             layers = <_BASE _SYM _NAV>;
         };
 
         combo_SQT {
             timeout-ms = <40>;
-            key-positions = <LTI LTM>;
+            key-positions = <LTR LTM>;
             bindings = <&kp SQT>;
             layers = <_BASE _SYM>;
         };
 
         combo_DQT {
             timeout-ms = <40>;
-            key-positions = <RTI RTM>;
+            key-positions = <RTR RTM>;
             bindings = <&kp DQT>;
             layers = <_BASE _SYM>;
         };
@@ -493,8 +493,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_TAP_NAV_HOLD";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <250>;
             quick-tap-ms = <170>;
             // global-quick-tap;
             bindings = <&kp>, <&kp>;
