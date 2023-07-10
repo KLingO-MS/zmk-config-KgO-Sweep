@@ -492,7 +492,7 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        bspctap: backsapce-tap {
+        bst: backsapce-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BSPC_TAP_SYM_HOLD";
             #binding-cells = <2>;
@@ -503,9 +503,31 @@
             bindings = <&mo_SYM>, <&kp>;
         };
 
-        spctap: space-tap {
+        comt: comma-tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_TAP_NAV_HOLD";
+            label = "COMMA_TAP_NAV_HOLD";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <170>;
+            // global-quick-tap;
+            bindings = <&mo_NAV>, <&com_sem>;
+        };
+
+        dott: dot-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DOT_TAP_BTF_HOLD";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <170>;
+            // global-quick-tap;
+            bindings = <&mo_BTF>, <&dot_col>;
+        };
+
+        ht: hold-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
@@ -609,7 +631,7 @@
    &hml RALT Q &kp F        &kp V       &kp P        &kp B     &kp K     &kp L        &kp U       &kp Y        &hmr RALT J
    &hml LALT A &hml LCTRL R &hml LGUI S &hml LSHFT T &kp G     &kp M     &hmr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
    &kp SQT     &kp Z        &kp C       &kp D        &kp COMMA &kp DOT   &kp H        &kp W       &kp X        &kp SEMI
-                                  &mo_NAV  &bspctap X BSPC     &spctap LSHFT SPACE  &mo_BTF
+                                    &comt 0 0  &bst 0 BSPC     &ht LSHFT SPACE  &dott 0 0
                         >;
                 };
 
@@ -623,7 +645,7 @@
    &hml RALT EXCL  &kp AT           &kp HASH        &kp DLLR         &kp AMPS      &kp GRAVE &kp N7        &kp N8       &kp N9        &hmr RALT N0
    &hml LALT QMARK &hml LCTRL ASTRK &hml LGUI MINUS &hml LSHFT PLUS  &kp PRCNT     &kp CARET &hmr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT KP_DOT
    &kp BSLH        &kp PIPE         &kp UNDER       &kp EQUAL        &kp LBKT      &kp RBKT  &kp N1        &kp N2       &kp N3        &kp SLASH
-                                                               &none &none         &spctap LSHFT SPACE  &kp BSPC
+                                                               &none &none         &ht LSHFT SPACE  &kp BSPC
                         >;
                 };
 
@@ -637,7 +659,7 @@
    &kp ESC       &win_cp             &mac_cp          &kp X               &kp K_APP          &kp INS   &kp HOME        &kp UP         &kp END          &kp DEL
    &hml LALT TAB &hml LCTRL C_VOL_DN &hml LGUI C_MUTE &hml LSHFT C_VOL_UP &kp PSCRN          &kp BSPC  &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
    &none         &kp C_PREV          &kp C_PP         &kp C_NEXT          &none              &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
-                                                                   &none  &kp BSPC           &spctap LSHFT SPACE  &kp BSPC
+                                                                   &none  &kp BSPC           &ht LSHFT SPACE  &kp BSPC
                         >;
                 };
                 
