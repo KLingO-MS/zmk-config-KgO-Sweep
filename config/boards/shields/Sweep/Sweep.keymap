@@ -192,8 +192,15 @@
             
         combo_CAPS {
             timeout-ms = <40>;
-            key-positions = <LMI RMI>;
+            key-positions = <LMM RMM>;
             bindings = <&caps_word>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_SHFT {
+            timeout-ms = <40>;
+            key-positions = <LMI RMI>;
+            bindings = <&sk LSHFT>;
             layers = <_BASE _SYM>;
         };
 
