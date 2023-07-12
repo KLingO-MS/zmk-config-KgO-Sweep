@@ -20,6 +20,7 @@ config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
 
-CONFIG_ZMK_BATTERY_REPORTING=n
+config ZMK_BATTERY_REPORTING
+    default n
 
 endif
