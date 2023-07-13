@@ -308,71 +308,71 @@
         // };
 
         combo_COM_SEM {
-            timeout-ms = <40>;
-            key-positions = <LBM LMM>;
+            timeout-ms = <45>;
+            key-positions = <LMR LMM>;
             bindings = <&com_sem>;
             layers = <_BASE _SYM>;
         };
 
         combo_DOT_COL {
-            timeout-ms = <40>;
-            key-positions = <RBM RMM>;
+            timeout-ms = <45>;
+            key-positions = <RMR RMM>;
             bindings = <&dot_col>;
             layers = <_BASE _SYM>;
         };
 
         combo_COLON {
-            timeout-ms = <40>;
-            key-positions = <RMM RTM>;
+            timeout-ms = <45>;
+            key-positions = <RTR RTM>;
             bindings = <&kp COLON>;
             layers = <_BASE _SYM _NAV>;
         };
 
         combo_SEMI {
-            timeout-ms = <40>;
-            key-positions = <LMM LTM>;
+            timeout-ms = <45>;
+            key-positions = <LTR LTM>;
             bindings = <&kp SEMI>;
             layers = <_BASE _SYM _NAV>;
         };
 
         combo_SQT {
-            timeout-ms = <45>;
-            key-positions = <LTR LTM>;
+            timeout-ms = <40>;
+            key-positions = <LTI LMI>;
             bindings = <&kp SQT>;
             layers = <_BASE _SYM>;
         };
 
         combo_DQT {
-            timeout-ms = <45>;
-            key-positions = <RTR RTM>;
+            timeout-ms = <40>;
+            key-positions = <RTI RMI>;
             bindings = <&kp DQT>;
             layers = <_BASE _SYM>;
         };
             
         combo_GT {
             timeout-ms = <40>;
-            key-positions = <RBM RBR>;
+            key-positions = <RBI RMI>;
             bindings = <&kp GT>;
             layers = <_BASE _SYM>;
         };
 
         combo_LT {
             timeout-ms = <40>;
-            key-positions = <LBM LBR>;
+            key-positions = <LBI LMI>;
             bindings = <&kp LT>;
             layers = <_BASE _SYM>;
         };
 
         combo_FSLH {
             timeout-ms = <45>;
-            key-positions = <RMM RMR>;
+            key-positions = <RBM RBR>;
             bindings = <&kp FSLH>;
             layers = <_BASE _SYM _NAV>;
         };
 
         combo_BSLH {
             timeout-ms = <45>;
-            key-positions = <LMM LMR>;
+            key-positions = <LBM LBR>;
             bindings = <&kp BSLH>;
             layers = <_BASE _SYM _NAV>;
         };
