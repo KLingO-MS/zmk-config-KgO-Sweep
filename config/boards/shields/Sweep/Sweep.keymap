@@ -210,8 +210,8 @@
         // };
             
         combo_CAPS {
-            timeout-ms = <40>;
-            key-positions = <LMM RMM>;
+            timeout-ms = <50>;
+            key-positions = <LMM LMI LMR>;
             bindings = <&caps_word>;
             layers = <_BASE _SYM>;
         };
