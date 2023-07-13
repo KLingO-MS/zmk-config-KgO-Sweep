@@ -164,18 +164,21 @@
             timeout-ms = <50>;
             key-positions = <RTI RTM RTR>;
             bindings = <&to_NAV>;
+            layers = <_BASE _SYM>;
         };
 
         combo_BASE {
             timeout-ms = <50>;
             key-positions = <RMI RMM RMR>;
             bindings = <&to_BASE>;
+            layers = <_NAV _SYM>;
         };
 
         combo_SYM {
             timeout-ms = <50>;
             key-positions = <RBI RBM RBR>;
             bindings = <&to_SYM>;
+            layers = <_BASE _NAV>;
         };
 
         // combo_ESC {
