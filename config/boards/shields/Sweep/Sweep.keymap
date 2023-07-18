@@ -18,8 +18,8 @@
 
 #define RGB_BASE RGB_COLOR_HSB(15,100,3)
 #define RGB_SYM RGB_COLOR_HSB(0,100,3)
-#define RGB_NAV RGB_COLOR_HSB(300,100,2)
-#define RGB_BTF RGB_COLOR_HSB(230,100,2)
+#define RGB_NAV RGB_COLOR_HSB(270,100,2)
+#define RGB_BTF RGB_COLOR_HSB(200,100,2)
 
 &sk {
     quick-release;
@@ -468,9 +468,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HRM";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <150>;                // repeat on tap-into-hold
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
             global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -482,9 +482,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HRM";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <150>;                // repeat on tap-into-hold
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
             global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
