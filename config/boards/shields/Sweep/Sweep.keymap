@@ -30,14 +30,7 @@
 };
 
 / {
-    // conditional_layers {
-    //     compatible = "zmk,conditional-layers";
-    //     tri_layer {
-    //         if-layers = <1 2>;
-    //         then-layer = <4>;
-    //     };
-    // };
-
+// ------------------------- MACROS --------------------------------
     macros {
         to_BASE: to_BASE {
             label = "ZM_to_BASE";
@@ -105,18 +98,6 @@
                 ;
         };
 
-        // to_BTF: to_BTF {
-        //     label = "ZM_to_BTF";
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings
-        //         = <&rgb_ug RGB_BTF>
-        //         , <&to _BTF>
-        //         ;
-        // };
-
         mo_BTF: mo_BTF {
             label = "ZM_mo_BTF";
             compatible = "zmk,behavior-macro";
@@ -146,6 +127,7 @@
 
     combos {
         compatible = "zmk,combos";
+// ------------------------- LAYER COMBOS --------------------------------
         combo_RESET {
             timeout-ms = <50>;
             key-positions = <LBR RBR>;
@@ -188,34 +170,7 @@
             layers = <_BASE _NAV>;
         };
 
-        // combo_ESC {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTP LTR>;
-        //     bindings = <&kp ESC>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_TAB {
-        //     timeout-ms = <40>;
-        //     key-positions = <LMP LMR>;
-        //     bindings = <&kp TAB>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_DEL {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTR RTP>;
-        //     bindings = <&kp DEL>;
-        //     layers = <_BASE _SYM _BT_NP>;
-        // };
-            
-        // combo_RET {
-        //     timeout-ms = <40>;
-        //     key-positions = <RMR RMP>;
-        //     bindings = <&kp RET>;
-        //     layers = <_BASE _SYM _BT_NP>;
-        // };
-            
+// ------------------------- CHARACTER COMBOS --------------------------------
         combo_CAPS {
             timeout-ms = <50>;
             key-positions = <LMI RMI>;
@@ -264,55 +219,6 @@
             bindings = <&kp RBKT>;
             layers = <_BASE _SYM>;
         };
-
-        // combo_COMMA {
-        //     timeout-ms = <40>;
-        //     key-positions = <LMR LMM>;
-        //     bindings = <&kp COMMA>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_DOT {
-        //     timeout-ms = <40>;
-        //     key-positions = <RMR RMM>;
-        //     bindings = <&kp DOT>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_X {
-        //     timeout-ms = <40>;
-        //     key-positions = <LMR LMM>;
-        //     bindings = <&kp X>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_W {
-        //     timeout-ms = <40>;
-        //     key-positions = <RMR RMM>;
-        //     bindings = <&kp W>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_SEMI_COL {
-        //     timeout-ms = <40>;
-        //     key-positions = <RMR RMM>;
-        //     bindings = <&sem_col>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_SEMI {
-        //     timeout-ms = <40>;
-        //     key-positions = <LBR LBM>;
-        //     bindings = <&kp SEMICOLON>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_COLON {
-        //     timeout-ms = <40>;
-        //     key-positions = <RBR RBM>;
-        //     bindings = <&kp COLON>;
-        //     layers = <_BASE _SYM>;
-        // };
 
         combo_COM_SEM {
             timeout-ms = <45>;
@@ -386,50 +292,7 @@
     };
 
     behaviors {
-        // td_fnav: tap_dance_fnav {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "LOCK_F_NAV";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <250>;
-        //     bindings = <&mo_F_NAV>, <&to_F_NAV>;
-        // };
- 
-        // td_btnp: tap_dance_btnp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "LOCK_BT_NP";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <250>;
-        //     bindings = <&mo_BT_NP>, <&to_BT_NP>;
-        // };
-
-    //    ht_fnav: hold_tap_fnav {
-    //        compatible = "zmk,behavior-hold-tap";
-    //        label = "SL_F_NAV";
-    //        #binding-cells = <2>;
-    //        flavor = "balanced";
-    //        tapping-term-ms = <180>;
-    //        quick-tap-ms = <180>;
-    //        bindings = <&mo_F_NAV>, <&sl>;
-    //    };
-
-    //    ht_btnp: hold_tap_btnp {
-    //        compatible = "zmk,behavior-hold-tap";
-    //        label = "SL_BT_NP";
-    //        #binding-cells = <2>;
-    //        flavor = "balanced";
-    //        tapping-term-ms = <180>;
-    //        quick-tap-ms = <180>;
-    //        bindings = <&mo_BT_NP>, <&sl>;
-    //    };
-
-        // copy_cut: copy_cut {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "COPY_CUT";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&kp C>, <&kp X>;
-        // };
-
+// ------------------------- TAP-DANCES --------------------------------
         win_cp: win_cp {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_COPY_PASTA";
@@ -446,24 +309,7 @@
             bindings = <&kp LG(C)>, <&kp LG(V)>;
         };
 
-        // ctrl_x: ctrl_x {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "CTRL_CUT_HOLD";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp>, <&win_cp>;
-        // };
-
-        // gui_x: gui_x {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "GUI_CUT_HOLD";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp>, <&mac_cp>;
-        // };
-
+// ------------------------- HOLD-TAPS --------------------------------
         /* left-hand HRMs */
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
@@ -508,54 +354,13 @@
             label = "SPC_TAP_NAV_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
             // global-quick-tap;
             bindings = <&mo_NAV>, <&kp>;
         };
 
-        // comt: comma-tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "COMMA_TAP_NAV_HOLD";
-        //     #binding-cells = <2>;
-        //     flavor = "balanced";
-        //     tapping-term-ms = <200>;
-        //     quick-tap-ms = <170>;
-        //     // global-quick-tap;
-        //     bindings = <&mo_NAV>, <&com_sem>;
-        // };
-
-        // dott: dot-tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "DOT_TAP_BTF_HOLD";
-        //     #binding-cells = <2>;
-        //     flavor = "balanced";
-        //     tapping-term-ms = <200>;
-        //     quick-tap-ms = <170>;
-        //     // global-quick-tap;
-        //     bindings = <&mo_BTF>, <&dot_col>;
-        // };
-
-        // ht: hold-tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "HOLD_TAP";
-        //     #binding-cells = <2>;
-        //     flavor = "balanced";
-        //     tapping-term-ms = <200>;
-        //     quick-tap-ms = <170>;
-        //     // global-quick-tap;
-        //     bindings = <&kp>, <&kp>;
-        // };
-
-        // rch: reset-combo-hold {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "RESET_COMBO_HOLD";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <2500>;
-        //     bindings = <&to_BOOT>, <&sys_reset>;
-        // };
-
+// ------------------------- MOD-MORPHS --------------------------------
         com_sem: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_SEMI";
@@ -563,14 +368,6 @@
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT)>;
         };
-
-        // com_dot: comma_dot {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     label = "COMMA_DOT";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp COMMA>, <&kp DOT>;
-        //     mods = <(MOD_LSFT)>;
-        // };
 
         dot_col: dot_colon {
             compatible = "zmk,behavior-mod-morph";
@@ -580,53 +377,6 @@
             mods = <(MOD_LSFT)>;
         };
         
-        // sem_col: semicolon_colon {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     label = "SEMI_COLON";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp SEMI>, <&kp COLON>;
-        //     mods = <(MOD_LSFT)>;
-        // };
-        
-        // qmk_exc: qmark_excl {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     label = "QMARK_EXCL";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp QMARK>, <&kp EXCL>;
-        //     mods = <(MOD_LSFT)>;
-        // };
-
-        // plus_multi: plus_multiply {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "PLUS_MULTIPLY";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
-        // };
-
-        // minus_div: minus_divide {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "MINUS_DIVIDE";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
-        // };
-
-        // sqt_lt: sqt_lt {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     label = "SQT_LT";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp SQT>, <&kp LT>;
-        //     mods = <(MOD_LSFT)>;
-        // };
-        
-        // dqt_gt: dqt_gt {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     label = "DQT_GT";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp DQT>, <&kp GT>;
-        //     mods = <(MOD_LSFT)>;
-        // };
     };
 
     keymap {
@@ -656,7 +406,7 @@
    &hml RALT AT   &kp AMPS         &kp QMARK       &kp EXCL         &kp DLLR      &kp GRAVE &kp N7        &kp N8       &kp N9        &hmr RALT N0
    &hml LALT HASH &hml LCTRL ASTRK &hml LGUI MINUS &hml LSHFT PLUS  &kp PRCNT     &kp CARET &hmr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT KP_DOT
    &kp BSLH       &kp PIPE         &kp UNDER       &kp EQUAL        &kp LBKT      &kp RBKT  &kp N1        &kp N2       &kp N3        &kp SLASH
-                                                              &none &kp BSPC      &kp SPACE &kp BSPC
+                                                           &none    &kp BSPC      &kp SPACE &kp BSPC
                         >;
                 };
 
@@ -670,7 +420,7 @@
    &kp ESC       &win_cp             &mac_cp          &kp X               &kp K_APP      &kp INS   &kp HOME        &kp UP         &kp END          &kp DEL
    &hml LALT TAB &hml LCTRL C_VOL_DN &hml LGUI C_MUTE &hml LSHFT C_VOL_UP &kp PSCRN      &kp BSPC  &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
    &none         &kp C_PREV          &kp C_PP         &kp C_NEXT          &none          &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
-                                                                   &none  &kp BSPC       &kp LSHFT &none
+                                                                 &none    &kp BSPC       &kp LSHFT &none
                         >;
                 };
                 
@@ -684,7 +434,7 @@
    &kp F1 &kp F2     &kp F3  &kp F4  &kp F5        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2     &bt BT_SEL 3 &bt BT_SEL 4
    &kp F6 &kp F7     &kp F8  &kp F9  &kp F10       &bt BT_CLR   &kp LSHFT    &kp LGUI         &kp LCTRL    &kp LALT
    &none  &sys_reset &kp F11 &kp F12 &none         &none        &out OUT_TOG &rgb_ug RGB_BASE &sys_reset   &none
-                               &none &none         &none &none
+                             &none   &none         &none    &none
                         >;
                 };                
     };
