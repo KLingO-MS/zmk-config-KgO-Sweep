@@ -349,7 +349,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
             // global-quick-tap;
-            bindings = <&mo _SYM>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
         spt: space-tap {
@@ -360,7 +360,7 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <200>;
             // global-quick-tap;
-            bindings = <&mo _NAV>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
 // ------------------------- MOD-MORPHS --------------------------------
@@ -395,7 +395,7 @@
    &hml RALT Q &kp Z        &kp C       &kp P        &kp B           &kp K     &kp L        &kp U       &kp Y        &hmr RALT X
    &hml LALT A &hml LCTRL R &hml LGUI S &hml LSHFT T &kp G           &kp M     &hmr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
    &kp SQT     &kp W        &kp V       &kp D        &kp SEMI        &kp COLON &kp H        &kp F       &kp J        &kp DQT
-                                          &kp COMMA  &bst 0 BSPC     &spt 0 SPACE  &kp DOT
+                                          &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
                         >;
                 };
 
