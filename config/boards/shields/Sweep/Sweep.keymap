@@ -181,100 +181,58 @@
             layers = <_BASE>;
         };
 
-        // combo_LPAR {
-        //     timeout-ms = <40>;
-        //     key-positions = <LMM LMI>;
-        //     bindings = <&kp LPAR>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_RPAR {
-        //     timeout-ms = <40>;
-        //     key-positions = <RMI RMM>;
-        //     bindings = <&kp RPAR>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_LBRC {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTM LTI>;
-        //     bindings = <&kp LBRC>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_RBRC {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTI RTM>;
-        //     bindings = <&kp RBRC>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_LBKT {
-        //     timeout-ms = <40>;
-        //     key-positions = <LBM LBI>;
-        //     bindings = <&kp LBKT>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_RBKT {
-        //     timeout-ms = <40>;
-        //     key-positions = <RBI RBM>;
-        //     bindings = <&kp RBKT>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        combo_AT {
-            timeout-ms = <45>;
-            key-positions = <LTR LMR>;
-            bindings = <&kp AT>;
+        combo_LPAR {
+            timeout-ms = <40>;
+            key-positions = <LMM LMI>;
+            bindings = <&kp LPAR>;
             layers = <_BASE _SYM>;
         };
 
-        combo_HASH {
-            timeout-ms = <45>;
-            key-positions = <LTM LMM>;
-            bindings = <&kp HASH>;
+        combo_RPAR {
+            timeout-ms = <40>;
+            key-positions = <RMI RMM>;
+            bindings = <&kp RPAR>;
             layers = <_BASE _SYM>;
         };
 
-        combo_DLLR {
-            timeout-ms = <45>;
-            key-positions = <LTI LMI>;
-            bindings = <&kp DLLR>;
+        combo_LBRC {
+            timeout-ms = <40>;
+            key-positions = <LTM LTI>;
+            bindings = <&kp LBRC>;
             layers = <_BASE _SYM>;
         };
 
-        combo_PERCENT {
-            timeout-ms = <45>;
-            key-positions = <RTI RMI>;
-            bindings = <&kp PERCENT>;
+        combo_RBRC {
+            timeout-ms = <40>;
+            key-positions = <RTI RTM>;
+            bindings = <&kp RBRC>;
             layers = <_BASE _SYM>;
         };
 
-        combo_CARET {
-            timeout-ms = <45>;
-            key-positions = <RTM RMM>;
-            bindings = <&kp CARET>;
+        combo_LBKT {
+            timeout-ms = <40>;
+            key-positions = <LBM LBI>;
+            bindings = <&kp LBKT>;
             layers = <_BASE _SYM>;
         };
 
-        combo_AMPS {
-            timeout-ms = <45>;
-            key-positions = <RTR RMR>;
-            bindings = <&kp AMPS>;
+        combo_RBKT {
+            timeout-ms = <40>;
+            key-positions = <RBI RBM>;
+            bindings = <&kp RBKT>;
             layers = <_BASE _SYM>;
         };
 
         combo_GT {
             timeout-ms = <45>;
-            key-positions = <RMM RMI>;
+            key-positions = <RTM RTR>;
             bindings = <&kp GT>;
             layers = <_BASE _SYM>;
         };
 
         combo_LT {
             timeout-ms = <45>;
-            key-positions = <LMM LMI>;
+            key-positions = <LTM LTR>;
             bindings = <&kp LT>;
             layers = <_BASE _SYM>;
         };
@@ -401,29 +359,29 @@
 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  !  |  "  |  ;  |  :  |  *  |    |  +  |  7  |  8  |  9  |  =  |
-// |  ?  |  '  |  ,  |  .  |  `  |    |  ~  |  4  |  5  |  6  |  0  |
-// |  \  |  |  |  _  |  -  |  <  |    |  >  |  1  |  2  |  3  |  /  |
+// |  #  |  &  |  ?  |  !  |  $  |    |  ^  |  7  |  8  |  9  |  %  |
+// |  @  |  *  |  -  |  +  |  `  |    |  ~  |  4  |  5  |  6  |  0  |
+// |  \  |  |  |  _  |  =  |  <  |    |  >  |  1  |  2  |  3  |  /  |
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
-   &hml RALT EXCL  &kp DQT        &kp SEMI        &kp COLON      &kp STAR      &kp PLUS  &kp N7        &kp N8       &kp N9        &hmr RALT EQUAL
-   &hml LALT QMARK &hml LCTRL SQT &hml LGUI COMMA &hml LSHFT DOT &kp GRAVE     &kp TILDE &hmr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
-   &kp BSLH        &kp PIPE       &kp UNDER       &kp MINUS      &kp LT        &kp GT    &kp N1        &kp N2       &kp N3        &kp SLASH
-                                                        &none    &kp BSPC      &kp SPACE &kp BSPC
+   &hml RALT HASH &kp AMPS        &kp QMARK       &kp EXCL        &kp DLLR      &kp CARET &kp N7        &kp N8       &kp N9        &hmr RALT PERCENT
+   &hml LALT AT   &hml LCTRL STAR &hml LGUI MINUS &hml LSHFT PLUS &kp GRAVE     &kp TILDE &hmr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
+   &kp BSLH       &kp PIPE        &kp UNDER       &kp EQUAL       &kp LT        &kp GT    &kp N1        &kp N2       &kp N3        &kp SLASH
+                                                         &none    &kp BSPC      &kp SPACE &kp BSPC
                         >;
                 };
 
                 nav_layer {
 // ---------------------------------    -----------------------------------
-// | ESC | VOL+ |  {  |  }  | PSCR |    | BSPC | HOME |  UP  | END  | DEL |
-// | TAB | MUTE |  (  |  )  | APP  |    | INS  | LEFT | DOWN | RGHT | RET |
-// |     | VOL- |  [  |  ]  |      |    |      | PGUP | SPC  | PGDN |     |
+// | ESC | VOL+ |  '  |  "  | PSCR |    | BSPC | HOME |  UP  | END  | DEL |
+// | TAB | MUTE |  ,  |  .  | APP  |    | INS  | LEFT | DOWN | RGHT | RET |
+// |     | VOL- |  ;  |  :  |      |    |      | PGUP | SPC  | PGDN |     |
 //                   | LSFT | BSPC |    | SHFT |      |
                         bindings = <
-   &kp ESC       &kp C_VOL_UP      &kp LBRC       &kp RBRC        &kp PSCRN      &kp BSPC  &kp HOME        &kp UP         &kp END          &kp DEL
-   &hml LALT TAB &hml LCTRL C_MUTE &hml LGUI LPAR &hml LSHFT RPAR &kp K_APP      &kp INS   &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-   &none         &kp C_VOL_DN      &kp LBKT       &kp RBKT        &none          &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
-                                                       &kp LSHFT  &kp BSPC       &kp LSHFT &none
+   &kp ESC       &kp C_VOL_UP      &kp SQT         &kp DQT        &kp PSCRN      &kp BSPC  &kp HOME        &kp UP         &kp END          &kp DEL
+   &hml LALT TAB &hml LCTRL C_MUTE &hml LGUI COMMA &hml LSHFT DOT &kp K_APP      &kp INS   &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+   &none         &kp C_VOL_DN      &kp SEMI        &kp COLON      &none          &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
+                                                         &kp LSHFT   &kp BSPC       &kp LSHFT &none
                         >;
                 };
                 
