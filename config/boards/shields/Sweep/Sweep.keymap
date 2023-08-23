@@ -188,28 +188,14 @@
         combo_RALTL {
             timeout-ms = <40>;
             key-positions = <LMP LTP>;
-            bindings = <&caps_word>;
+            bindings = <&kp RALT>;
             //layers = <_BASE>;
         };
 
         combo_RALTR {
             timeout-ms = <40>;
             key-positions = <LMP RTP>;
-            bindings = <&caps_word>;
-            //layers = <_BASE>;
-        };
-
-        combo_LREPEAT {
-            timeout-ms = <45>;
-            key-positions = <LMM LMR>;
-            bindings = <&key_repeat>;
-            //layers = <_BASE>;
-        };
-
-        combo_RREPEAT {
-            timeout-ms = <45>;
-            key-positions = <RMM RMR>;
-            bindings = <&key_repeat>;
+            bindings = <&kp RALT>;
             //layers = <_BASE>;
         };
 
@@ -258,28 +244,28 @@
 
         combo_GT {
             timeout-ms = <45>;
-            key-positions = <RTM RTR>;
+            key-positions = <RBM RBR>;
             bindings = <&kp GT>;
             layers = <_BASE _SYM>;
         };
 
         combo_LT {
             timeout-ms = <45>;
-            key-positions = <LTM LTR>;
+            key-positions = <LBM LBR>;
             bindings = <&kp LT>;
             layers = <_BASE _SYM>;
         };
 
         combo_FSLH {
             timeout-ms = <45>;
-            key-positions = <RBM RBR>;
+            key-positions = <RMM RMR>;
             bindings = <&kp FSLH>;
             layers = <_BASE _SYM>;
         };
 
         combo_BSLH {
             timeout-ms = <45>;
-            key-positions = <LBR LBM>;
+            key-positions = <LMR LMM>;
             bindings = <&kp BSLH>;
             layers = <_BASE _SYM>;
         };
