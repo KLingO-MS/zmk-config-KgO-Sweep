@@ -244,28 +244,42 @@
 
         combo_GT {
             timeout-ms = <45>;
-            key-positions = <RBM RBR>;
+            key-positions = <RTM RTR>;
             bindings = <&kp GT>;
             layers = <_BASE _SYM>;
         };
 
         combo_LT {
             timeout-ms = <45>;
-            key-positions = <LBM LBR>;
+            key-positions = <LTM LTR>;
             bindings = <&kp LT>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_COM_SEM {
+            timeout-ms = <45>;
+            key-positions = <RMM RMR>;
+            bindings = <&com_sem>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_DOT_COL {
+            timeout-ms = <45>;
+            key-positions = <LMR LMM>;
+            bindings = <&dot_col>;
             layers = <_BASE _SYM>;
         };
 
         combo_FSLH {
             timeout-ms = <45>;
-            key-positions = <RMM RMR>;
+            key-positions = <RBM RBR>;
             bindings = <&kp FSLH>;
             layers = <_BASE _SYM>;
         };
 
         combo_BSLH {
             timeout-ms = <45>;
-            key-positions = <LMR LMM>;
+            key-positions = <LBR LBM>;
             bindings = <&kp BSLH>;
             layers = <_BASE _SYM>;
         };
@@ -341,21 +355,21 @@
         };
 
 // ------------------------- MOD-MORPHS --------------------------------
-        // com_sem: comma_semicolon {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     label = "COMMA_SEMI";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp COMMA>, <&kp SEMI>;
-        //     mods = <(MOD_LSFT)>;
-        // };
+        com_sem: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT)>;
+        };
 
-        // dot_col: dot_colon {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     label = "DOT_COLON";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp DOT>, <&kp COLON>;
-        //     mods = <(MOD_LSFT)>;
-        // };
+        dot_col: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT)>;
+        };
         
     };
 
