@@ -244,42 +244,28 @@
 
         combo_GT {
             timeout-ms = <45>;
-            key-positions = <RTM RTR>;
+            key-positions = <RBM RBR>;
             bindings = <&kp GT>;
             layers = <_BASE _SYM>;
         };
 
         combo_LT {
             timeout-ms = <45>;
-            key-positions = <LTM LTR>;
+            key-positions = <LBM LBR>;
             bindings = <&kp LT>;
-            layers = <_BASE _SYM>;
-        };
-
-        combo_COM_SEM {
-            timeout-ms = <45>;
-            key-positions = <RMM RMR>;
-            bindings = <&com_sem>;
-            layers = <_BASE _SYM>;
-        };
-
-        combo_DOT_COL {
-            timeout-ms = <45>;
-            key-positions = <LMR LMM>;
-            bindings = <&dot_col>;
             layers = <_BASE _SYM>;
         };
 
         combo_FSLH {
             timeout-ms = <45>;
-            key-positions = <RBM RBR>;
+            key-positions = <RMM RMR>;
             bindings = <&kp FSLH>;
             layers = <_BASE _SYM>;
         };
 
         combo_BSLH {
             timeout-ms = <45>;
-            key-positions = <LBR LBM>;
+            key-positions = <LMR LMM>;
             bindings = <&kp BSLH>;
             layers = <_BASE _SYM>;
         };
@@ -309,7 +295,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HRM";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             global-quick-tap-ms = <120>;
@@ -322,6 +308,32 @@
         hmr: hrm_right {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HRM";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
+            global-quick-tap-ms = <120>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
+
+        hsl: hrs_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_SHIFT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
+            global-quick-tap-ms = <120>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
+
+        hsr: hrs_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_SHIFT";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <300>;
@@ -355,21 +367,21 @@
         };
 
 // ------------------------- MOD-MORPHS --------------------------------
-        com_sem: comma_semicolon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMI";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-            mods = <(MOD_LSFT)>;
-        };
+        // com_sem: comma_semicolon {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     label = "COMMA_SEMI";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp COMMA>, <&kp SEMI>;
+        //     mods = <(MOD_LSFT)>;
+        // };
 
-        dot_col: dot_colon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_COLON";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
-            mods = <(MOD_LSFT)>;
-        };
+        // dot_col: dot_colon {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     label = "DOT_COLON";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp DOT>, <&kp COLON>;
+        //     mods = <(MOD_LSFT)>;
+        // };
         
     };
 
@@ -384,7 +396,7 @@
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
    &kp Q       &kp Z        &kp C       &kp P        &kp B           &kp K     &kp L        &kp U       &kp Y        &kp X
-   &hml LALT A &hml LCTRL R &hml LGUI S &hml LSHFT T &kp G           &kp M     &hmr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
+   &hml LALT A &hml LCTRL R &hml LGUI S &hsl LSHFT T &kp G           &kp M     &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
    &kp SQT     &kp W        &kp V       &kp D        &kp COMMA       &kp DOT   &kp H        &kp F       &kp J        &kp SEMI
                                           &kp LSHFT  &bst _SYM BSPC  &spt _NAV SPACE  &kp LSHFT
                         >;
@@ -398,7 +410,7 @@
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
    &kp HASH     &kp AMPS        &kp QMARK       &kp EXCL        &kp DLLR      &kp CARET &kp N7        &kp N8       &kp N9        &kp PERCENT
-   &hml LALT AT &hml LCTRL STAR &hml LGUI MINUS &hml LSHFT PLUS &kp GRAVE     &kp TILDE &hmr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
+   &hml LALT AT &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp GRAVE     &kp TILDE &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
    &kp BSLH     &kp PIPE        &kp UNDER       &kp EQUAL       &kp LT        &kp GT    &kp N1        &kp N2       &kp N3        &kp SLASH
                                                        &none    &kp BSPC      &kp SPACE &kp BSPC
                         >;
@@ -412,7 +424,7 @@
 //                   | LSFT | BSPC |    | SHFT |      |
                         bindings = <
    &kp ESC       &kp C_VOL_UP      &kp SQT         &kp DQT        &kp PSCRN      &kp BSPC  &kp HOME        &kp UP         &kp END          &kp DEL
-   &hml LALT TAB &hml LCTRL C_MUTE &hml LGUI COMMA &hml LSHFT DOT &kp K_APP      &kp INS   &hmr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
+   &hml LALT TAB &hml LCTRL C_MUTE &hml LGUI COMMA &hsl LSHFT DOT &kp K_APP      &kp INS   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
    &none         &kp C_VOL_DN      &kp SEMI        &kp COLON      &none          &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
                                                          &kp LSHFT   &kp BSPC       &kp LSHFT &none
                         >;
