@@ -202,14 +202,14 @@
         combo_LREPEAT {
             timeout-ms = <45>;
             key-positions = <LMM LMR>;
-            bindings = <&repeat>;
+            bindings = <&key_repeat>;
             //layers = <_BASE>;
         };
 
         combo_RREPEAT {
             timeout-ms = <45>;
             key-positions = <RMM RMR>;
-            bindings = <&repeat>;
+            bindings = <&key_repeat>;
             //layers = <_BASE>;
         };
 
