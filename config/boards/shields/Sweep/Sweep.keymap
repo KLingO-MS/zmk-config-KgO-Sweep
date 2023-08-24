@@ -412,7 +412,7 @@
    &kp HASH     &kp AMPS        &kp QMARK       &kp EXCL        &kp DLLR      &kp CARET &kp N7        &kp N8       &kp N9        &kp PERCENT
    &hml LALT AT &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp GRAVE     &kp TILDE &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
    &kp BSLH     &kp PIPE        &kp UNDER       &kp EQUAL       &kp LT        &kp GT    &kp N1        &kp N2       &kp N3        &kp SLASH
-                                                       &none    &kp BSPC      &kp SPACE &kp BSPC
+                                                       &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
                         >;
                 };
 
@@ -426,7 +426,7 @@
    &kp ESC       &kp C_VOL_UP      &kp SQT         &kp DQT        &kp PSCRN      &kp BSPC  &kp HOME        &kp UP         &kp END          &kp DEL
    &hml LALT TAB &hml LCTRL C_MUTE &hml LGUI COMMA &hsl LSHFT DOT &kp K_APP      &kp INS   &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
    &none         &kp C_VOL_DN      &kp SEMI        &kp COLON      &none          &none     &kp PG_UP       &kp SPACE      &kp PG_DN        &none
-                                                         &kp LSHFT   &kp BSPC       &kp LSHFT &none
+                                                      &kp LSHFT   &kp BSPC       &kp LSHFT &none
                         >;
                 };
                 
