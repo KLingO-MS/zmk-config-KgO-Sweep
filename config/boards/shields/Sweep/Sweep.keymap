@@ -13,11 +13,12 @@
 
 #define _BASE    0
 #define _SYM     1
-#define _NAV     2
-#define _BTF     3
+#define _NUM     2
+#define _NAV     3
+#define _BTF     4
 
 #define RGB_BASE RGB_COLOR_HSB(0,100,3)
-#define RGB_SYM RGB_COLOR_HSB(20,100,3)
+#define RGB_SYM RGB_COLOR_HSB(50,100,3)
 #define RGB_NAV RGB_COLOR_HSB(180,100,3)
 #define RGB_BTF RGB_COLOR_HSB(230,100,4)
 
@@ -27,6 +28,10 @@
 
 &sl {
     release-after-ms = <300>;
+};
+
+&num_word {
+    layers = <_NUM>;  // replace NUM by the location of numbers layer
 };
 
 / {
@@ -348,7 +353,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
             //global-quick-tap-ms = <100>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&num_word>, <&kp>;
         };
 
         spt: space-tap {
@@ -409,6 +414,20 @@
    &hml LALT AT &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp GRAVE     &kp TILDE &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
    &kp BSLH     &kp PIPE        &kp UNDER       &kp EQUAL       &kp LT        &kp GT    &kp N1        &kp N2       &kp N3        &kp SLASH
                                                        &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
+                        >;
+                };
+
+                num_layer {
+// -------------------------------    -------------------------------
+// |  #  |  &  |  ?  |  !  |  $  |    |  ^  |  7  |  8  |  9  |  %  |
+// |  @  |  *  |  -  |  +  |  `  |    |  ~  |  4  |  5  |  6  |  0  |
+// |  \  |  |  |  _  |  =  |  <  |    |  >  |  1  |  2  |  3  |  /  |
+//                  |     | BSPC |    | SPC | BSPC |
+                        bindings = <
+    &trans  &trans  &trans  &trans  &trans      &trans  &kp N7        &kp N8       &kp N9  &trans  
+    &trans  &trans  &trans  &trans  &trans      &trans  &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
+    &trans  &trans  &trans  &trans  &trans      &trans  &kp N1        &kp N2       &kp N3  &trans  
+                            &trans  &trans      &trans  &trans  
                         >;
                 };
 
