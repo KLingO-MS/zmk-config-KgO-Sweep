@@ -13,13 +13,12 @@
 
 #define _BASE    0
 #define _SYM     1
-#define _NUM     2
-#define _NAV     3
-#define _BTF     4
+#define _NAV     2
+#define _BTF     3
 
 #define RGB_BASE RGB_COLOR_HSB(0,100,3)
-#define RGB_SYM RGB_COLOR_HSB(50,100,3)
-#define RGB_NAV RGB_COLOR_HSB(180,100,3)
+#define RGB_SYM RGB_COLOR_HSB(40,100,3)
+#define RGB_NAV RGB_COLOR_HSB(150,100,3)
 #define RGB_BTF RGB_COLOR_HSB(230,100,4)
 
 &sk {
@@ -28,10 +27,6 @@
 
 &sl {
     release-after-ms = <300>;
-};
-
-&num_word {
-    layers = <_NUM>;  // replace NUM by the location of numbers layer
 };
 
 / {
@@ -290,15 +285,6 @@
         //     bindings = <&kp LG(C)>, <&kp LG(V)>;
         // };
 
-        smart_num: smart_num {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER";
-            #binding-cells = <0>;
-            bindings = <&tog _NUM>, <&none>, <&tog _NUM>;
-            ignored-key-positions = <RTI RMI RBI RTM RMM RBM RTR RMR RBR RMP>;
-            ignored-layers = <_NUM>;
-        }; 
-
 // ------------------------- HOLD-TAPS --------------------------------
         /* left-hand HRMs */
         hml: hrm_left {
@@ -362,7 +348,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
             //global-quick-tap-ms = <100>;
-            bindings = <&smart_num>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
         spt: space-tap {
@@ -408,7 +394,7 @@
    &kp Q       &kp Z        &kp C       &kp P        &kp B           &kp K     &kp L        &kp U       &kp Y        &kp X
    &hml LALT A &hml LCTRL R &hml LGUI S &hsl LSHFT T &kp G           &kp M     &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
    &kp SQT     &kp W        &kp V       &kp D        &kp COMMA       &kp DOT   &kp H        &kp F       &kp J        &kp SEMI
-                                          &kp LSHFT  &bst _SYM BSPC  &spt _NAV SPACE  &kp LSHFT
+                                          &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
                         >;
                 };
 
@@ -426,30 +412,16 @@
                         >;
                 };
 
-                num_layer {
-// -------------------------------    -------------------------------
-// |  #  |  &  |  ?  |  !  |  $  |    |  ^  |  7  |  8  |  9  |  %  |
-// |  @  |  *  |  -  |  +  |  `  |    |  ~  |  4  |  5  |  6  |  0  |
-// |  \  |  |  |  _  |  =  |  <  |    |  >  |  1  |  2  |  3  |  /  |
-//                  |     | BSPC |    | SPC | BSPC |
-                        bindings = <
-    &trans  &trans  &trans  &trans  &trans      &trans  &kp N7        &kp N8       &kp N9  &trans  
-    &trans  &trans  &trans  &trans  &trans      &trans  &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
-    &trans  &trans  &trans  &trans  &trans      &trans  &kp N1        &kp N2       &kp N3  &trans  
-                            &trans  &trans      &trans  &trans  
-                        >;
-                };
-
                 nav_layer {
 // ---------------------------------    -----------------------------------
-// | ESC | VOL+ |  '  |  "  | PSCR |    | PGUP | BSPC |  UP  | DEL  | INS |
+// | ESC | VOL+ |  '  |  "  | PSCR |    | PGUP | HOME |  UP  | END  | INS |
 // | TAB | MUTE |  ,  |  .  | APP  |    | PGDN | LEFT | DOWN | RGHT | RET |
-// |     | VOL- |  ;  |  :  |      |    |      | HOME | SPC  | END  |     |
+// |     | VOL- |  ;  |  :  |      |    |      | BSPC | SPC  | DEL  |     |
 //                   | LSFT | BSPC |    | SHFT |      |
                         bindings = <
-   &kp ESC       &kp C_VOL_UP      &kp SQT         &kp DQT        &kp PSCRN      &kp PG_UP &kp BSPC        &kp UP         &kp DEL          &kp INS
+   &kp ESC       &kp C_VOL_UP      &kp SQT         &kp DQT        &kp PSCRN      &kp PG_UP &kp HOME        &kp UP         &kp END          &kp INS
    &hml LALT TAB &hml LCTRL C_MUTE &hml LGUI COMMA &hsl LSHFT DOT &kp K_APP      &kp PG_DN &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-   &none         &kp C_VOL_DN      &kp SEMI        &kp COLON      &none          &none     &kp HOME        &kp SPACE      &kp END          &none
+   &none         &kp C_VOL_DN      &kp SEMI        &kp COLON      &none          &none     &kp BSPC        &kp SPACE      &kp DEL          &none
                                                       &kp LSHFT   &kp BSPC       &kp LSHFT &none
                         >;
                 };
@@ -459,7 +431,7 @@
 // | F1 |  F2   | F3  | F4  | F5  |    |  BT1  | BT2  | BT3 |  BT4  | BT5 |
 // | F6 |  F7   | F8  | F9  | F10 |    | BTCLR | SHFT | GUI | CTRL  | ALT |
 // |    | RESET | F11 | F12 |     |    |       | USB  | RGB | RESET |     |
-//                    |     |   kmk  |    |     |     |
+//                    |     |     |    |     |     |
                         bindings = <
    &kp F1 &kp F2     &kp F3  &kp F4  &kp F5        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4
    &kp F6 &kp F7     &kp F8  &kp F9  &kp F10       &bt BT_CLR   &kp LSHFT    &kp LGUI        &kp LCTRL    &kp LALT
