@@ -29,10 +29,10 @@
     release-after-ms = <300>;
 };
 
-&num_word {
-    layers = <_SYM>;  // replace NUM by the location of numbers layer
-    /delete-property/ ignore-modifiers;
-};
+// &num_word {
+//     layers = <_SYM>;  // replace NUM by the location of numbers layer
+//     /delete-property/ ignore-modifiers;
+// };
 
 / {
 // ------------------------- MACROS --------------------------------
@@ -289,6 +289,15 @@
         //     tapping-term-ms = <400>;
         //     bindings = <&kp LG(C)>, <&kp LG(V)>;
         // };
+
+        num_word: behavior_num_word {
+			compatible = "zmk,behavior-caps-word";
+			label = "NUM_WORD";
+			#binding-cells = <0>;
+            layers = <_SYM>;                                // insert location of numbers layer here
+			continue-list = <BACKSPACE DELETE DOT COMMA N0 N1 N2 N3 N4 N5 N6 N7 N8 N9>;  // adjust as desired
+            //ignore-numbers;                                // numbers don't deactivate the layer
+		};
 
 // ------------------------- HOLD-TAPS --------------------------------
         /* left-hand HRMs */
