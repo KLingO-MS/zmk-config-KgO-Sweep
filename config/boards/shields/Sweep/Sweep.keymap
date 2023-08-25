@@ -18,7 +18,7 @@
 
 #define RGB_BASE RGB_COLOR_HSB(0,100,3)
 #define RGB_SYM RGB_COLOR_HSB(40,100,3)
-#define RGB_NAV RGB_COLOR_HSB(150,100,3)
+#define RGB_NAV RGB_COLOR_HSB(130,100,3)
 #define RGB_BTF RGB_COLOR_HSB(230,100,4)
 
 &sk {
@@ -29,9 +29,26 @@
     release-after-ms = <300>;
 };
 
+&num_word {
+    layers = <_SYM>;  // replace NUM by the location of numbers layer
+};
+
 / {
 // ------------------------- MACROS --------------------------------
     macros {
+        sft: sft {
+            // ...
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>; // Must be 1
+            wait-ms = <0>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
         to_BASE: to_BASE {
             label = "ZM_to_BASE";
             compatible = "zmk,behavior-macro";
@@ -348,7 +365,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
             //global-quick-tap-ms = <100>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&num_word>, <&kp>;
         };
 
         spt: space-tap {
@@ -405,8 +422,8 @@
 // |  \  |  |  |  _  |  =  |  <  |    |  >  |  1  |  2  |  3  |  /  |
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp HASH     &kp AMPS        &kp QMARK       &kp EXCL        &kp DLLR      &kp CARET &kp N7        &kp N8       &kp N9        &kp PERCENT
-   &hml LALT AT &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp GRAVE     &kp TILDE &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
+   &sft N3      &sft N7         &kp QMARK       &sft N1         &sft N4       &sft N6   &kp N7        &kp N8       &kp N9        &sft N5
+   &sft N2      &sft N8         &hml LGUI MINUS &hsl LSHFT PLUS &kp GRAVE     &kp TILDE &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT N0
    &kp BSLH     &kp PIPE        &kp UNDER       &kp EQUAL       &kp LT        &kp GT    &kp N1        &kp N2       &kp N3        &kp SLASH
                                                        &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
                         >;
