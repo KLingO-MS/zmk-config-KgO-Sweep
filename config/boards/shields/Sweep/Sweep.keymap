@@ -40,7 +40,7 @@
             tap-ms = <0>;
             bindings
                 = <&rgb_ug RGB_OFF>
-                , <&to _BASE>
+                , <&tog _NAV>
                 ;
         };
 
@@ -81,7 +81,7 @@
             bindings
                 = <&rgb_ug RGB_ON>
                 , <&rgb_ug RGB_NAV>
-                , <&to _NAV>
+                , <&tog _NAV>
                 ;
         };
 
