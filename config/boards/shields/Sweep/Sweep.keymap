@@ -422,14 +422,14 @@
 
                 nav_layer {
 // --------------------------------    -----------------------------------
-// | ESC |  7  |  8  |  9  |  0   |    | PGUP | HOME |  UP  | END  | INS |
-// | TAB |  4  |  5  |  6  | PSCR |    | PGDN | LEFT | DOWN | RGHT | RET |
-// |     |  1  |  2  |  3  |      |    |      | DEL  | SPC  | APP  |     |
+// | ESC |  7  |  8  |  9  | PSCR |    | PGUP | HOME |  UP  | END  | INS |
+// | TAB |  4  |  5  |  6  |  0   |    | PGDN | LEFT | SPC  | RGHT | RET |
+// |     |  1  |  2  |  3  |      |    |      | DEL  | DOWN | APP  |     |
 //                  | LSFT | BSPC |    | SHFT |      |
                         bindings = <
-   &kp ESC       &kp N7        &kp N8       &kp N9        &kp N0          &kp PG_UP &kp HOME        &kp UP         &kp END          &kp INS
-   &hml LALT TAB &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp PSCRN       &kp PG_DN &hsr LSHFT LEFT &hmr LGUI DOWN &hmr LCTRL RIGHT &hmr LALT RET
-   &none         &kp N1        &kp N2       &kp N3        &none           &none     &kp DEL         &kp SPACE      &kp K_APP        &none
+   &kp ESC       &kp N7        &kp N8       &kp N9        &kp PSCRN       &kp PG_UP &kp HOME        &kp UP          &kp END          &kp INS
+   &hml LALT TAB &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp N0          &kp PG_DN &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
+   &none         &kp N1        &kp N2       &kp N3        &none           &none     &kp DEL         &kp DOWN        &kp K_APP        &none
                                               &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
                         >;
                 };
