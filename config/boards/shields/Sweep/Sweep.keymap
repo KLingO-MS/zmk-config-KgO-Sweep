@@ -12,8 +12,8 @@
 #include "keypos_34keys.h"
 
 #define _BASE    0
-#define _SYM     1
-#define _NAV     2
+#define _NAV     1
+#define _SYM     2
 #define _BTF     3
 
 #define RGB_BASE RGB_COLOR_HSB(0,100,3)
@@ -420,20 +420,6 @@
                         >;
                 };
 
-                sym_layer {
-// -------------------------------    -------------------------------
-// |  <  |  |  |  +  |  *  |  %  |    |  ~  |  #  |  $  |  &  |  >  |
-// |  ?  |  !  |  -  |  _  |  ^  |    |  `  |  ,  |  .  |  "  |  '  |
-// |     |  \  |  =  |  /  |  V- |    |  V+ |  ;  |  :  |  @  |     |
-//                  |     | BSPC |    | SPC | BSPC |
-                        bindings = <
-   &kp LT          &kp PIPE        &kp PLUS        &kp STAR         &kp PRCNT     &kp TILDE    &kp HASH         &kp DLLR      &kp AMPS       &kp GT
-   &hml LALT QMARK &hml LCTRL EXCL &hml LGUI MINUS &hsl LSHFT UNDER &kp CARET     &kp GRAVE    &hsr LSHFT COMMA &hmr LGUI DOT &hmr LCTRL DQT &hmr LALT SQT
-   &none           &kp BSLH        &kp EQUAL       &kp SLASH        &kp C_VOL_DN  &kp C_VOL_UP &kp SEMI         &kp COLON     &kp AT         &none
-                                                           &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
-                        >;
-                };
-
                 nav_layer {
 // --------------------------------    -----------------------------------
 // | ESC |  7  |  8  |  9  |  0   |    | PGUP | HOME |  UP  | END  | INS |
@@ -448,6 +434,20 @@
                         >;
                 };
                 
+                sym_layer {
+// -------------------------------    -------------------------------
+// |  <  |  |  |  +  |  *  |  %  |    |  ~  |  #  |  $  |  &  |  >  |
+// |  ?  |  !  |  -  |  _  |  ^  |    |  `  |  ,  |  .  |  "  |  '  |
+// |     |  \  |  =  |  /  |  V- |    |  V+ |  ;  |  :  |  @  |     |
+//                  |     | BSPC |    | SPC | BSPC |
+                        bindings = <
+   &kp LT          &kp PIPE        &kp PLUS        &kp STAR         &kp PRCNT     &kp TILDE    &kp HASH         &kp DLLR      &kp AMPS       &kp GT
+   &hml LALT QMARK &hml LCTRL EXCL &hml LGUI MINUS &hsl LSHFT UNDER &kp CARET     &kp GRAVE    &hsr LSHFT COMMA &hmr LGUI DOT &hmr LCTRL DQT &hmr LALT SQT
+   &none           &kp BSLH        &kp EQUAL       &kp SLASH        &kp C_VOL_DN  &kp C_VOL_UP &kp SEMI         &kp COLON     &kp AT         &none
+                                                           &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
+                        >;
+                };
+
                 btf_layer {
 // --------------------------------    ------------------------------------
 // | F1 |  F2   | F3  | F4  | F5  |    |  BT1  | BT2  | BT3 |  BT4  | BT5 |
