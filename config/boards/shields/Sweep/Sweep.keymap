@@ -437,13 +437,13 @@
                 sym_layer {
 // -------------------------------    -------------------------------
 // |  <  |  |  |  +  |  *  |  %  |    |  ~  |  #  |  $  |  &  |  >  |
-// |  !  |  ?  |  -  |  _  |  ^  |    |  `  |  .  |  ,  |  "  |  '  |
+// |  ?  |  !  |  -  |  _  |  ^  |    |  `  |  .  |  ,  |  "  |  '  |
 // |     |  \  |  =  |  /  |  V- |    |  V+ |  :  |  ;  |  @  |     |
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp LT         &kp PIPE         &kp PLUS        &kp STAR         &kp PRCNT     &kp TILDE    &kp HASH       &kp DLLR        &kp AMPS       &kp GT
-   &hml LALT EXCL &hml LCTRL QMARK &hml LGUI MINUS &hsl LSHFT UNDER &kp CARET     &kp GRAVE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT SQT
-   &none          &kp BSLH         &kp EQUAL       &kp SLASH        &kp C_VOL_DN  &kp C_VOL_UP &kp COLON      &kp SEMI        &kp AT         &none
+   &kp LT          &kp PIPE        &kp PLUS        &kp STAR         &kp PRCNT     &kp TILDE    &kp HASH       &kp DLLR        &kp AMPS       &kp GT
+   &hml LALT QMARK &hml LCTRL EXCL &hml LGUI MINUS &hsl LSHFT UNDER &kp CARET     &kp GRAVE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT SQT
+   &none           &kp BSLH        &kp EQUAL       &kp SLASH        &kp C_VOL_DN  &kp C_VOL_UP &kp COLON      &kp SEMI        &kp AT         &none
                                                            &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
                         >;
                 };
