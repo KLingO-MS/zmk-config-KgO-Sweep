@@ -437,13 +437,13 @@
                 sym_layer {
 // -------------------------------    -------------------------------
 // |  %  |  |  |  +  |  *  |  <  |    |  >  |  #  |  $  |  &  |  @  |
-// |  ?  |  !  |  -  |  _  |  `  |    |  ~  |  .  |  ,  |  "  |  '  |
+// |  !  |  '  |  -  |  _  |  `  |    |  ~  |  .  |  ,  |  "  |  ?  |
 // |     |  \  |  =  |  /  |     |    |     |  :  |  ;  |  ^  |     |
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp PRCNT       &kp PIPE        &kp PLUS        &kp STAR         &kp LT        &kp GT       &kp HASH       &kp DLLR        &kp AMPS       &kp AT
-   &hml LALT QMARK &hml LCTRL EXCL &hml LGUI MINUS &hsl LSHFT UNDER &kp GRAVE     &kp TILDE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT SQT
-   &none           &kp BSLH        &kp EQUAL       &kp SLASH        &none         &none        &kp COLON      &kp SEMI        &kp CARET      &none
+   &kp PRCNT      &kp PIPE       &kp PLUS        &kp STAR         &kp LT        &kp GT       &kp HASH       &kp DLLR        &kp AMPS       &kp AT
+   &hml LALT EXCL &hml LCTRL SQT &hml LGUI MINUS &hsl LSHFT UNDER &kp GRAVE     &kp TILDE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT QMARK
+   &none          &kp BSLH       &kp EQUAL       &kp SLASH        &none         &none        &kp COLON      &kp SEMI        &kp CARET      &none
                                                            &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
                         >;
                 };
