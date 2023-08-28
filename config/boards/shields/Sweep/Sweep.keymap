@@ -436,14 +436,14 @@
                 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  <  |  |  |  +  |  *  |  %  |    |  ~  |  #  |  $  |  &  |  >  |
-// |  ?  |  !  |  -  |  _  |  ^  |    |  `  |  .  |  ,  |  "  |  '  |
-// |     |  \  |  =  |  /  |  V- |    |  V+ |  :  |  ;  |  @  |     |
+// |  %  |  |  |  +  |  *  |  <  |    |  >  |  #  |  $  |  &  |  @  |
+// |  ?  |  !  |  -  |  _  |  `  |    |  ~  |  .  |  ,  |  "  |  '  |
+// |     |  \  |  =  |  /  |     |    |     |  :  |  ;  |  ^  |     |
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp LT          &kp PIPE        &kp PLUS        &kp STAR         &kp PRCNT     &kp TILDE    &kp HASH       &kp DLLR        &kp AMPS       &kp GT
-   &hml LALT QMARK &hml LCTRL EXCL &hml LGUI MINUS &hsl LSHFT UNDER &kp CARET     &kp GRAVE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT SQT
-   &none           &kp BSLH        &kp EQUAL       &kp SLASH        &kp C_VOL_DN  &kp C_VOL_UP &kp COLON      &kp SEMI        &kp AT         &none
+   &kp PRCNT       &kp PIPE        &kp PLUS        &kp STAR         &kp LT        &kp GT       &kp HASH       &kp DLLR        &kp AMPS       &kp AT
+   &hml LALT QMARK &hml LCTRL EXCL &hml LGUI MINUS &hsl LSHFT UNDER &kp GRAVE     &kp TILDE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT SQT
+   &none           &kp BSLH        &kp EQUAL       &kp SLASH        &none         &none        &kp COLON      &kp SEMI        &kp CARET      &none
                                                            &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
                         >;
                 };
