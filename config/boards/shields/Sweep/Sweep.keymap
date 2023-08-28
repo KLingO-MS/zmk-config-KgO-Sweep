@@ -59,18 +59,18 @@
         //         ;
         // };
 
-        to_SYM: to_SYM {
-            label = "ZM_to_SYM";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&rgb_ug RGB_ON>
-                , <&rgb_ug RGB_SYM>
-                , <&to _SYM>
-                ;
-        };
+        // to_SYM: to_SYM {
+        //     label = "ZM_to_SYM";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings
+        //         = <&rgb_ug RGB_ON>
+        //         , <&rgb_ug RGB_SYM>
+        //         , <&to _SYM>
+        //         ;
+        // };
 
         to_NAV: to_NAV {
             label = "ZM_to_NAV";
@@ -176,21 +176,21 @@
 // ------------------------- VOLUME COMBOS --------------------------------
         combo_V_UP {
             timeout-ms = <40>;
-            key-positions = <RTC RMC>;
+            key-positions = <LTR LTM>;
             bindings = <&kp C_VOL_UP>;
             // layers = <_BASE _SYM>;
         };
 
         combo_V_DN {
             timeout-ms = <40>;
-            key-positions = <LTC LMC>;
+            key-positions = <LBR LBM>;
             bindings = <&kp C_VOL_DN>;
             // layers = <_BASE _SYM>;
         };
 
         combo_MUTE {
             timeout-ms = <50>;
-            key-positions = <LMC RMC>;
+            key-positions = <LMR LMM>;
             bindings = <&kp C_MUTE>;
             // layers = <_BASE _SYM>;
         };
