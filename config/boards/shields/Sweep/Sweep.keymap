@@ -178,6 +178,7 @@
             timeout-ms = <40>;
             key-positions = <LTR LTM>;
             bindings = <&kp C_VOL_UP>;
+            global-quick-tap-ms = <200>;
             // layers = <_BASE _SYM>;
         };
 
@@ -185,6 +186,7 @@
             timeout-ms = <40>;
             key-positions = <LBR LBM>;
             bindings = <&kp C_VOL_DN>;
+            global-quick-tap-ms = <200>;
             // layers = <_BASE _SYM>;
         };
 
@@ -192,6 +194,7 @@
             timeout-ms = <50>;
             key-positions = <LMR LMM>;
             bindings = <&kp C_MUTE>;
+            global-quick-tap-ms = <200>;
             // layers = <_BASE _SYM>;
         };
 
@@ -200,6 +203,7 @@
             timeout-ms = <50>;
             key-positions = <LMI RMI>;
             bindings = <&caps_word>;
+            global-quick-tap-ms = <200>;
             layers = <_BASE>;
         };
 
@@ -207,6 +211,7 @@
             timeout-ms = <40>;
             key-positions = <LMP LTP>;
             bindings = <&kp RALT>;
+            global-quick-tap-ms = <200>;
             //layers = <_BASE>;
         };
 
@@ -214,6 +219,7 @@
             timeout-ms = <40>;
             key-positions = <LMP RTP>;
             bindings = <&kp RALT>;
+            global-quick-tap-ms = <200>;
             //layers = <_BASE>;
         };
 
