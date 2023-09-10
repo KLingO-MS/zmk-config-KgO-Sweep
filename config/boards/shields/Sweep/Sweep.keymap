@@ -414,14 +414,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  Q  |  Z  |  D  |  P  |  B  |    |  V  |  L  |  U  |  Y  |  X  |
+// |  Q  |  Z  |  L  |  K  |  P  |    |  B  |  V  |  U  |  Y  |  X  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-// |     |  W  |  C  |  K  |     |    |     |  H  |  F  |  J  |     |
+// |     |  W  |  C  |  D  |     |    |     |  H  |  F  |  J  |     |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
-   &kp Q       &kp Z        &kp D       &kp P        &kp B           &kp V  &kp L        &kp U       &kp Y        &kp X
+   &kp Q       &kp Z        &kp L       &kp K        &kp P           &kp B  &kp V        &kp U       &kp Y        &kp X
    &hml LALT A &hml LCTRL R &hml LGUI S &hsl LSHFT T &kp G           &kp M  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
-   &none       &kp W        &kp C       &kp K        &none           &none  &kp H        &kp F       &kp J        &none
+   &none       &kp W        &kp C       &kp D        &none           &none  &kp H        &kp F       &kp J        &none
                                           &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
                         >;
                 };
@@ -436,7 +436,7 @@
    &kp ESC      &kp N7        &kp N8       &kp N9        &kp PSCRN       &kp K_APP &kp HOME        &kp UP          &kp END          &kp INS
    &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB         &kp DEL   &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
    &none        &kp N1        &kp N2       &kp N3        &none           &none     &kp PG_UP       &kp DOWN        &kp PG_DN        &none
-                                              &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
+                                             &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
                         >;
                 };
                 
