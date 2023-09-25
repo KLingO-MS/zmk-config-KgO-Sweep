@@ -473,7 +473,7 @@
 // |     |  1  |  2  |  3  |      |    |     | PGUP | DOWN | PGDN |     |
 //                  | LSFT | BSPC |    | SHFT |      |
                         bindings = <
-   &kp KP_COMMA &kp N7        &kp N8       &kp N9        &kp ESC         &kp K_APP &kp HOME        &kp UP          &kp END          &kp INS
+   &kp KP_DOT   &kp N7        &kp N8       &kp N9        &kp ESC         &kp K_APP &kp HOME        &kp UP          &kp END          &kp INS
    &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB         &kp DEL   &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
    &none        &kp N1        &kp N2       &kp N3        &none           &none     &kp PG_UP       &kp DOWN        &kp PG_DN        &none
                                              &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
