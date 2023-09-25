@@ -176,7 +176,7 @@
 // ------------------------- VOLUME COMBOS --------------------------------
         combo_V_UP {
             timeout-ms = <40>;
-            key-positions = <LTR LTM>;
+            key-positions = <RTM RMM>;
             bindings = <&kp C_VOL_UP>;
             global-quick-tap-ms = <200>;
             // layers = <_BASE _SYM>;
@@ -184,7 +184,7 @@
 
         combo_V_DN {
             timeout-ms = <40>;
-            key-positions = <LBR LBM>;
+            key-positions = <RMM RBM>;
             bindings = <&kp C_VOL_DN>;
             global-quick-tap-ms = <200>;
             // layers = <_BASE _SYM>;
@@ -192,7 +192,7 @@
 
         combo_MUTE {
             timeout-ms = <50>;
-            key-positions = <LMR LMM>;
+            key-positions = <RMI RMR>;
             bindings = <&kp C_MUTE>;
             global-quick-tap-ms = <200>;
             // layers = <_BASE _SYM>;
@@ -264,6 +264,46 @@
             key-positions = <RBI RBM>;
             bindings = <&kp RBKT>;
             layers = <_BASE _SYM>;
+        };
+
+        combo_PSCRN {
+            timeout-ms = <40>;
+            key-positions = <LTC LMC>;
+            bindings = <&kp PSCRN>;
+            layers = <_BASE _SYM _NAV>;
+            global-quick-tap-ms = <200>;
+        };
+
+        combo_COPY_M {
+            timeout-ms = <40>;
+            key-positions = <LMM LBM>;
+            bindings = <&kp LG(C)>;
+            layers = <_BASE>;
+            global-quick-tap-ms = <200>;
+        };
+
+        combo_COPY_W {
+            timeout-ms = <40>;
+            key-positions = <LMR LBR>;
+            bindings = <&kp LC(C)>;
+            layers = <_BASE>;
+            global-quick-tap-ms = <200>;
+        };
+
+        combo_PASTA_M {
+            timeout-ms = <40>;
+            key-positions = <LTM LMM>;
+            bindings = <&kp LG(V)>;
+            layers = <_BASE>;
+            global-quick-tap-ms = <200>;
+        };
+
+        combo_PASTA_W {
+            timeout-ms = <40>;
+            key-positions = <LTR LMR>;
+            bindings = <&kp LC(V)>;
+            layers = <_BASE>;
+            global-quick-tap-ms = <200>;
         };
 
         // combo_GT {
@@ -428,12 +468,12 @@
 
                 nav_layer {
 // --------------------------------    ----------------------------------
-// | ESC |  7  |  8  |  9  | PSCR |    | APP | HOME |  UP  | END  | INS |
+// | . , |  7  |  8  |  9  | ESC  |    | APP | HOME |  UP  | END  | INS |
 // |  0  |  4  |  5  |  6  | TAB  |    | DEL | LEFT | SPC  | RGHT | RET |
 // |     |  1  |  2  |  3  |      |    |     | PGUP | DOWN | PGDN |     |
 //                  | LSFT | BSPC |    | SHFT |      |
                         bindings = <
-   &kp ESC      &kp N7        &kp N8       &kp N9        &kp PSCRN       &kp K_APP &kp HOME        &kp UP          &kp END          &kp INS
+   &kp KP_COMMA &kp N7        &kp N8       &kp N9        &kp ESC         &kp K_APP &kp HOME        &kp UP          &kp END          &kp INS
    &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB         &kp DEL   &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
    &none        &kp N1        &kp N2       &kp N3        &none           &none     &kp PG_UP       &kp DOWN        &kp PG_DN        &none
                                              &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
