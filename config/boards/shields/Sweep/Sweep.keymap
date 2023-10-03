@@ -178,7 +178,7 @@
             timeout-ms = <40>;
             key-positions = <RTM RMM>;
             bindings = <&kp C_VOL_UP>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
             // layers = <_BASE _SYM>;
         };
 
@@ -186,7 +186,7 @@
             timeout-ms = <40>;
             key-positions = <RMM RBM>;
             bindings = <&kp C_VOL_DN>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
             // layers = <_BASE _SYM>;
         };
 
@@ -194,7 +194,7 @@
             timeout-ms = <50>;
             key-positions = <RMI RMR>;
             bindings = <&kp C_MUTE>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
             // layers = <_BASE _SYM>;
         };
 
@@ -203,7 +203,7 @@
             timeout-ms = <50>;
             key-positions = <LMI RMI>;
             bindings = <&caps_word>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
             layers = <_BASE>;
         };
 
@@ -211,7 +211,7 @@
             timeout-ms = <40>;
             key-positions = <LMP LTP>;
             bindings = <&kp RALT>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
             //layers = <_BASE>;
         };
 
@@ -219,7 +219,7 @@
             timeout-ms = <40>;
             key-positions = <LMP RTP>;
             bindings = <&kp RALT>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
             //layers = <_BASE>;
         };
 
@@ -271,7 +271,7 @@
             key-positions = <LTC LMC>;
             bindings = <&kp PSCRN>;
             layers = <_BASE _SYM _NAV>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
         };
 
         combo_COPY_M {
@@ -279,7 +279,7 @@
             key-positions = <LMM LBM>;
             bindings = <&kp LG(C)>;
             layers = <_BASE>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
         };
 
         combo_COPY_W {
@@ -287,7 +287,7 @@
             key-positions = <LMR LBR>;
             bindings = <&kp LC(C)>;
             layers = <_BASE>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
         };
 
         combo_PASTA_M {
@@ -295,7 +295,7 @@
             key-positions = <LTM LMM>;
             bindings = <&kp LG(V)>;
             layers = <_BASE>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
         };
 
         combo_PASTA_W {
@@ -303,7 +303,7 @@
             key-positions = <LTR LMR>;
             bindings = <&kp LC(V)>;
             layers = <_BASE>;
-            global-quick-tap-ms = <200>;
+            require-prior-idle-msx = <200>;
         };
 
         // combo_GT {
