@@ -303,7 +303,7 @@
             key-positions = <LTR LMR>;
             bindings = <&kp LC(V)>;
             layers = <_BASE>;
-            require-prior-idle-msx = <200>;
+            require-prior-idle-ms = <200>;
         };
 
         // combo_GT {
