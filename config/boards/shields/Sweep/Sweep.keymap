@@ -11,15 +11,18 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keypos_34keys.h"
 
-#define _BASE    0
-#define _AL2     1
-#define _NAV     2
-#define _SYM     3
-#define _BTF     4
+#define _A1     0
+#define _A2     1
+#define _NAV    2
+#define _NUM    3
+#define _S1     4
+#define _S2     5
+#define _FUN    6
+#define _BT     7
 
 #define RGB_BASE RGB_COLOR_HSB(0,100,3)
-#define RGB_SYM RGB_COLOR_HSB(40,100,3)
-#define RGB_NAV RGB_COLOR_HSB(130,100,3)
+#define RGB_NAV RGB_COLOR_HSB(80,100,3)
+#define RGB_NUM RGB_COLOR_HSB(180,100,3)
 #define RGB_BTF RGB_COLOR_HSB(230,100,4)
 
 &sk {
@@ -41,7 +44,7 @@
             tap-ms = <0>;
             bindings
                 = <&rgb_ug RGB_OFF>
-                , <&tog _NAV>
+                , <&to _A1>
                 ;
         };
 
@@ -60,18 +63,18 @@
         //         ;
         // };
 
-        // to_SYM: to_SYM {
-        //     label = "ZM_to_SYM";
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings
-        //         = <&rgb_ug RGB_ON>
-        //         , <&rgb_ug RGB_SYM>
-        //         , <&to _SYM>
-        //         ;
-        // };
+        to_NUM: to_NUM {
+            label = "ZM_to_SYM";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&rgb_ug RGB_ON>
+                , <&rgb_ug RGB_NUM>
+                , <&to _NUM>
+                ;
+        };
 
         to_NAV: to_NAV {
             label = "ZM_to_NAV";
@@ -82,7 +85,7 @@
             bindings
                 = <&rgb_ug RGB_ON>
                 , <&rgb_ug RGB_NAV>
-                , <&tog _NAV>
+                , <&to _NAV>
                 ;
         };
 
@@ -113,7 +116,7 @@
                 , <&macro_press &mo _BTF>
                 , <&macro_pause_for_release>
                 , <&macro_tap &rgb_ug RGB_OFF>
-                , <&macro_release &mo _BTF>
+                , <&macro_release &mo _BT>
                 ;
         };
 
@@ -132,32 +135,39 @@
     combos {
         compatible = "zmk,combos";
 // ------------------------- LAYER COMBOS --------------------------------
-        combo_RESET {
-            timeout-ms = <50>;
-            key-positions = <LMC RMC>;
-            bindings = <&to_BOOT>;
-            layers = <_BTF>;
-        };
+        // combo_RESET {
+        //     timeout-ms = <50>;
+        //     key-positions = <LMC RMC>;
+        //     bindings = <&to_BOOT>;
+        //     layers = <_BTF>;
+        // };
 
         combo_BTF {
             timeout-ms = <50>;
             key-positions = <LHI RHI>;
             bindings = <&mo_BTF>;
-            layers = <_BASE _SYM _NAV>;
+            layers = <_A1>;
         };
 
-        combo_NAVR {
+        combo_FUN {
+            timeout-ms = <50>;
+            key-positions = <LMP RMP>;
+            bindings = <&mo _FUN>;
+            layers = <_A1>;
+        };
+
+        combo_NAV {
             timeout-ms = <50>;
             key-positions = <RMI RMM RMR>;
             bindings = <&to_NAV>;
-            layers = <_BASE _SYM>;
+            layers = <_A1 _NUM>;
         };
 
-        combo_NAVL {
+        combo_NUM {
             timeout-ms = <50>;
             key-positions = <LMI LMM LMR>;
-            bindings = <&to_NAV>;
-            layers = <_BASE _SYM>;
+            bindings = <&to_NUM>;
+            layers = <_A1 _NAV>;
         };
 
         combo_BASER {
@@ -171,32 +181,32 @@
             timeout-ms = <50>;
             key-positions = <LMI LMM LMR>;
             bindings = <&to_BASE>;
-            layers = <_NAV>;
+            layers = <_NUM>;
         };
 
 // ------------------------- VOLUME COMBOS --------------------------------
-        combo_V_UP {
-            timeout-ms = <40>;
-            key-positions = <RTM RMM>;
-            bindings = <&kp C_VOL_UP>;
-            require-prior-idle-ms = <200>;
-            // layers = <_BASE _SYM>;
-        };
+        // combo_V_UP {
+        //     timeout-ms = <40>;
+        //     key-positions = <RTM RMM>;
+        //     bindings = <&kp C_VOL_UP>;
+        //     require-prior-idle-ms = <200>;
+        //     // layers = <_BASE _SYM>;
+        // };
 
-        combo_V_DN {
-            timeout-ms = <40>;
-            key-positions = <RMM RBM>;
-            bindings = <&kp C_VOL_DN>;
-            require-prior-idle-ms = <200>;
-            // layers = <_BASE _SYM>;
-        };
+        // combo_V_DN {
+        //     timeout-ms = <40>;
+        //     key-positions = <RMM RBM>;
+        //     bindings = <&kp C_VOL_DN>;
+        //     require-prior-idle-ms = <200>;
+        //     // layers = <_BASE _SYM>;
+        // };
 
         combo_MUTE {
             timeout-ms = <50>;
-            key-positions = <RMI RMR>;
+            key-positions = <THI RHI>;
             bindings = <&kp C_MUTE>;
             require-prior-idle-ms = <200>;
-            // layers = <_BASE _SYM>;
+            layers = <_FUN>;
         };
 
 // ------------------------- MODS COMBOS --------------------------------
@@ -205,73 +215,81 @@
             key-positions = <LMI RMI>;
             bindings = <&caps_word>;
             require-prior-idle-ms = <200>;
-            layers = <_BASE>;
+            layers = <_A1>;
         };
 
-        combo_RALTL {
-            timeout-ms = <40>;
-            key-positions = <LMP LTP>;
-            bindings = <&kp RALT>;
-            require-prior-idle-ms = <200>;
-            //layers = <_BASE>;
-        };
+        // combo_RALTL {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMP LTP>;
+        //     bindings = <&kp RALT>;
+        //     require-prior-idle-ms = <200>;
+        //     //layers = <_BASE>;
+        // };
 
-        combo_RALTR {
-            timeout-ms = <40>;
-            key-positions = <LMP RTP>;
-            bindings = <&kp RALT>;
-            require-prior-idle-ms = <200>;
-            //layers = <_BASE>;
-        };
+        // combo_RALTR {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMP RTP>;
+        //     bindings = <&kp RALT>;
+        //     require-prior-idle-ms = <200>;
+        //     //layers = <_BASE>;
+        // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        combo_LPAR {
-            timeout-ms = <40>;
-            key-positions = <LMM LMI>;
-            bindings = <&kp LPAR>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_LPAR {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMM LMI>;
+        //     bindings = <&kp LPAR>;
+        //     layers = <_BASE _SYM>;
+        // };
 
-        combo_RPAR {
-            timeout-ms = <40>;
-            key-positions = <RMI RMM>;
-            bindings = <&kp RPAR>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_RPAR {
+        //     timeout-ms = <40>;
+        //     key-positions = <RMI RMM>;
+        //     bindings = <&kp RPAR>;
+        //     layers = <_BASE _SYM>;
+        // };
 
-        combo_LBRC {
-            timeout-ms = <40>;
-            key-positions = <LTM LTI>;
-            bindings = <&kp LBRC>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_LBRC {
+        //     timeout-ms = <40>;
+        //     key-positions = <LTM LTI>;
+        //     bindings = <&kp LBRC>;
+        //     layers = <_BASE _SYM>;
+        // };
 
-        combo_RBRC {
-            timeout-ms = <40>;
-            key-positions = <RTI RTM>;
-            bindings = <&kp RBRC>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_RBRC {
+        //     timeout-ms = <40>;
+        //     key-positions = <RTI RTM>;
+        //     bindings = <&kp RBRC>;
+        //     layers = <_BASE _SYM>;
+        // };
 
-        combo_LBKT {
-            timeout-ms = <40>;
-            key-positions = <LBM LBI>;
-            bindings = <&kp LBKT>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_LBKT {
+        //     timeout-ms = <40>;
+        //     key-positions = <LBM LBI>;
+        //     bindings = <&kp LBKT>;
+        //     layers = <_BASE _SYM>;
+        // };
 
-        combo_RBKT {
-            timeout-ms = <40>;
-            key-positions = <RBI RBM>;
-            bindings = <&kp RBKT>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_RBKT {
+        //     timeout-ms = <40>;
+        //     key-positions = <RBI RBM>;
+        //     bindings = <&kp RBKT>;
+        //     layers = <_BASE _SYM>;
+        // };
 
         combo_PSCRN {
             timeout-ms = <40>;
-            key-positions = <LTC LMC>;
+            key-positions = <RMI RMM>;
             bindings = <&kp PSCRN>;
-            layers = <_BASE _SYM _NAV>;
+            layers = <_NAV>;
+            require-prior-idle-ms = <200>;
+        };
+
+        combo_APP {
+            timeout-ms = <40>;
+            key-positions = <RMR RMM>;
+            bindings = <&kp K_APP>;
+            layers = <_NAV>;
             require-prior-idle-ms = <200>;
         };
 
@@ -306,21 +324,21 @@
 
     behaviors {
 // ------------------------- TAP-DANCES --------------------------------
-        // win_cp: win_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "CTRL_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LC(C)>, <&kp LC(V)>;
-        // };
+        plu_mul: plus_multiply {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PLUS_ASTERISK";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
+        };
 
-        // mac_cp: mac_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "GUI_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LG(C)>, <&kp LG(V)>;
-        // };
+        min_div: minus_divide {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MINUS_DIVIDE";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
+        };
 
 // ------------------------- HOLD-TAPS --------------------------------
         /* left-hand HRMs */
@@ -351,31 +369,31 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        hsl: hrs_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_SHIFT";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
-        };
+        // hsl: hrs_left {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "LEFT_SHIFT";
+        //     #binding-cells = <2>;
+        //     flavor = "balanced";
+        //     tapping-term-ms = <300>;
+        //     quick-tap-ms = <170>;                // repeat on tap-into-hold
+        //     require-prior-idle-ms = <120>;
+        //     bindings = <&kp>, <&kp>;
+        //     hold-trigger-key-positions = <KEYS_R THUMBS>;
+        //     hold-trigger-on-release;             // delay positional check until key-release
+        // };
 
-        hsr: hrs_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_SHIFT";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <120>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
-        };
+        // hsr: hrs_right {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "RIGHT_SHIFT";
+        //     #binding-cells = <2>;
+        //     flavor = "balanced";
+        //     tapping-term-ms = <300>;
+        //     quick-tap-ms = <170>;                // repeat on tap-into-hold
+        //     require-prior-idle-ms = <120>;
+        //     bindings = <&kp>, <&kp>;
+        //     hold-trigger-key-positions = <KEYS_L THUMBS>;
+        //     hold-trigger-on-release;             // delay positional check until key-release
+        // };
 
         hll: hrl_left {
             compatible = "zmk,behavior-hold-tap";
@@ -449,71 +467,113 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  Q  |  Z  |  L  |  D  |  P  |    |  B  |  M  |  U  |  Y  |  X  |
-// |  A  |  S  |  R  |  T  |  W  |    |  V  |  N  |  E  |  I  |  O  |
-// |     |  G  |  C  |  K  |     |    |     |  H  |  F  |  J  |     |
-//            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
+// |     |     |     |     |     |    |     |     |     |     |     |
+// |     |  C  |  L  |  D  |     |    |     |  H  |  U  |  Y  |     |
+// |  A  |  S  |  R  |  T  |     |    |     |  N  |  E  |  I  |  O  |
+//             |     | _A2(BSPC) |    | LSFT(SPC) |     |
                         bindings = <
-   &none       &kp C        &kp L       &kp D        &none           &none  &kp H        &kp U       &kp Y        &none
-   &hml LALT A &hml LCTRL S &hml LGUI R &hsl LSHFT T &none           &none  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
-   &none       &none        &none       &none        &none           &none  &none        &none       &none        &none
-                                        &mo _SYM &bst _AL2 BSPC      &spt LSHFT SPACE  &mo _NAV
+   &none       &none       &none        &none       &none    &none  &none       &none        &none       &none
+   &none       &hml LALT C &hml LCTRL L &hml LGUI D &none    &none  &hmr LGUI H &hmr LCTRL U &hmr LALT Y &none
+   &hll _NAV A &hll _S2 S  &hll _S1 R   &hll _NUM T &none    &none  &hlr _NUM N &hlr _S1 E   &hlr _S2 I  &hlr _NAV O 
+                                     &none  &bst _A2 BSPC    &spt LSHFT SPACE  &none
                         >;
                 };
 
                 alpha2_layer {
 // -------------------------------    -------------------------------
-// |  Q  |  Z  |  L  |  D  |  P  |    |  B  |  M  |  U  |  Y  |  X  |
-// |  A  |  S  |  R  |  T  |  W  |    |  V  |  N  |  E  |  I  |  O  |
-// |     |  G  |  C  |  K  |     |    |     |  H  |  F  |  J  |     |
+// |     |     |     |     |     |    |     |     |     |     |     |
+// |     |  W  |  G  |  K  |     |    |     |  V  |  F  |  J  |     |
+// |  Q  |  Z  |  B  |  P  |     |    |     |  M  |  .  |  ,  |  X  |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
-   &none  &kp W  &kp G  &kp K  &none           &none  &kp V  &kp F    &kp J      &none
-   &kp Q  &kp Z  &kp B  &kp P  &none           &none  &kp M  &kp DOT  &kp COMMA  &kp X 
-   &none  &none  &none  &none  &none           &none  &none  &none    &none      &none
-                     &none  &kp BSPC           &kp LSHFT &none
+   &none       &none       &none        &none       &none    &none  &none       &none        &none          &none
+   &none       &hml LALT W &hml LCTRL G &hml LGUI K &none    &none  &hmr LGUI V &hmr LCTRL F &hmr LALT J    &none
+   &hll _NAV Q &hll _S2 Z  &hll _S1 B   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 DOT &hlr _S2 COMMA &hlr _NAV X 
+                                             &none  &none    &kp LSHFT  &none
                         >;
                 };
 
                 nav_layer {
-// --------------------------------    ----------------------------------
-// | . , |  7  |  8  |  9  | ESC  |    | INS | HOME |  UP  | END  | APP |
-// |  0  |  4  |  5  |  6  | TAB  |    | DEL | LEFT | SPC  | RGHT | RET |
-// |     |  1  |  2  |  3  |      |    |     | PGUP | DOWN | PGDN |     |
-//                  | LSFT | BSPC |    | SHFT |      |
+// --------------------------------    ---------------------------------
+// |     |      |      |     |    |    |    |      |      |      |     |
+// |     | HOME | END  | ESC |    |    |    | INS  | UP   | DEL  |     |
+// | ` ~ | PGUP | PGDN | TAB |    |    |    | LEFT | DOWN | RGHT | RET |
+//             |     | LSFT(BSPC) |    | LSFT(SPC) |      |
                         bindings = <
-   &kp KP_DOT   &kp N7        &kp N8       &kp N9        &kp ESC         &kp INS   &kp HOME        &kp UP          &kp END          &kp K_APP
-   &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB         &kp DEL   &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
-   &none        &kp N1        &kp N2       &kp N3        &none           &none     &kp PG_UP       &kp DOWN        &kp PG_DN        &none
-                                             &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
+   &none     &none          &none          &none         &none    &none  &none         &none         &none         &none
+   &none     &hml LALT HOME &hml LCTRL END &hml LGUI ESC &none    &none  &hmr LGUI INS &hmr LCTRL UP &hmr LALT DEL &none
+   &kp GRAVE &kp PG_UP      &kp PG_DN      &kp TAB       &none    &none  &kp LEFT      &kp DOWN      &kp RIGHT     &kp ENTER
+                                        &none  &spt LSHFT BSPC    &spt LSHFT SPC &none
                         >;
                 };
                 
-                sym_layer {
+                num_layer {
 // -------------------------------    -------------------------------
-// |  %  |  |  |  +  |  *  |  <  |    |  >  |  #  |  $  |  &  |  @  |
-// |  !  |  ?  |  -  |  _  |  `  |    |  ~  |  .  |  ,  |  "  |  '  |
-// |     |  \  |  =  |  /  |     |    |     |  :  |  ;  |  ^  |     |
-//                  |     | BSPC |    | SPC | BSPC |
+// |     |     |     |     |     |    |     |     |     |     |     |
+// |     |  4  |  5  |  6  |     |    |     |  7  |  8  |  9  |     |
+// |  0  |  1  |  2  |  3  |     |    |     | + * | - / | , . | RET |
+//            |     | LSFT(BSPC) |    | LSFT(SPC) |     |
                         bindings = <
-   &kp PRCNT      &kp PIPE         &kp PLUS        &kp STAR         &kp LT        &kp GT       &kp HASH       &kp DLLR        &kp AMPS       &kp AT
-   &hml LALT EXCL &hml LCTRL QMARK &hml LGUI MINUS &hsl LSHFT UNDER &kp GRAVE     &kp TILDE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT SQT
-   &none          &kp BSLH         &kp EQUAL       &kp SLASH        &none         &none        &kp COLON      &kp SEMI        &kp CARET      &none
-                                                           &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
+   &none  &none        &none         &none        &none    &none  &none        &none         &none        &none
+   &none  &hml LALT N4 &hml LCTRL N5 &hml LGUI N6 &none    &none  &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &none
+   &kp N0 &kp N1       &kp N2        &kp N3       &none    &none  &plu_mul     &min_div      &kp KP_DOT   &kp ENTER
+                                        &none  &spt LSHFT BSPC    &spt LSHFT SPC &none
+                        >;
+                };
+                
+                sym1_layer {
+// -------------------------------    -------------------------------
+// |     |     |     |     |     |    |     |     |     |     |     |
+// |     |  *  |  =  |  +  |     |    |     |  !  |  '  |  "  |     |
+// |  \  |  |  |  _  |  -  |     |    |     |  ?  |  :  |  ;  |  /  |
+//            |     | LSFT(BSPC) |    | LSFT(SPC) |     |
+                        bindings = <
+   &none    &none           &none            &none          &none    &none  &none          &none          &none         &none
+   &none    &hml LALT ASTRK &hml LCTRL EQUAL &hml LGUI PLUS &none    &none  &hmr LGUI EXCL &hmr LCTRL SQT &hmr LALT DQT &none
+   &kp BSLH &kp PIPE        &kp UNDER        &kp MINUS      &none    &none  &kp QMARK      &kp COLON      &kp SEMI      &kp SLASH
+                                                  &none  &kp BSPC    &kp SPC &none
                         >;
                 };
 
-                btf_layer {
-// ----------------------------    ----------------------------------
-// | F11 | F7 | F8 | F9 | F12 |    | BT1 | BT2  | BT3 |  BT4  | BT5 |
-// | F10 | F4 | F5 | F6 | RST |    | RST | SHFT | GUI | CTRL  | ALT |
-// |     | F1 | F2 | F3 |     |    |     | USB  | RGB | BTCLR |     |
-//                |     |     |    |     |     |
+                sym2_layer {
+// -------------------------------    -------------------------------
+// |     |     |     |     |     |    |     |     |     |     |     |
+// |     |  @  |  #  |  $  |     |    |     |  %  |  ^  |  &  |     |
+// |  <  |  {  |  [  |  (  |     |    |     |  )  |  ]  |  }  |  >  |
+//            |     | LSFT(BSPC) |    | LSFT(SPC) |     |
                         bindings = <
-   &kp F11 &kp F7 &kp F8 &kp F9 &kp F12       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4
-   &kp F10 &kp F4 &kp F5 &kp F6 &sys_reset    &sys_reset   &kp LSHFT    &kp LGUI        &kp LCTRL    &kp LALT
-   &none   &kp F1 &kp F2 &kp F3 &none         &none        &out OUT_TOG &rgb_ug RGB_OFF &bt BT_CLR   &none
-                        &none   &none         &none    &none
+   &none  &none        &none           &none          &none    &none  &none           &none            &none          &none
+   &none  &hml LALT AT &hml LCTRL HASH &hml LGUI DLLR &none    &none  &hmr LGUI PRCNT &hmr LCTRL CARET &hmr LALT AMPS &none
+   &kp LT &kp LBRC     &kp LBKT        &kp LPAR       &none    &none  &kp RPAR        &kp RBKT         &kp RBRC       &kp GT
+                                            &none  &kp BSPC    &kp SPC &none
+                        >;
+                };
+
+                fun_layer {
+// --------------------------    -----------------------------
+// |    |    |    |    |    |    |    |     |     |     |    |
+// |    | F4 | F5 | F6 |    |    |    | F7  | F8  | F9  |    |
+// |    | F1 | F2 | F3 |    |    |    | F10 | F11 | F12 |    |
+//                |    | V- |    | V+ |     |
+                        bindings = <
+   &none  &none        &none         &none        &none    &none  &none        &none         &none        &none
+   &none  &hml LALT F4 &hml LCTRL F5 &hml LGUI F6 &none    &none  &hmr LGUI F7 &hmr LCTRL F8 &hmr LALT F9 &none
+   &none  &kp F1       &kp F2        &kp F3       &none    &none  &kp F10      &kp F11       &kp F12      &none
+                             &none  &spt LSHFT C_VOL_DN    &spt LSHFT C_VOL_UP &none
+                        >;
+                };                
+
+                bt_layer {
+// ------------------------------    -----------------------------
+// |     |     |     |     |    |    |    |      |    |    |     |
+// |     | BT4 | BT5 | USB |    |    |    | BOOT |    |    |     |
+// | RST | BT1 | BT2 | BT3 |    |    |    | CLR  |    |    | RST |
+//                   |     |    |    |    |      |
+                        bindings = <
+   &none      &none        &none        &none        &none    &none  &none      &none &none &none
+   &none      &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG &none    &none  &to_BOOT   &none &none &none
+   &sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none    &none  &bt BT_CLR &none &none &sys_reset
+                                              &none  &none    &none  &none
                         >;
                 };                
     };
