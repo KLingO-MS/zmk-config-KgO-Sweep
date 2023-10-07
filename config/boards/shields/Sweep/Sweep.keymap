@@ -454,10 +454,10 @@
 // |     |  G  |  C  |  K  |     |    |     |  H  |  F  |  J  |     |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
-   &hml LALT Q &kp Z        &kp L       &kp D        &kp P           &kp B  &kp M        &kp U       &kp Y        &hmr LALT X
-   &hll _AL2 A &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp W           &kp V  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hlr _AL2 O 
-   &none       &kp G        &kp C       &kp K        &none           &none  &kp H        &kp F       &kp J        &none
-                                          &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
+   &none       &kp C        &kp L       &kp D        &none           &none  &kp H        &kp U       &kp Y        &none
+   &hml LATL A &hml LCTRL S &hml LGUI R &hsl LSHFT T &none           &none  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
+   &none       &none        &none       &none        &none           &none  &none        &none       &none        &none
+                                          &sl _AL2   &bst _SYM BSPC  &spt _NAV SPACE  &kp LSHFT
                         >;
                 };
 
@@ -468,10 +468,10 @@
 // |     |  G  |  C  |  K  |     |    |     |  H  |  F  |  J  |     |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
-   &none  &kp LS(Q)  &kp LS(W)  &kp LS(P)  &none           &none  &kp LS(B)  &kp LS(V)  &kp LS(X)  &none
-   &none  &kp Q      &kp W      &kp P      &none           &none  &kp B      &kp V      &kp X      &none 
-   &none  &none      &none      &none      &none           &none  &none      &none      &none      &none
-                                     &none &none           &none &none
+   &none  &kp W  &kp G  &kp K  &none           &none  &kp V  &kp F    &kp J      &none
+   &kp Q  &kp Z  &kp B  &kp P  &none           &none  &kp M  &kp DOT  &kp COMMA  &none 
+   &none  &none  &none  &none  &none           &none  &none  &none    &none      &none
+                     &to_BASE  &none           &none  &kp LSHFT
                         >;
                 };
 
