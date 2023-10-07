@@ -471,7 +471,7 @@
    &none  &kp W  &kp G  &kp K  &none           &none  &kp V  &kp F    &kp J      &none
    &kp Q  &kp Z  &kp B  &kp P  &none           &none  &kp M  &kp DOT  &kp COMMA  &kp X 
    &none  &none  &none  &none  &none           &none  &none  &none    &none      &none
-                    &none  &kp BSPCE           &kp LSHFT &none
+                     &none  &kp BSPC           &kp LSHFT &none
                         >;
                 };
 
