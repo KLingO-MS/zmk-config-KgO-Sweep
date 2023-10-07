@@ -12,9 +12,10 @@
 #include "keypos_34keys.h"
 
 #define _BASE    0
-#define _NAV     1
-#define _SYM     2
-#define _BTF     3
+#define _AL2     1
+#define _NAV     2
+#define _SYM     3
+#define _BTF     4
 
 #define RGB_BASE RGB_COLOR_HSB(0,100,3)
 #define RGB_SYM RGB_COLOR_HSB(40,100,3)
@@ -274,38 +275,7 @@
             require-prior-idle-ms = <200>;
         };
 
-        combo_COPY_M {
-            timeout-ms = <40>;
-            key-positions = <LMM LBM>;
-            bindings = <&kp LG(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
-
-        combo_COPY_W {
-            timeout-ms = <40>;
-            key-positions = <LMR LBR>;
-            bindings = <&kp LC(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
-
-        combo_PASTA_M {
-            timeout-ms = <40>;
-            key-positions = <LTM LMM>;
-            bindings = <&kp LG(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
-
-        combo_PASTA_W {
-            timeout-ms = <40>;
-            key-positions = <LTR LMR>;
-            bindings = <&kp LC(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
-
+?
         // combo_GT {
         //     timeout-ms = <45>;
         //     key-positions = <RBM RBR>;
@@ -408,6 +378,32 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
+        hll: hrl_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_LAYER";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <120>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
+        };
+
+        hlr: hrl_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_LAYER";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <170>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <120>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
+        };
+
         bst: backspace-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BSPC_TAP_SYM_HOLD";
@@ -459,10 +455,24 @@
 // |     |  G  |  C  |  K  |     |    |     |  H  |  F  |  J  |     |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
-   &kp Q       &kp Z        &kp L       &kp D        &kp P           &kp B  &kp M        &kp U       &kp Y        &kp X
-   &hml LALT A &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp W           &kp V  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
+   &hml LALT Q &kp Z        &kp L       &kp D        &kp P           &kp B  &kp M        &kp U       &kp Y        &hmr LALT X
+   &hll _LA2 A &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp W           &kp V  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hlr _AL2 O 
    &none       &kp G        &kp C       &kp K        &none           &none  &kp H        &kp F       &kp J        &none
                                           &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
+                        >;
+                };
+
+                alpha2_layer {
+// -------------------------------    -------------------------------
+// |  Q  |  Z  |  L  |  D  |  P  |    |  B  |  M  |  U  |  Y  |  X  |
+// |  A  |  S  |  R  |  T  |  W  |    |  V  |  N  |  E  |  I  |  O  |
+// |     |  G  |  C  |  K  |     |    |     |  H  |  F  |  J  |     |
+//            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
+                        bindings = <
+   &none  &kp LS(Q)  &kp LS(W)  &kp LS(P)  &none           &none  &kp LS(B)  &kp LS(V)  &kp LS(X)  &none
+   &none  &kp Q      &kp W      &kp P      &none           &none  &kp B      &kp V      &kp X      &none 
+   &none  &none      &none      &none      &none           &none  &none      &none      &none      &none
+                                     &none &none           &none &none
                         >;
                 };
 
