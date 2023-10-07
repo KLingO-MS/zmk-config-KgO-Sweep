@@ -275,7 +275,6 @@
             require-prior-idle-ms = <200>;
         };
 
-?
         // combo_GT {
         //     timeout-ms = <45>;
         //     key-positions = <RBM RBR>;
