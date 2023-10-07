@@ -455,7 +455,7 @@
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
    &hml LALT Q &kp Z        &kp L       &kp D        &kp P           &kp B  &kp M        &kp U       &kp Y        &hmr LALT X
-   &hll _LA2 A &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp W           &kp V  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hlr _AL2 O 
+   &hll _AL2 A &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp W           &kp V  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hlr _AL2 O 
    &none       &kp G        &kp C       &kp K        &none           &none  &kp H        &kp F       &kp J        &none
                                           &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
                         >;
