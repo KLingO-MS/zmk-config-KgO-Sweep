@@ -184,22 +184,38 @@
             layers = <_NUM>;
         };
 
-// ------------------------- VOLUME COMBOS --------------------------------
-        // combo_V_UP {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTM RMM>;
-        //     bindings = <&kp C_VOL_UP>;
-        //     require-prior-idle-ms = <200>;
-        //     // layers = <_BASE _SYM>;
-        // };
+// ------------------------- MISC COMBOS --------------------------------
+        combo_MAC_COPY {
+            timeout-ms = <40>;
+            key-positions = <LMI LBI>;
+            bindings = <&kp LG(C)>;
+            require-prior-idle-ms = <200>;
+            layers = <_A1 _NAV>;
+        };
 
-        // combo_V_DN {
-        //     timeout-ms = <40>;
-        //     key-positions = <RMM RBM>;
-        //     bindings = <&kp C_VOL_DN>;
-        //     require-prior-idle-ms = <200>;
-        //     // layers = <_BASE _SYM>;
-        // };
+        combo_MAC_PASTE {
+            timeout-ms = <40>;
+            key-positions = <RMI RBI>;
+            bindings = <&kp LG(V)>;
+            require-prior-idle-ms = <200>;
+            layers = <_A1 _NAV>;
+        };
+
+        combo_WIN_COPY {
+            timeout-ms = <40>;
+            key-positions = <LMM LBM>;
+            bindings = <&kp LC(C)>;
+            require-prior-idle-ms = <200>;
+            layers = <_A1 _NAV>;
+        };
+
+        combo_WIN_PASTE {
+            timeout-ms = <40>;
+            key-positions = <RMM RBM>;
+            bindings = <&kp LC(V)>;
+            require-prior-idle-ms = <200>;
+            layers = <_A1 _NAV>;
+        };
 
         combo_MUTE {
             timeout-ms = <50>;
