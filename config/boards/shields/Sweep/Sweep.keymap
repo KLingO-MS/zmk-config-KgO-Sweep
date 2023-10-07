@@ -224,44 +224,86 @@
         };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        combo_LPAR {
+        combo_P {
             timeout-ms = <40>;
             key-positions = <LMM LMI>;
+            bindings = <&kp P>;
+            layers = <_BASE>;
+        };
+
+        combo_V {
+            timeout-ms = <40>;
+            key-positions = <RMI RMM>;
+            bindings = <&kp V>;
+            layers = <_BASE>;
+        };
+
+        combo_Q {
+            timeout-ms = <40>;
+            key-positions = <LTM LTI>;
+            bindings = <&kp Q>;
+            layers = <_BASE>;
+        };
+
+        combo_X {
+            timeout-ms = <40>;
+            key-positions = <RTI RTM>;
+            bindings = <&kp X>;
+            layers = <_BASE>;
+        };
+
+        combo_W {
+            timeout-ms = <40>;
+            key-positions = <LBM LBI>;
+            bindings = <&kp W>;
+            layers = <_BASE>;
+        };
+
+        combo_B {
+            timeout-ms = <40>;
+            key-positions = <RBI RBM>;
+            bindings = <&kp B>;
+            layers = <_BASE>;
+        };
+
+        combo_LPAR {
+            timeout-ms = <40>;
+            key-positions = <LMM LMR>;
             bindings = <&kp LPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_RPAR {
             timeout-ms = <40>;
-            key-positions = <RMI RMM>;
+            key-positions = <RMR RMM>;
             bindings = <&kp RPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBRC {
             timeout-ms = <40>;
-            key-positions = <LTM LTI>;
+            key-positions = <LTM LTR>;
             bindings = <&kp LBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBRC {
             timeout-ms = <40>;
-            key-positions = <RTI RTM>;
+            key-positions = <RTR RTM>;
             bindings = <&kp RBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBKT {
             timeout-ms = <40>;
-            key-positions = <LBM LBI>;
+            key-positions = <LBM LBR>;
             bindings = <&kp LBKT>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBKT {
             timeout-ms = <40>;
-            key-positions = <RBI RBM>;
+            key-positions = <RBR RBM>;
             bindings = <&kp RBKT>;
             layers = <_BASE _SYM>;
         };
@@ -274,37 +316,37 @@
             require-prior-idle-ms = <200>;
         };
 
-        combo_COPY_M {
-            timeout-ms = <40>;
-            key-positions = <LMM LBM>;
-            bindings = <&kp LG(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_COPY_M {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMM LBM>;
+        //     bindings = <&kp LG(C)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_COPY_W {
-            timeout-ms = <40>;
-            key-positions = <LMR LBR>;
-            bindings = <&kp LC(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_COPY_W {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMR LBR>;
+        //     bindings = <&kp LC(C)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_PASTA_M {
-            timeout-ms = <40>;
-            key-positions = <LTM LMM>;
-            bindings = <&kp LG(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_PASTA_M {
+        //     timeout-ms = <40>;
+        //     key-positions = <LTM LMM>;
+        //     bindings = <&kp LG(V)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_PASTA_W {
-            timeout-ms = <40>;
-            key-positions = <LTR LMR>;
-            bindings = <&kp LC(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_PASTA_W {
+        //     timeout-ms = <40>;
+        //     key-positions = <LTR LMR>;
+        //     bindings = <&kp LC(V)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
         // combo_GT {
         //     timeout-ms = <45>;
