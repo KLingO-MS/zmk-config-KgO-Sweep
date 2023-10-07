@@ -292,7 +292,7 @@
 
         combo_PSCRN {
             timeout-ms = <40>;
-            key-positions = <RMI RMM>;
+            key-positions = <RBI RBM>;
             bindings = <&kp PSCRN>;
             layers = <_NAV>;
             require-prior-idle-ms = <200>;
@@ -300,7 +300,7 @@
 
         combo_APP {
             timeout-ms = <40>;
-            key-positions = <RMR RMM>;
+            key-positions = <RBR RBM>;
             bindings = <&kp K_APP>;
             layers = <_NAV>;
             require-prior-idle-ms = <200>;
