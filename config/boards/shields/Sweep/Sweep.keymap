@@ -219,7 +219,7 @@
 
         combo_MUTE {
             timeout-ms = <50>;
-            key-positions = <THI RHI>;
+            key-positions = <LHI RHI>;
             bindings = <&kp C_MUTE>;
             require-prior-idle-ms = <200>;
             layers = <_FUN>;
