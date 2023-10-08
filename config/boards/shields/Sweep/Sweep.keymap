@@ -498,13 +498,13 @@
                 alpha2_layer {
 // -------------------------------    -------------------------------
 // |     |     |     |     |     |    |     |     |     |     |     |
-// |     |  W  |  G  |  B  |     |    |     |  V  |  F  |  J  |     |
-// |  Q  |  Z  |  K  |  P  |     |    |     |  M  |  .  |  ,  |  X  |
+// |     |  W  |  G  |  K  |     |    |     |  V  |  F  |  J  |     |
+// |  Q  |  Z  |  B  |  P  |     |    |     |  M  |  .  |  ,  |  X  |
 //             |    | _SYM(BSPC) |    | _NAV(SPC) |     |
                         bindings = <
    &none       &none       &none        &none       &none    &none  &none       &none        &none          &none
-   &none       &hml LALT W &hml LCTRL G &hml LGUI B &none    &none  &hmr LGUI V &hmr LCTRL F &hmr LALT J    &none
-   &hll _NAV Q &hll _S2 Z  &hll _S1 K   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 DOT &hlr _S2 COMMA &hlr _NAV X 
+   &none       &hml LALT W &hml LCTRL G &hml LGUI K &none    &none  &hmr LGUI V &hmr LCTRL F &hmr LALT J    &none
+   &hll _NAV Q &hll _S2 Z  &hll _S1 B   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 DOT &hlr _S2 COMMA &hlr _NAV X 
                                              &none  &none    &kp LSHFT  &none
                         >;
                 };
@@ -512,12 +512,12 @@
                 nav_layer {
 // --------------------------------    ---------------------------------
 // |     |      |      |     |    |    |    |      |      |      |     |
-// |     | HOME | END  | ESC |    |    |    | INS  | UP   | DEL  |     |
+// |     | HOME | END  | ESC |    |    |    | DEL  | UP   | INS  |     |
 // | ` ~ | PGUP | PGDN | TAB |    |    |    | LEFT | DOWN | RGHT | RET |
 //              |    | LSFT(BSPC) |    | LSFT(SPC) |      |
                         bindings = <
    &none     &none          &none          &none         &none    &none  &none         &none         &none         &none
-   &none     &hml LALT HOME &hml LCTRL END &hml LGUI ESC &none    &none  &hmr LGUI INS &hmr LCTRL UP &hmr LALT DEL &none
+   &none     &hml LALT HOME &hml LCTRL END &hml LGUI ESC &none    &none  &hmr LGUI DEL &hmr LCTRL UP &hmr LALT INS &none
    &kp GRAVE &kp PG_UP      &kp PG_DN      &kp TAB       &none    &none  &kp LEFT      &kp DOWN      &kp RIGHT     &kp ENTER
                                         &none  &spt LSHFT BSPC    &spt LSHFT SPC &none
                         >;
