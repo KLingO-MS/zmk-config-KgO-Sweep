@@ -531,13 +531,13 @@
 // -------------------------------    -------------------------------
 // |     |     |     |     |     |    |     |     |     |     |     |
 // |     |  4  |  5  |  6  |     |    |     |  7  |  8  |  9  |     |
-// | , . |  1  |  2  |  3  |     |    |     |  0  | + * | - / | RET |
+// |  0  |  1  |  2  |  3  |     |    |     | , . | + * | - / | RET |
 //             |    | LSFT(BSPC) |    | LSFT(SPC) |     |
                         bindings = <
-   &none      &none        &none         &none        &none    &none  &none        &none         &none        &none
-   &none      &hml LALT N4 &hml LCTRL N5 &hml LGUI N6 &none    &none  &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &none
-   &kp KP_DOT &kp N1       &kp N2        &kp N3       &none    &none  &kp N0       &plu_mul     &min_div      &kp ENTER
-                                     &none  &spt LSHFT BSPC    &spt LSHFT SPC &none
+   &none  &none        &none         &none        &none    &none  &none        &none         &none        &none
+   &none  &hml LALT N4 &hml LCTRL N5 &hml LGUI N6 &none    &none  &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &none
+   &kp N0 &kp N1       &kp N2        &kp N3       &none    &none  &kp KP_DOT   &plu_mul      &min_div     &kp ENTER
+                                 &none  &spt LSHFT BSPC    &spt LSHFT SPC &none
                         >;
                 };
                 
