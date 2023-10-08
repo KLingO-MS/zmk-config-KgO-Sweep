@@ -495,13 +495,13 @@
                 alpha2_layer {
 // -------------------------------    -------------------------------
 // |     |     |     |     |     |    |     |     |     |     |     |
-// |     |  W  |  G  |  K  |     |    |     |  V  |  F  |  J  |     |
-// |  Q  |  Z  |  B  |  P  |     |    |     |  M  |  .  |  ,  |  X  |
+// |     |  W  |  G  |  B  |     |    |     |  V  |  F  |  J  |     |
+// |  Q  |  Z  |  K  |  P  |     |    |     |  M  |  .  |  ,  |  X  |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
    &none       &none       &none        &none       &none    &none  &none       &none        &none          &none
-   &none       &hml LALT W &hml LCTRL G &hml LGUI K &none    &none  &hmr LGUI V &hmr LCTRL F &hmr LALT J    &none
-   &hll _NAV Q &hll _S2 Z  &hll _S1 B   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 DOT &hlr _S2 COMMA &hlr _NAV X 
+   &none       &hml LALT W &hml LCTRL G &hml LGUI B &none    &none  &hmr LGUI V &hmr LCTRL F &hmr LALT J    &none
+   &hll _NAV Q &hll _S2 Z  &hll _S1 K   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 DOT &hlr _S2 COMMA &hlr _NAV X 
                                              &none  &none    &kp LSHFT  &none
                         >;
                 };
