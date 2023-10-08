@@ -152,7 +152,7 @@
         combo_FUN {
             timeout-ms = <50>;
             key-positions = <LHI RHI>;
-            bindings = <&mo _FUN>;
+            bindings = <&mo_FUN>;
             layers = <_A1>;
         };
 
