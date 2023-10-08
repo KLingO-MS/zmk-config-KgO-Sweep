@@ -494,7 +494,7 @@
                         bindings = <
    &none       &none       &none        &none       &none    &none  &none       &none        &none       &none
    &none       &hml LALT C &hml LCTRL L &hml LGUI D &none    &none  &hmr LGUI H &hmr LCTRL U &hmr LALT Y &none
-   &hll _NAV A &hll _S2 S  &hll _S1 R   &hll _NUM T &none    &none  &hlr _NUM N &hlr _S1 E   &hlr _S2 I  &hlr _NAV O 
+   &hll _NUM A &hll _S2 S  &hll _S1 R   &hll _NAV T &none    &none  &hlr _NAV N &hlr _S1 E   &hlr _S2 I  &hlr _NUM O 
                                      &none  &bst _A2 BSPC    &spt LSHFT SPACE  &none
                         >;
                 };
@@ -506,23 +506,23 @@
 // |  Q  |  Z  |  K  |  P  |     |    |     |  M  |  ,  |  .  |  X  |
 //             |    | _SYM(BSPC) |    | _NAV(SPC) |     |
                         bindings = <
-   &none       &none       &none        &none       &none    &none  &none       &none          &none        &none
-   &none       &hml LALT W &hml LCTRL G &hml LGUI B &none    &none  &hmr LGUI V &hmr LCTRL F   &hmr LALT J  &none
-   &hll _NAV Q &hll _S2 Z  &hll _S1 K   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 COMMA &hlr _S2 DOT &hlr _NAV X 
-                                             &none  &none    &kp LSHFT  &none
+   &none &none       &none        &none       &none    &none  &none       &none        &none       &none
+   &none &hml LALT W &hml LCTRL G &hml LGUI B &none    &none  &hmr LGUI V &hmr LCTRL F &hmr LALT J &none
+   &kp Q &kp Z       &kp K        &kp P       &none    &none  &kp M       &kp COMMA    &kp DOT     &kp X 
+                                       &none  &none    &kp LSHFT  &none
                         >;
                 };
 
                 nav_layer {
 // --------------------------------    ---------------------------------
 // |     |      |      |     |    |    |    |      |      |      |     |
-// |     | HOME | END  | ESC |    |    |    | DEL  | UP   | INS  |     |
-// | ` ~ | PGUP | PGDN | TAB |    |    |    | LEFT | DOWN | RGHT | RET |
+// |     | PGUP | PGDN | ESC |    |    |    | DEL  | UP   | INS  |     |
+// | ` ~ | HOME | END  | TAB |    |    |    | LEFT | DOWN | RGHT | RET |
 //              |    | LSFT(BSPC) |    | LSFT(SPC) |      |
                         bindings = <
-   &none     &none          &none          &none         &none    &none  &none         &none         &none         &none
-   &none     &hml LALT HOME &hml LCTRL END &hml LGUI ESC &none    &none  &hmr LGUI DEL &hmr LCTRL UP &hmr LALT INS &none
-   &kp GRAVE &kp PG_UP      &kp PG_DN      &kp TAB       &none    &none  &kp LEFT      &kp DOWN      &kp RIGHT     &kp ENTER
+   &none     &none           &none            &none         &none    &none  &none         &none         &none         &none
+   &none     &hml LALT PG_UP &hml LCTRL PG_DN &hml LGUI ESC &none    &none  &hmr LGUI DEL &hmr LCTRL UP &hmr LALT INS &none
+   &kp GRAVE &kp HOME        &kp END          &kp TAB       &none    &none  &kp LEFT      &kp DOWN      &kp RIGHT     &kp ENTER
                                         &none  &spt LSHFT BSPC    &spt LSHFT SPC &none
                         >;
                 };
@@ -531,12 +531,12 @@
 // -------------------------------    -------------------------------
 // |     |     |     |     |     |    |     |     |     |     |     |
 // |     |  4  |  5  |  6  |     |    |     |  7  |  8  |  9  |     |
-// |  0  |  1  |  2  |  3  |     |    |     | , . | + * | - / | RET |
+// | , . |  1  |  2  |  3  |     |    |     |  0  | + * | - / | RET |
 //             |    | LSFT(BSPC) |    | LSFT(SPC) |     |
                         bindings = <
-   &none  &none        &none         &none        &none    &none  &none        &none         &none        &none
-   &none  &hml LALT N4 &hml LCTRL N5 &hml LGUI N6 &none    &none  &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &none
-   &kp N0 &kp N1       &kp N2        &kp N3       &none    &none  &kp KP_DOT   &plu_mul      &min_div     &kp ENTER
+   &none      &none        &none         &none        &none    &none  &none        &none         &none        &none
+   &none      &hml LALT N4 &hml LCTRL N5 &hml LGUI N6 &none    &none  &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &none
+   &kp KP_DOT &kp N1       &kp N2        &kp N3       &none    &none  &kp N0       &plu_mul      &min_div     &kp ENTER
                                  &none  &spt LSHFT BSPC    &spt LSHFT SPC &none
                         >;
                 };
