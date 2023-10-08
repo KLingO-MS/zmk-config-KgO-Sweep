@@ -499,12 +499,12 @@
 // -------------------------------    -------------------------------
 // |     |     |     |     |     |    |     |     |     |     |     |
 // |     |  W  |  G  |  K  |     |    |     |  V  |  F  |  J  |     |
-// |  Q  |  Z  |  B  |  P  |     |    |     |  M  |  .  |  ,  |  X  |
+// |  Q  |  Z  |  B  |  P  |     |    |     |  M  |  ,  |  .  |  X  |
 //             |    | _SYM(BSPC) |    | _NAV(SPC) |     |
                         bindings = <
-   &none       &none       &none        &none       &none    &none  &none       &none        &none          &none
-   &none       &hml LALT W &hml LCTRL G &hml LGUI K &none    &none  &hmr LGUI V &hmr LCTRL F &hmr LALT J    &none
-   &hll _NAV Q &hll _S2 Z  &hll _S1 B   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 DOT &hlr _S2 COMMA &hlr _NAV X 
+   &none       &none       &none        &none       &none    &none  &none       &none          &none        &none
+   &none       &hml LALT W &hml LCTRL G &hml LGUI K &none    &none  &hmr LGUI V &hmr LCTRL F   &hmr LALT J  &none
+   &hll _NAV Q &hll _S2 Z  &hll _S1 B   &hll _NUM P &none    &none  &hlr _NUM M &hlr _S1 COMMA &hlr _S2 DOT &hlr _NAV X 
                                              &none  &none    &kp LSHFT  &none
                         >;
                 };
@@ -541,12 +541,12 @@
 // -------------------------------    -------------------------------
 // |     |     |     |     |     |    |     |     |     |     |     |
 // |     |  *  |  =  |  +  |     |    |     |  !  |  '  |  "  |     |
-// |  \  |  |  |  _  |  -  |     |    |     |  ?  |  :  |  ;  |  /  |
+// |  \  |  |  |  _  |  -  |     |    |     |  ?  |  ;  |  :  |  /  |
 //             |    | LSFT(BSPC) |    | LSFT(SPC) |     |
                         bindings = <
    &none    &none           &none            &none          &none    &none  &none          &none          &none         &none
    &none    &hml LALT ASTRK &hml LCTRL EQUAL &hml LGUI PLUS &none    &none  &hmr LGUI EXCL &hmr LCTRL SQT &hmr LALT DQT &none
-   &kp BSLH &kp PIPE        &kp UNDER        &kp MINUS      &none    &none  &kp QMARK      &kp COLON      &kp SEMI      &kp SLASH
+   &kp BSLH &kp PIPE        &kp UNDER        &kp MINUS      &none    &none  &kp QMARK      &kp SEMI       &kp COLON     &kp SLASH
                                                   &none  &kp BSPC    &kp SPC &none
                         >;
                 };
