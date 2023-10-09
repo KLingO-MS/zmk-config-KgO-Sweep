@@ -482,15 +482,15 @@
                 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  %  |  |  |  +  |  *  |  <  |    |  >  |  #  |  $  |  &  |  @  |
-// |  !  |  ?  |  -  |  _  |  `  |    |  ~  |  .  |  ,  |  "  |  '  |
-// |     |  \  |  =  |  /  |     |    |     |  :  |  ;  |  ^  |     |
+// |  @  |  #  |  $  |  %  |  <  |    |  >  |  &  |  '  |  "  |  |  |
+// |  /  |  *  |  -  |  +  |  `  |    |  ~  |  ?  |  ,  |  .  |  \  |
+// |     |  ^  |  _  |  =  |     |    |     |  !  |  ;  |  :  |     |
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp PRCNT      &kp PIPE         &kp PLUS        &kp STAR         &kp LT        &kp GT       &kp HASH       &kp DLLR        &kp AMPS       &kp AT
-   &hml LALT EXCL &hml LCTRL QMARK &hml LGUI MINUS &hsl LSHFT UNDER &kp GRAVE     &kp TILDE    &hsr LSHFT DOT &hmr LGUI COMMA &hmr LCTRL DQT &hmr LALT SQT
-   &none          &kp BSLH         &kp EQUAL       &kp SLASH        &none         &none        &kp COLON      &kp SEMI        &kp CARET      &none
-                                                           &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
+   &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp LT        &kp GT       &kp AMPS         &kp SQT         &kp DQT         &kp PIPE
+   &hml LALT SLASH &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp GRAVE     &kp TILDE    &hsr LSHFT QMARK &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT BSLH
+   &none           &kp CARET       &kp UNDER       &kp EQUAL       &none         &none        &kp EXCL         &kp SEMI        &kp COLON      &none
+                                                          &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
                         >;
                 };
 
