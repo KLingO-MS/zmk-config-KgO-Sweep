@@ -482,14 +482,14 @@
                 
                 sym_layer {
 // -------------------------------    -------------------------------
-// |  @  |  #  |  $  |  %  |  <  |    |  >  |  &  |  '  |  "  |  |  |
-// |  /  |  *  |  -  |  +  |  `  |    |  ~  |  ?  |  ,  |  .  |  \  |
+// |  @  |  #  |  $  |  %  |  `  |    |  ~  |  &  |  '  |  "  |  |  |
+// |  /  |  *  |  -  |  +  |  <  |    |  >  |  ?  |  ,  |  .  |  \  |
 // |     |  ^  |  _  |  =  |     |    |     |  !  |  ;  |  :  |     |
 //                  |     | BSPC |    | SPC | BSPC |
                         bindings = <
-   &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp LT        &kp GT       &kp AMPS         &kp SQT         &kp DQT         &kp PIPE
-   &hml LALT SLASH &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp GRAVE     &kp TILDE    &hsr LSHFT QMARK &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT BSLH
-   &none           &kp CARET       &kp UNDER       &kp EQUAL       &none         &none        &kp EXCL         &kp SEMI        &kp COLON      &none
+   &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp GRAVE     &kp TILDE  &kp AMPS         &kp SQT         &kp DQT         &kp PIPE
+   &hml LALT SLASH &hml LCTRL STAR &hml LGUI MINUS &hsl LSHFT PLUS &kp LT        &kp GT     &hsr LSHFT QMARK &hmr LGUI COMMA &hmr LCTRL DOT &hmr LALT BSLH
+   &none           &kp CARET       &kp UNDER       &kp EQUAL       &none         &none      &kp EXCL         &kp SEMI        &kp COLON      &none
                                                           &none    &kp BSPC      &spt _NAV SPACE     &kp BSPC
                         >;
                 };
