@@ -213,12 +213,36 @@
             layers = <_A1 _NAV>;
         };
 
-        combo_MUTE {
-            timeout-ms = <50>;
-            key-positions = <LBP RBP>;
-            bindings = <&kp C_MUTE>;
+        // combo_MUTE {
+        //     timeout-ms = <50>;
+        //     key-positions = <LBP RBP>;
+        //     bindings = <&kp C_MUTE>;
+        //     require-prior-idle-ms = <200>;
+        //     layers = <_FUN>;
+        // };
+
+        combo_PSCRN {
+            timeout-ms = <40>;
+            key-positions = <RTR RTM>;
+            bindings = <&kp PSCRN>;
+            layers = <_NAV>;
             require-prior-idle-ms = <200>;
-            layers = <_FUN>;
+        };
+
+        combo_APP {
+            timeout-ms = <40>;
+            key-positions = <RBR RBM>;
+            bindings = <&kp K_APP>;
+            layers = <_NAV>;
+            require-prior-idle-ms = <200>;
+        };
+
+        combo_BSPC {
+            timeout-ms = <40>;
+            key-positions = <RBI RBM>;
+            bindings = <&kp BSPC>;
+            // layers = <_NAV>;
+            require-prior-idle-ms = <150>;
         };
 
 // ------------------------- MODS COMBOS --------------------------------
@@ -288,22 +312,6 @@
         //     bindings = <&kp RBKT>;
         //     layers = <_BASE _SYM>;
         // };
-
-        combo_PSCRN {
-            timeout-ms = <40>;
-            key-positions = <RBI RBM>;
-            bindings = <&kp PSCRN>;
-            layers = <_NAV>;
-            require-prior-idle-ms = <200>;
-        };
-
-        combo_APP {
-            timeout-ms = <40>;
-            key-positions = <RBR RBM>;
-            bindings = <&kp K_APP>;
-            layers = <_NAV>;
-            require-prior-idle-ms = <200>;
-        };
 
         // combo_GT {
         //     timeout-ms = <45>;
@@ -511,13 +519,13 @@
 
                 nav_layer {
 // ---------------------------    ----------------------------
-//       | PGUP | PGDN | ESC |    | BSPC | UP   | DEL  |
+//       | PGUP | PGDN | ESC |    | DEL  | UP   | INS  |
 // | ` ~ | HOME | END  | TAB |    | LEFT | DOWN | RGHT | RET |
-//               | LSFT(INS) |    | LSFT(SPC) |
+//              | LSFT(BSPC) |    | LSFT(SPC) |
                         bindings = <
-             &kp PG_UP      &kp PG_DN      &kp ESC           &kp BSPC       &kp UP          &kp DEL
+             &kp PG_UP      &kp PG_DN      &kp ESC           &kp DEL        &kp UP          &kp INS
    &kp GRAVE &hml LALT HOME &hml LCTRL END &hml LGUI TAB     &hmr LGUI LEFT &hmr LCTRL DOWN &hmr LALT RIGHT &kp ENTER
-                                           &spt LSHFT INS   &spt LSHFT SPC
+                                           &spt LSHFT BSPC   &spt LSHFT SPC
                         >;
                 };
                 
