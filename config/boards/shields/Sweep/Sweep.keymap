@@ -420,7 +420,7 @@
             label = "LEFT_LAYER";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <225>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             require-prior-idle-ms = <120>;
             bindings = <&mo>, <&kp>;
@@ -433,7 +433,7 @@
             label = "RIGHT_LAYER";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <225>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
             require-prior-idle-ms = <120>;
             bindings = <&mo>, <&kp>;
@@ -447,7 +447,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <170>;
             //require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
@@ -457,8 +457,8 @@
             label = "SPC_TAP_NAV_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <225>;
+            quick-tap-ms = <170>;
             //require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
