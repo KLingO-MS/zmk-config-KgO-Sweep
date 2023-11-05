@@ -559,12 +559,12 @@
 
                 fun_layer {
 // ---------------------    ------------------------
-//      | F4 | F5 | F6 |    | F7  | F8  | F9  |
-// |    | F1 | F2 | F3 |    | F10 | F11 | F12 | V± |
+//      | F4 | F5 | F6 |    | F10 | F11 | F12 |
+// |    | F1 | F2 | F3 |    | F7  | F8  | F9  | V± |
 //                |    |    | SFT(MUTE) |
                         bindings = <
-         &kp F4       &kp F5        &kp F6           &kp F7        &kp F8         &kp F9
-   &none &hml LALT F1 &hml LCTRL F2 &hml LGUI F3     &hmr LGUI F10 &hmr LCTRL F11 &hmr LALT F12 &vol_dn_up
+         &kp F4       &kp F5        &kp F6           &kp F10      &kp F11       &kp F12
+   &none &hml LALT F1 &hml LCTRL F2 &hml LGUI F3     &hmr LGUI F7 &hmr LCTRL F8 &hmr LALT F9 &vol_dn_up
                                            &none     &spt LSHFT C_MUTE
                         >;
                 };                
