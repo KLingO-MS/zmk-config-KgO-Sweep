@@ -487,11 +487,11 @@
 
                 base_layer {
 // -------------------------    -------------------------
-//       |  C  |  L  |  D  |    |  P  |  U  |  Y  |     
+//       |  C  |  L  |  D  |    |  H  |  U  |  Y  |     
 // |  A  |  S  |  R  |  T  |    |  N  |  E  |  I  |  O  |
 //             | _A2(BSPC) |    | LSFT(SPC) |
                         bindings = <
-               &kp C       &hll _S2 L   &hll _S1 D      &hlr _S1 P  &hlr _S2 U   &kp Y
+               &kp C       &hll _S2 L   &hll _S1 D      &hlr _S1 H  &hlr _S2 U   &kp Y
    &hll _NAV A &hml LALT S &hml LCTRL R &hml LGUI T     &hmr LGUI N &hmr LCTRL E &hmr LALT I &hlr _NUM O 
                                       &bst _A2 BSPC     &spt LSHFT SPACE
                         >;
@@ -499,12 +499,12 @@
 
                 alpha2_layer {
 // -------------------------    -------------------------
-//       |  '  |  G  |  B  |    |  K  |  F  |  "  |
-// |  Q  |  Z  |  V  |  M  |    |  H  |  W  |  J  |  X  |
+//       |  '  |  G  |  B  |    |  P  |  W  |  "  |
+// |  Q  |  Z  |  V  |  M  |    |  K  |  F  |  J  |  X  |
 //                   |     |    | LSFT(SPC) |
                         bindings = <
-         &kp SQT     &kp G        &kp B           &kp K       &kp F        &kp DQT
-   &kp Q &hml LALT Z &hml LCTRL V &hml LGUI M     &hmr LGUI H &hmr LCTRL W &hmr LALT J &kp X 
+         &kp SQT     &kp G        &kp B           &kp P       &kp W        &kp DQT
+   &kp Q &hml LALT Z &hml LCTRL V &hml LGUI M     &hmr LGUI K &hmr LCTRL F &hmr LALT J &kp X 
                                   &none           &spt LSHFT SPACE
                         >;
                 };
