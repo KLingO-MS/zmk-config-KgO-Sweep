@@ -499,12 +499,12 @@
 
                 alpha2_layer {
 // -------------------------    -------------------------
-//       |  '  |  G  |  B  |    |  K  |  W  |  "  |
-// |  Q  |  Z  |  V  |  M  |    |  P  |  F  |  J  |  X  |
+//       |  '  |  G  |  B  |    |  P  |  W  |  "  |
+// |  Q  |  Z  |  V  |  M  |    |  K  |  F  |  J  |  X  |
 //                   |     |    | LSFT(SPC) |
                         bindings = <
-         &kp SQT     &kp G        &kp B           &kp K       &kp W        &kp DQT
-   &kp Q &hml LALT Z &hml LCTRL V &hml LGUI M     &hmr LGUI P &hmr LCTRL F &hmr LALT J &kp X 
+         &kp SQT     &kp G        &kp B           &kp P       &kp W        &kp DQT
+   &kp Q &hml LALT Z &hml LCTRL V &hml LGUI M     &hmr LGUI K &hmr LCTRL F &hmr LALT J &kp X 
                                   &none           &spt LSHFT SPACE
                         >;
                 };
