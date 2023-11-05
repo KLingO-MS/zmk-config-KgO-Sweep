@@ -437,11 +437,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BSPC_TAP_SYM_HOLD";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <200>;
             //require-prior-idle-ms = <100>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&sl>;
         };
 
         spt: space-tap {
@@ -489,11 +489,11 @@
 // -------------------------    -------------------------
 //       |  C  |  L  |  D  |    |  H  |  U  |  Y  |     
 // |  A  |  S  |  R  |  T  |    |  N  |  E  |  I  |  O  |
-//             | _A2(BSPC) |    | LSFT(SPC) |
+//            | _A2(sl A2) |    | LSFT(SPC) |
                         bindings = <
                &kp C       &hll _S2 L   &hll _S1 D      &hlr _S1 H  &hlr _S2 U   &kp Y
    &hll _NAV A &hml LALT S &hml LCTRL R &hml LGUI T     &hmr LGUI N &hmr LCTRL E &hmr LALT I &hlr _NUM O 
-                                      &bst _A2 BSPC     &spt LSHFT SPACE
+                                      &bst _A2 _A2      &spt LSHFT SPACE
                         >;
                 };
 
