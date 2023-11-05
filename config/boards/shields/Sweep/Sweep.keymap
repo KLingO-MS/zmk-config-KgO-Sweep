@@ -493,7 +493,7 @@
                         bindings = <
                &kp C       &hll _S2 L   &hll _S1 D      &hlr _S1 H  &hlr _S2 U   &kp Y
    &hll _NAV A &hml LALT S &hml LCTRL R &hml LGUI T     &hmr LGUI N &hmr LCTRL E &hmr LALT I &hlr _NUM O 
-                                      &bst _A2 _A2      &spt LSHFT SPACE
+                                        &sl _A2         &spt LSHFT SPACE
                         >;
                 };
 
@@ -511,13 +511,13 @@
 
                 nav_layer {
 // ---------------------------    ----------------------------
-//       | PGUP | PGDN | ESC |    | DEL  | UP   | INS  |
+//       | PGUP | PGDN | ESC |    | BSPC | UP   | DEL  |
 // | ` ~ | HOME | END  | TAB |    | LEFT | DOWN | RGHT | RET |
-//              | LSFT(BSPC) |    | LSFT(SPC) |
+//               | LSFT(INS) |    | LSFT(SPC) |
                         bindings = <
-             &kp PG_UP      &kp PG_DN      &kp ESC           &kp DEL        &kp UP          &kp INS
+             &kp PG_UP      &kp PG_DN      &kp ESC           &kp BSPC       &kp UP          &kp DEL
    &kp GRAVE &hml LALT HOME &hml LCTRL END &hml LGUI TAB     &hmr LGUI LEFT &hmr LCTRL DOWN &hmr LALT RIGHT &kp ENTER
-                                           &spt LSHFT BSPC   &spt LSHFT SPC
+                                           &spt LSHFT INS   &spt LSHFT SPC
                         >;
                 };
                 
