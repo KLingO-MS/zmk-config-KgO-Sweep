@@ -527,7 +527,7 @@
 // | , . |  1  |  2  |  3  |    |  7  |  8  |  9  | RET |
 //            | LSFT(BSPC) |    | LSFT(SPC) |
                         bindings = <
-              &kp N2       &kp N4        &kp N5             &kp N0       &plu_mul      &min_div
+              &kp N4       &kp N5        &kp N6             &kp N0       &plu_mul      &min_div
    &kp KP_DOT &hml LALT N1 &hml LCTRL N2 &hml LGUI N3       &hmr LGUI N7 &hmr LCTRL N8 &hmr LALT N9 &kp ENTER
                                          &spt LSHFT BSPC    &spt LSHFT SPC
                         >;
