@@ -459,9 +459,9 @@
 // |     |  Z  |  V  |  M  |     |    |     |  H  |  W  |  Q  |     |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
-   &kp X       &kp C        &kp L       &kp D        &kp G           &kp F  &kp P        &kp U       &kp Y        &kp Q
-   &hml LALT O &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp B           &kp K  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT A 
-   &none       &kp Z        &kp V       &kp M        &none           &none  &kp H        &kp W       &kp J        &none
+   &kp J       &kp C        &kp L       &kp D        &kp G           &kp F  &kp P        &kp U       &kp Y        &kp X
+   &hml LALT I &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp B           &kp K  &hsr LSHFT N &hmr LGUI E &hmr LCTRL A &hmr LALT O 
+   &none       &kp Z        &kp V       &kp M        &none           &none  &kp H        &kp W       &kp Q        &none
                                           &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
                         >;
                 };
