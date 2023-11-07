@@ -454,9 +454,9 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  X  |  C  |  L  |  D  |  G  |    |  F  |  P  |  U  |  Y  |  Q  |
-// |  O  |  S  |  R  |  T  |  B  |    |  K  |  N  |  E  |  I  |  A  |
-// |     |  Z  |  V  |  M  |     |    |     |  H  |  W  |  J  |     |
+// |  J  |  C  |  L  |  D  |  G  |    |  F  |  P  |  U  |  Y  |  X  |
+// |  I  |  S  |  R  |  T  |  B  |    |  K  |  N  |  E  |  A  |  O  |
+// |     |  Z  |  V  |  M  |     |    |     |  H  |  W  |  Q  |     |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
    &kp X       &kp C        &kp L       &kp D        &kp G           &kp F  &kp P        &kp U       &kp Y        &kp Q
