@@ -174,28 +174,28 @@
         };
 
 // ------------------------- VOLUME COMBOS --------------------------------
-        combo_V_UP {
-            timeout-ms = <40>;
-            key-positions = <RTC RMC>;
-            bindings = <&kp C_VOL_UP>;
-            require-prior-idle-ms = <200>;
-            // layers = <_BASE _SYM>;
-        };
+        // combo_V_UP {
+        //     timeout-ms = <40>;
+        //     key-positions = <RTC RMC>;
+        //     bindings = <&kp C_VOL_UP>;
+        //     require-prior-idle-ms = <200>;
+        //     // layers = <_BASE _SYM>;
+        // };
 
-        combo_V_DN {
-            timeout-ms = <40>;
-            key-positions = <LTC LMC>;
-            bindings = <&kp C_VOL_DN>;
-            require-prior-idle-ms = <200>;
-            // layers = <_BASE _SYM>;
-        };
+        // combo_V_DN {
+        //     timeout-ms = <40>;
+        //     key-positions = <LTC LMC>;
+        //     bindings = <&kp C_VOL_DN>;
+        //     require-prior-idle-ms = <200>;
+        //     // layers = <_BASE _SYM>;
+        // };
 
         combo_MUTE {
             timeout-ms = <50>;
-            key-positions = <LTC RTC>;
+            key-positions = <LBC RBC>;
             bindings = <&kp C_MUTE>;
             require-prior-idle-ms = <200>;
-            // layers = <_BASE _SYM>;
+            // layers = <_NAV _SYM>;
         };
 
 // ------------------------- MODS COMBOS --------------------------------
@@ -266,45 +266,45 @@
             layers = <_BASE _SYM>;
         };
 
-        combo_PSCRN {
-            timeout-ms = <40>;
-            key-positions = <LBR LBI>;
-            bindings = <&kp PSCRN>;
-            layers = <_BASE _SYM _NAV>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_PSCRN {
+        //     timeout-ms = <40>;
+        //     key-positions = <LBR LBI>;
+        //     bindings = <&kp PSCRN>;
+        //     layers = <_BASE _SYM _NAV>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_COPY_M {
-            timeout-ms = <40>;
-            key-positions = <RTM RTR>;
-            bindings = <&kp LG(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_COPY_M {
+        //     timeout-ms = <40>;
+        //     key-positions = <RTM RTR>;
+        //     bindings = <&kp LG(C)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_COPY_W {
-            timeout-ms = <40>;
-            key-positions = <LTM LTR>;
-            bindings = <&kp LC(C)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_COPY_W {
+        //     timeout-ms = <40>;
+        //     key-positions = <LTM LTR>;
+        //     bindings = <&kp LC(C)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_PASTA_M {
-            timeout-ms = <40>;
-            key-positions = <RBM RBR>;
-            bindings = <&kp LG(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_PASTA_M {
+        //     timeout-ms = <40>;
+        //     key-positions = <RBM RBR>;
+        //     bindings = <&kp LG(V)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
-        combo_PASTA_W {
-            timeout-ms = <40>;
-            key-positions = <LBM LBR>;
-            bindings = <&kp LC(V)>;
-            layers = <_BASE>;
-            require-prior-idle-ms = <200>;
-        };
+        // combo_PASTA_W {
+        //     timeout-ms = <40>;
+        //     key-positions = <LBM LBR>;
+        //     bindings = <&kp LC(V)>;
+        //     layers = <_BASE>;
+        //     require-prior-idle-ms = <200>;
+        // };
 
         // combo_GT {
         //     timeout-ms = <45>;
@@ -337,21 +337,21 @@
 
     behaviors {
 // ------------------------- TAP-DANCES --------------------------------
-        // win_cp: win_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "CTRL_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LC(C)>, <&kp LC(V)>;
-        // };
+        win_cp: win_cp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_COPY_PASTA";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp LC(C)>, <&kp LC(V)>;
+        };
 
-        // mac_cp: mac_cp {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "GUI_COPY_PASTA";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&kp LG(C)>, <&kp LG(V)>;
-        // };
+        mac_cp: mac_cp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GUI_COPY_PASTA";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>;
+        };
 
 // ------------------------- HOLD-TAPS --------------------------------
         /* left-hand HRMs */
@@ -456,12 +456,12 @@
 // -------------------------------    -------------------------------
 // |  Q  |  C  |  L  |  D  |  G  |    |  F  |  P  |  U  |  Y  |  X  |
 // |  A  |  S  |  R  |  T  |  B  |    |  K  |  N  |  E  |  I  |  O  |
-// |     |  Z  |  V  |  M  |     |    |     |  H  |  W  |  J  |     |
+// |     |  Z  |  V  |  M  |  V- |    |  V+ |  H  |  W  |  J  |     |
 //            | SFT | _SYM(BSPC) |    | _NAV(SPC) | SFT |
                         bindings = <
-   &kp Q       &kp C        &kp L       &kp D        &kp G           &kp F  &kp P        &kp U       &kp Y        &kp X
-   &hml LALT A &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp B           &kp K  &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
-   &none       &kp Z        &kp V       &kp M        &none           &none  &kp H        &kp W       &kp J        &none
+   &kp Q       &kp C        &kp L       &kp D        &kp G           &kp F        &kp P        &kp U       &kp Y        &kp X
+   &hml LALT A &hml LCTRL S &hml LGUI R &hsl LSHFT T &kp B           &kp K        &hsr LSHFT N &hmr LGUI E &hmr LCTRL I &hmr LALT O 
+   &none       &kp Z        &kp V       &kp M        &kp C_VOL_DN    &kp C_VOL_UP &kp H        &kp W       &kp J        &none
                                           &kp COMMA  &bst _SYM BSPC  &spt _NAV SPACE  &kp DOT
                         >;
                 };
@@ -470,12 +470,12 @@
 // --------------------------------    -----------------------------------
 // | . , |  7  |  8  |  9  | ESC  |    | PGUP | HOME |  UP  | END  | INS |
 // |  0  |  4  |  5  |  6  | TAB  |    | PGDN | LEFT | SPC  | RGHT | RET |
-// |     |  1  |  2  |  3  |      |    |      | DEL  | DOWN | APP  |     |
+// |     |  1  |  2  |  3  | wC&P |    | mC&P | DEL  | DOWN | APP  | PRN |
 //                  | LSFT | BSPC |    | SHFT |      |
                         bindings = <
    &kp KP_DOT   &kp N7        &kp N8       &kp N9        &kp ESC         &kp PG_UP &kp HOME        &kp UP          &kp END          &kp INS
    &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB         &kp PG_DN &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
-   &none        &kp N1        &kp N2       &kp N3        &none           &none     &kp DEL         &kp DOWN        &kp K_APP        &none
+   &none        &kp N1        &kp N2       &kp N3        &win_cp         &mac_cp   &kp DEL         &kp DOWN        &kp K_APP        &kp PSCRN
                                              &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
                         >;
                 };
