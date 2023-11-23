@@ -454,14 +454,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  B  |  Z  |  D  |  L  |  W  |    |  F  |  P  |  O  |  U  |  Y  |
-// |  N  |  S  |  T  |  R  |  J  |    |  G  |  H  |  A  |  E  |  I  |
-// |  v- |  C  |  M  |  V  |  <  |    |  >  |  K  |  X  |  Q  |  v+ |
+// |  B  |  L  |  D  |  V  |  W  |    |  F  |  P  |  O  |  U  |  Y  |
+// |  N  |  R  |  T  |  S  |  G  |    |  Z  |  H  |  A  |  E  |  I  |
+// |  v- |  J  |  M  |  C  |  <  |    |  >  |  K  |  X  |  Q  |  v+ |
 //            |  =  | _SYM(BSPC) |    | _NAV(SPC) |  +  |
                         bindings = <
-   &kp B        &kp Z        &kp D       &kp L        &kp W           &kp F  &kp P        &kp O       &kp U        &kp Y
-   &hml LALT N  &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp J           &kp G  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-   &kp C_VOL_DN &kp C        &kp M       &kp V        &kp LT          &kp GT &kp K        &kp X       &kp Q        &kp C_VOL_UP
+   &kp B        &kp L        &kp D       &kp V        &kp W           &kp F  &kp P        &kp O       &kp U        &kp Y
+   &hml LALT N  &hml LCTRL R &hml LGUI T &hsl LSHFT S &kp G           &kp Z  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &kp C_VOL_DN &kp J        &kp M       &kp C        &kp LT          &kp GT &kp K        &kp X       &kp Q        &kp C_VOL_UP
                                             &kp EQUAL &bst _SYM BSPC  &spt _NAV SPACE  &kp PLUS
                         >;
                 };
