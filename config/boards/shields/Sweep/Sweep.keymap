@@ -190,13 +190,13 @@
         //     // layers = <_BASE _SYM>;
         // };
 
-        combo_MUTE {
-            timeout-ms = <50>;
-            key-positions = <LBP RBP>;
-            bindings = <&kp C_MUTE>;
-            require-prior-idle-ms = <200>;
-            // layers = <_NAV _SYM>;
-        };
+        // combo_MUTE {
+        //     timeout-ms = <50>;
+        //     key-positions = <LBP RBP>;
+        //     bindings = <&kp C_MUTE>;
+        //     require-prior-idle-ms = <200>;
+        //     // layers = <_NAV _SYM>;
+        // };
 
 // ------------------------- MODS COMBOS --------------------------------
         combo_CAPS {
@@ -454,28 +454,28 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  B  |  C  |  D  |  L  |  W  |    |  F  |  P  |  O  |  U  |  Y  |
+// |  B  |  Z  |  D  |  L  |  W  |    |  F  |  M  |  O  |  U  |  Y  |
 // |  N  |  S  |  T  |  R  |  J  |    |  G  |  H  |  A  |  E  |  I  |
-// |  V- |  Z  |  M  |  V  |  <  |    |  >  |  K  |  X  |  Q  |  V+ |
+// |  v- |  C  |  P  |  V  |  <  |    |  >  |  K  |  Q  |  X  |  v+ |
 //            |  +  | _SYM(BSPC) |    | _NAV(SPC) |  =  |
                         bindings = <
-   &kp B        &kp C        &kp D       &kp L        &kp W           &kp F  &kp P        &kp O       &kp U        &kp Y
+   &kp B        &kp Z        &kp D       &kp L        &kp W           &kp F  &kp M        &kp O       &kp U        &kp Y
    &hml LALT N  &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp J           &kp G  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-   &kp C_VOL_DN &kp Z        &kp M       &kp V        &kp LT          &kp GT &kp K        &kp X       &kp Q        &kp C_VOL_UP
+   &kp C_VOL_DN &kp C        &kp P       &kp V        &kp LT          &kp GT &kp K        &kp Q       &kp X        &kp C_VOL_UP
                                             &kp PLUS  &bst _SYM BSPC  &spt _NAV SPACE  &kp EQUAL
                         >;
                 };
 
                 nav_layer {
-// --------------------------------    -----------------------------------
-// | . , |  7  |  8  |  9  | ESC  |    | PGUP | HOME |  UP  | END  | INS |
-// |  0  |  4  |  5  |  6  | TAB  |    | PGDN | LEFT | SPC  | RGHT | RET |
-// |     |  1  |  2  |  3  | wC&P |    | mC&P | DEL  | DOWN | APP  | PRN |
-//                  | LSFT | BSPC |    | SHFT |      |
+// -------------------------------    -----------------------------------
+// | . , |  7  |  8  |  9  | ESC |    | PGUP | HOME |  UP  | END  | INS |
+// |  0  |  4  |  5  |  6  | TAB |    | PGDN | LEFT | SPC  | RGHT | RET |
+// |     |  1  |  2  |  3  |     |    | PRN  | DEL  | DOWN | APP  |  v. |
+//                 | LSFT | BSPC |    | SHFT |      |
                         bindings = <
    &kp KP_DOT   &kp N7        &kp N8       &kp N9        &kp ESC         &kp PG_UP &kp HOME        &kp UP          &kp END          &kp INS
    &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB         &kp PG_DN &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
-   &none        &kp N1        &kp N2       &kp N3        &win_cp         &mac_cp   &kp DEL         &kp DOWN        &kp K_APP        &kp PSCRN
+   &none        &kp N1        &kp N2       &kp N3        &win_cp         &kp PSCRN &kp DEL         &kp DOWN        &kp K_APP        &kp C_MUTE
                                              &kp LSHFT   &bst _SYM BSPC  &kp LSHFT &none
                         >;
                 };
