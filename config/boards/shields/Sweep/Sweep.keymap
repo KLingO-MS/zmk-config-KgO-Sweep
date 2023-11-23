@@ -337,21 +337,21 @@
 
     behaviors {
 // ------------------------- TAP-DANCES --------------------------------
-        win_cp: win_cp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_COPY_PASTA";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&kp LC(C)>, <&kp LC(V)>;
-        };
+        // win_cp: win_cp {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     label = "CTRL_COPY_PASTA";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <400>;
+        //     bindings = <&kp LC(C)>, <&kp LC(V)>;
+        // };
 
-        mac_cp: mac_cp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GUI_COPY_PASTA";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&kp LG(C)>, <&kp LG(V)>;
-        };
+        // mac_cp: mac_cp {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     label = "GUI_COPY_PASTA";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <400>;
+        //     bindings = <&kp LG(C)>, <&kp LG(V)>;
+        // };
 
 // ------------------------- HOLD-TAPS --------------------------------
         /* left-hand HRMs */
@@ -457,12 +457,12 @@
 // |  B  |  Z  |  D  |  L  |  W  |    |  F  |  M  |  O  |  U  |  Y  |
 // |  N  |  S  |  T  |  R  |  J  |    |  G  |  H  |  A  |  E  |  I  |
 // |  v- |  C  |  P  |  V  |  <  |    |  >  |  K  |  Q  |  X  |  v+ |
-//            |  +  | _SYM(BSPC) |    | _NAV(SPC) |  =  |
+//            |  =  | _SYM(BSPC) |    | _NAV(SPC) |  +  |
                         bindings = <
    &kp B        &kp Z        &kp D       &kp L        &kp W           &kp F  &kp M        &kp O       &kp U        &kp Y
    &hml LALT N  &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp J           &kp G  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
    &kp C_VOL_DN &kp C        &kp P       &kp V        &kp LT          &kp GT &kp K        &kp Q       &kp X        &kp C_VOL_UP
-                                            &kp PLUS  &bst _SYM BSPC  &spt _NAV SPACE  &kp EQUAL
+                                            &kp EQUAL &bst _SYM BSPC  &spt _NAV SPACE  &kp PLUS
                         >;
                 };
 
