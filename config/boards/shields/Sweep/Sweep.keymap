@@ -425,7 +425,7 @@
 
         // dot_col: dot_colon {
         //     compatible = "zmk,behavior-mod-morph";
-llvdv        //     #binding-cells = <0>;
+        //     #binding-cells = <0>;
         //     bindings = <&kp DOT>, <&kp COLON>;
         //     mods = <(MOD_LSFT)>;
         // };
