@@ -217,6 +217,34 @@
         // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
+        combo_J {
+            timeout-ms = <40>;
+            key-positions = <LMR LMM>;
+            bindings = <&kp J>;
+            layers = <_BASE>;
+        };
+
+        combo_W {
+            timeout-ms = <40>;
+            key-positions = <LMM LMI>;
+            bindings = <&kp W>;
+            layers = <_BASE>;
+        };
+
+        combo_G {
+            timeout-ms = <40>;
+            key-positions = <RMM RMR>;
+            bindings = <&kp G>;
+            layers = <_BASE>;
+        };
+
+        combo_F {
+            timeout-ms = <40>;
+            key-positions = <RMI RMM>;
+            bindings = <&kp F>;
+            layers = <_BASE>;
+        };
+
         // combo_LPAR {
         //     timeout-ms = <40>;
         //     key-positions = <LMM LMI>;
