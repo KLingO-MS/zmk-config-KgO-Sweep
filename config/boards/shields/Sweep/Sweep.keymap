@@ -415,12 +415,14 @@
         compatible = "zmk,keymap";
 
                 base_layer {
+                        display-name = "BASE";
                         bindings = <
                         &kp A      &tog 1
                         >;
                 };
 
                 nav_layer {
+                        display-name = "BT"
                         bindings = <
                         &bt BT_CLR &tog 1
                         >;
