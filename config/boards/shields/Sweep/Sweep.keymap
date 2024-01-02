@@ -422,7 +422,7 @@
                 };
 
                 nav_layer {
-                        display-name = "BT"
+                        display-name = "BT";
                         bindings = <
                         &bt BT_CLR &tog 1
                         >;
