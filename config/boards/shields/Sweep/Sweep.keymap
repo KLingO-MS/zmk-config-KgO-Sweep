@@ -422,7 +422,7 @@
 
                 nav_layer {
                         bindings = <
-                        &&bt BT_CLR &tog 1
+                        &bt BT_CLR &tog 1
                         >;
                 };
                 
