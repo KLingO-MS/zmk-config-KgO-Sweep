@@ -507,13 +507,13 @@
 
                 btf_layer {
 // ----------------------------    ----------------------------------
-// | F11 | F7 | F8 | F9 | F10 |    | BT1 | BT2  | BT3 |  BT4  | BT5 |
-// | F12 | F4 | F5 | F6 |     |    |     | SHFT | GUI | CTRL  | ALT |
+// | F11 | F7 | F8 | F9 | F12 |    | BT1 | BT2  | BT3 |  BT4  | BT5 |
+// | F10 | F4 | F5 | F6 |     |    |     | SHFT | GUI | CTRL  | ALT |
 // |     | F1 | F2 | F3 |     |    |     | USB  | RGB | BTCLR |     |
 //                |     |     |    |     |     |
                         bindings = <
-   &kp F11 &kp F7 &kp F8 &kp F9 &kp F10       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4
-   &kp F12 &kp F4 &kp F5 &kp F6 &none         &none        &kp LSHFT    &kp LGUI        &kp LCTRL    &kp LALT
+   &kp F11 &kp F7 &kp F8 &kp F9 &kp F12       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4
+   &kp F10 &kp F4 &kp F5 &kp F6 &none         &none        &kp LSHFT    &kp LGUI        &kp LCTRL    &kp LALT
    &none   &kp F1 &kp F2 &kp F3 &none         &none        &out OUT_TOG &rgb_ug RGB_OFF &bt BT_CLR   &none
                         &none   &none         &none    &none
                         >;
