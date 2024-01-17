@@ -217,75 +217,75 @@
         // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        combo_J {
-            timeout-ms = <40>;
-            key-positions = <LMR LMM>;
-            bindings = <&kp J>;
-            layers = <_BASE>;
-        };
+        // combo_J {
+        //     timeout-ms = <40>;
+        //     key-positions = <LMR LMM>;
+        //     bindings = <&kp J>;
+        //     layers = <_BASE>;
+        // };
 
-        combo_W {
-            timeout-ms = <40>;
-            key-positions = <LMM LMI>;
-            bindings = <&kp W>;
-            layers = <_BASE>;
-        };
-
-        combo_G {
-            timeout-ms = <40>;
-            key-positions = <RMM RMR>;
-            bindings = <&kp G>;
-            layers = <_BASE>;
-        };
-
-        combo_F {
-            timeout-ms = <40>;
-            key-positions = <RMI RMM>;
-            bindings = <&kp F>;
-            layers = <_BASE>;
-        };
-
-        // combo_LPAR {
+        // combo_W {
         //     timeout-ms = <40>;
         //     key-positions = <LMM LMI>;
-        //     bindings = <&kp LPAR>;
-        //     layers = <_BASE _SYM>;
+        //     bindings = <&kp W>;
+        //     layers = <_BASE>;
         // };
 
-        // combo_RPAR {
+        // combo_G {
+        //     timeout-ms = <40>;
+        //     key-positions = <RMM RMR>;
+        //     bindings = <&kp G>;
+        //     layers = <_BASE>;
+        // };
+
+        // combo_F {
         //     timeout-ms = <40>;
         //     key-positions = <RMI RMM>;
-        //     bindings = <&kp RPAR>;
-        //     layers = <_BASE _SYM>;
+        //     bindings = <&kp F>;
+        //     layers = <_BASE>;
         // };
 
-        // combo_LBRC {
-        //     timeout-ms = <40>;
-        //     key-positions = <LTM LTI>;
-        //     bindings = <&kp LBRC>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_LPAR {
+            timeout-ms = <40>;
+            key-positions = <LMM LMI>;
+            bindings = <&kp LPAR>;
+            layers = <_BASE _SYM>;
+        };
 
-        // combo_RBRC {
-        //     timeout-ms = <40>;
-        //     key-positions = <RTI RTM>;
-        //     bindings = <&kp RBRC>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_RPAR {
+            timeout-ms = <40>;
+            key-positions = <RMI RMM>;
+            bindings = <&kp RPAR>;
+            layers = <_BASE _SYM>;
+        };
 
-        // combo_LBKT {
-        //     timeout-ms = <40>;
-        //     key-positions = <LBM LBI>;
-        //     bindings = <&kp LBKT>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_LBRC {
+            timeout-ms = <40>;
+            key-positions = <LTM LTI>;
+            bindings = <&kp LBRC>;
+            layers = <_BASE _SYM>;
+        };
 
-        // combo_RBKT {
-        //     timeout-ms = <40>;
-        //     key-positions = <RBI RBM>;
-        //     bindings = <&kp RBKT>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_RBRC {
+            timeout-ms = <40>;
+            key-positions = <RTI RTM>;
+            bindings = <&kp RBRC>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_LBKT {
+            timeout-ms = <40>;
+            key-positions = <LBM LBI>;
+            bindings = <&kp LBKT>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_RBKT {
+            timeout-ms = <40>;
+            key-positions = <RBI RBM>;
+            bindings = <&kp RBKT>;
+            layers = <_BASE _SYM>;
+        };
 
         // combo_PSCRN {
         //     timeout-ms = <40>;
