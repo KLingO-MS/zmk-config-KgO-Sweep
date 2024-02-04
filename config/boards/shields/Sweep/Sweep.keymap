@@ -479,14 +479,14 @@
 
                 nav_layer {
 // -------------------------------    ----------------------------------
-// | . , |  7  |  8  |  9  | ESC |    | INS | HOME |  UP  | END  | APP |
-// |  0  |  4  |  5  |  6  | TAB |    | DEL | LEFT | SPC  | RGHT | RET |
-// | PRN |  1  |  2  |  3  |  v- |    |  v+ | PGUP | DOWN | PGDN |  v. |
+// | ESC |  7  |  8  |  9  | TAB |    | INS | HOME |  UP  | END  | DEL |
+// |  0  |  4  |  5  |  6  | , . |    | PRN | LEFT | SPC  | RGHT | RET |
+// |  v. |  1  |  2  |  3  |  v- |    |  v+ | PGUP | DOWN | PGDN | APP |
 //                 | LSFT | BSPC |    | SHFT |      |
                         bindings = <
-   &kp KP_DOT   &kp N7        &kp N8       &kp N9        &kp ESC         &kp INS      &kp HOME        &kp UP          &kp END          &kp K_APP
-   &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp TAB         &kp DEL      &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
-   &kp PSCRN    &kp N1        &kp N2       &kp N3        &kp C_VOL_DN    &kp C_VOL_UP &kp PG_UP       &kp DOWN        &kp PG_DN        &kp C_MUTE
+   &kp ESC      &kp N7        &kp N8       &kp N9        &kp TAB         &kp INS      &kp HOME        &kp UP          &kp END          &kp DEL
+   &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp KP_DOT      &kp PSCRN    &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
+   &kp C_MUTE   &kp N1        &kp N2       &kp N3        &kp C_VOL_DN    &kp C_VOL_UP &kp PG_UP       &kp DOWN        &kp PG_DN        &kp K_APP
                                               &kp LSHFT   &bst _SYM BSPC  &kp LSHFT    &none
                         >;
                 };
