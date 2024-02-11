@@ -124,7 +124,7 @@
     combos {
         compatible = "zmk,combos";
 // ------------------------- LAYER COMBOS --------------------------------
-        combo_RESET {
+        combo_BOOT {
             timeout-ms = <50>;
             key-positions = <LMC RMC>;
             bindings = <&to_BOOT>;
@@ -217,33 +217,33 @@
         // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        combo_J {
-            timeout-ms = <50>;
-            key-positions = <LMI LBI>;
-            bindings = <&kp J>;
-            layers = <_BASE>;
-        };
+        // combo_J {
+        //     timeout-ms = <50>;
+        //     key-positions = <LMI LBI>;
+        //     bindings = <&kp J>;
+        //     layers = <_BASE>;
+        // };
 
-        combo_W {
-            timeout-ms = <50>;
-            key-positions = <LTI LMI>;
-            bindings = <&kp W>;
-            layers = <_BASE>;
-        };
+        // combo_W {
+        //     timeout-ms = <50>;
+        //     key-positions = <LTI LMI>;
+        //     bindings = <&kp W>;
+        //     layers = <_BASE>;
+        // };
 
-        combo_G {
-            timeout-ms = <50>;
-            key-positions = <RMI RBI>;
-            bindings = <&kp G>;
-            layers = <_BASE>;
-        };
+        // combo_G {
+        //     timeout-ms = <50>;
+        //     key-positions = <RMI RBI>;
+        //     bindings = <&kp G>;
+        //     layers = <_BASE>;
+        // };
 
-        combo_F {
-            timeout-ms = <50>;
-            key-positions = <RTI RMI>;
-            bindings = <&kp F>;
-            layers = <_BASE>;
-        };
+        // combo_F {
+        //     timeout-ms = <50>;
+        //     key-positions = <RTI RMI>;
+        //     bindings = <&kp F>;
+        //     layers = <_BASE>;
+        // };
 
 // ------------------------- SYMBOL COMBOS --------------------------------
         combo_LPAR {
@@ -467,14 +467,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  P  |  C  |  D  |  L  |  W  |    |  F  |  M  |  O  |  U  |  Y  |
+// |  B  |  C  |  D  |  L  |  W  |    |  F  |  P  |  O  |  U  |  Y  |
 // |  N  |  S  |  T  |  R  |  J  |    |  G  |  H  |  A  |  E  |  I  |
-// | wCP |  Z  |  B  |  V  |  <  |    |  >  |  K  |  Q  |  X  | mCP |
+// | wCP |  Z  |  V  |  M  |  <  |    |  >  |  K  |  Q  |  X  | mCP |
 //            |  =  | _SYM(BSPC) |    | _NAV(SPC) |  +  |
                         bindings = <
-   &kp P        &kp C        &kp D       &kp L        &kp W           &kp F  &kp M        &kp O       &kp U        &kp Y
+   &kp B        &kp C        &kp D       &kp L        &kp W           &kp F  &kp P        &kp O       &kp U        &kp Y
    &hml LALT N  &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp J           &kp G  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
-   &win_cp      &kp Z        &kp B       &kp V        &kp LT          &kp GT &kp K        &kp Q       &kp X        &mac_cp
+   &win_cp      &kp Z        &kp V       &kp M        &kp LT          &kp GT &kp K        &kp Q       &kp X        &mac_cp
                                             &kp EQUAL &bst _SYM BSPC  &spt _NAV SPACE  &kp PLUS
                         >;
                 };
