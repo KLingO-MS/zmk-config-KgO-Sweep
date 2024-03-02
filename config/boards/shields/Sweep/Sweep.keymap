@@ -119,6 +119,19 @@
                 , <&bootloader>
                 ;
         };
+
+        YOU: YOU {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp LS(Y)>
+                , <&kp O>
+                , <&kp U>
+                ;
+        };
+
     };
 
     combos {
@@ -245,44 +258,51 @@
         //     layers = <_BASE>;
         // };
 
+        combo_YOU {
+            timeout-ms = <50>;
+            key-positions = <RTI RTM RTR>;
+            bindings = <&YOU>;
+            layers = <_BASE>;
+        };
+
 // ------------------------- SYMBOL COMBOS --------------------------------
         combo_LPAR {
-            timeout-ms = <50>;
+            timeout-ms = <45>;
             key-positions = <LMM LMI>;
             bindings = <&kp LPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_RPAR {
-            timeout-ms = <50>;
+            timeout-ms = <45>;
             key-positions = <RMI RMM>;
             bindings = <&kp RPAR>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBRC {
-            timeout-ms = <50>;
+            timeout-ms = <45>;
             key-positions = <LTM LTI>;
             bindings = <&kp LBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBRC {
-            timeout-ms = <50>;
+            timeout-ms = <45>;
             key-positions = <RTI RTM>;
             bindings = <&kp RBRC>;
             layers = <_BASE _SYM>;
         };
 
         combo_LBKT {
-            timeout-ms = <50>;
+            timeout-ms = <45>;
             key-positions = <LBM LBI>;
             bindings = <&kp LBKT>;
             layers = <_BASE _SYM>;
         };
 
         combo_RBKT {
-            timeout-ms = <50>;
+            timeout-ms = <45>;
             key-positions = <RBI RBM>;
             bindings = <&kp RBKT>;
             layers = <_BASE _SYM>;
@@ -379,26 +399,26 @@
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <170>;
+            require-prior-idle-ms = <250>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            // hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         /* right-hand HRMs */
         hmr: hrm_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <170>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <170>;
+            require-prior-idle-ms = <250>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
-            // hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         hsl: hrs_left {
@@ -467,13 +487,13 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  B  |  C  |  P  |  L  |  W  |    |  G  |  H  |  O  |  U  |  Y  |
-// |  N  |  S  |  T  |  R  |  J  |    |  F  |  D  |  A  |  E  |  I  |
+// |  B  |  C  |  P  |  L  |  W  |    |  F  |  D  |  O  |  U  |  Y  |
+// |  N  |  S  |  T  |  R  |  J  |    |  G  |  H  |  A  |  E  |  I  |
 // | wCP |  Z  |  V  |  M  |  <  |    |  >  |  K  |  Q  |  X  | mCP |
 //            |  =  | _SYM(BSPC) |    | _NAV(SPC) |  +  |
                         bindings = <
-   &kp B        &kp C        &kp P       &kp L        &kp W           &kp G  &kp H        &kp O       &kp U        &kp Y
-   &hml LALT N  &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp J           &kp F  &hsr LSHFT D &hmr LGUI A &hmr LCTRL E &hmr LALT I 
+   &kp B        &kp C        &kp P       &kp L        &kp W           &kp F  &kp D        &kp O       &kp U        &kp Y
+   &hml LALT N  &hml LCTRL S &hml LGUI T &hsl LSHFT R &kp J           &kp G  &hsr LSHFT H &hmr LGUI A &hmr LCTRL E &hmr LALT I 
    &win_cp      &kp Z        &kp V       &kp M        &kp LT          &kp GT &kp K        &kp Q       &kp X        &mac_cp
                                             &kp EQUAL &bst _SYM BSPC  &spt _NAV SPACE  &kp PLUS
                         >;
@@ -489,7 +509,7 @@
    &kp ESC      &kp N7        &kp N8       &kp N9        &kp TAB         &kp INS      &kp HOME        &kp UP          &kp END          &kp DEL
    &hml LALT N0 &hml LCTRL N4 &hml LGUI N5 &hsl LSHFT N6 &kp KP_DOT      &kp PSCRN    &hsr LSHFT LEFT &hmr LGUI SPACE &hmr LCTRL RIGHT &hmr LALT RET
    &kp C_MUTE   &kp N1        &kp N2       &kp N3        &kp C_VOL_DN    &kp C_VOL_UP &kp PG_UP       &kp DOWN        &kp PG_DN        &kp K_APP
-                                              &kp LSHFT   &bst _SYM BSPC  &kp LSHFT    &none
+                                             &kp LSHFT   &bst _SYM BSPC  &kp LSHFT    &none
                         >;
                 };
                 
