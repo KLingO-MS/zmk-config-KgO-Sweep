@@ -544,7 +544,7 @@
    &kp ESC       &kp HOME        &kp UP          &kp END          &kp PG_UP       &kp PSCRN    &kp N7        &kp N8       &kp N9        &kp N0
    &hml LALT TAB &hml LCTRL LEFT &hml LGUI SPACE &hsl LSHFT RIGHT &kp PG_DN       &kp KP_DOT   &hsr LSHFT N4 &hmr LGUI N5 &hmr LCTRL N6 &hmr LALT RET
    &kp C_MUTE    &kp INS         &kp DOWN        &kp DEL          &kp C_VOL_DN    &kp C_VOL_UP &kp N1        &kp N2       &kp N3        &kp K_APP
-                                                 &hSR LSHFT RET   &bst _SYM BSPC  &plus_mul    &min_div
+                                                 &hsr LSHFT RET   &bst _SYM BSPC  &plus_mul    &min_div
                         >;
                 };
                 
