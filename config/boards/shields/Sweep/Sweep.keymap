@@ -251,33 +251,33 @@
         // };
 
 // ------------------------- CHARACTER COMBOS --------------------------------
-        // combo_J {
-        //     timeout-ms = <50>;
-        //     key-positions = <LMI LBI>;
-        //     bindings = <&kp J>;
-        //     layers = <_BASE>;
-        // };
+        combo_J {
+            timeout-ms = <40>;
+            key-positions = <RTM RTR>;
+            bindings = <&kp J>;
+            layers = <_BASE>;
+        };
 
-        // combo_W {
-        //     timeout-ms = <50>;
-        //     key-positions = <LTI LMI>;
-        //     bindings = <&kp W>;
-        //     layers = <_BASE>;
-        // };
+        combo_W {
+            timeout-ms = <40>;
+            key-positions = <LTM LTR>;
+            bindings = <&kp W>;
+            layers = <_BASE>;
+        };
 
-        // combo_G {
-        //     timeout-ms = <50>;
-        //     key-positions = <RMI RBI>;
-        //     bindings = <&kp G>;
-        //     layers = <_BASE>;
-        // };
+        combo_G {
+            timeout-ms = <40>;
+            key-positions = <LMR LMM>;
+            bindings = <&kp G>;
+            layers = <_BASE>;
+        };
 
-        // combo_F {
-        //     timeout-ms = <50>;
-        //     key-positions = <RTI RMI>;
-        //     bindings = <&kp F>;
-        //     layers = <_BASE>;
-        // };
+        combo_F {
+            timeout-ms = <40>;
+            key-positions = <RMM RMR>;
+            bindings = <&kp F>;
+            layers = <_BASE>;
+        };
 
         combo_YOU {
             timeout-ms = <50>;
@@ -564,7 +564,7 @@
 
                 btf_layer {
 // -------------------------------    ----------------------------
-// | BT1 | BT2 | BT3 | BT4 | BT5 |    | F11 | F7 | F8 | F9 | F10 |    
+// | BT1 | BT2 | BT3 | BT4 | BT5 |    | F11 | F7 | F8 | F9 | F10 |
 // | ALT | CTL | GUI | SFT | USB |    | F12 | F4 | F5 | F6 | APP |
 // |     |  v- |  v. |  v+ |     |    |     | F1 | F2 | F3 |     |
 //                   |     |     |    |     |     |
