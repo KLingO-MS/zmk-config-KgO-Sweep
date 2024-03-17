@@ -132,6 +132,41 @@
                 ;
         };
 
+        you: you {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp Y>
+                , <&kp O>
+                , <&kp U>
+                ;
+        };
+
+        The: The {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp LS(T)>
+                , <&kp H>
+                , <&kp E>
+                ;
+        };
+
+        the: the {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings
+                = <&kp T>
+                , <&kp H>
+                , <&kp E>
+                ;
+        };
     };
 
     combos {
@@ -282,10 +317,16 @@
         combo_YOU {
             timeout-ms = <50>;
             key-positions = <RTI RTM RTR>;
-            bindings = <&You>;
+            bindings = <&mm_you>;
             layers = <_BASE>;
         };
 
+        combo_THE {
+            timeout-ms = <50>;
+            key-positions = <LTI LTM LTR>;
+            bindings = <&mm_the>;
+            layers = <_BASE>;
+        };
 // ------------------------- SYMBOL COMBOS --------------------------------
         combo_LPAR {
             timeout-ms = <45>;
@@ -514,6 +555,20 @@
         //     bindings = <&kp DOT>, <&kp COLON>;
         //     mods = <(MOD_LSFT)>;
         // };
+
+        mm_you: mm_you {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&you>, <&You>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_the: mm_the {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&the>, <&The>;
+            mods = <(MOD_LSFT)>;
+        };
         
     };
 
