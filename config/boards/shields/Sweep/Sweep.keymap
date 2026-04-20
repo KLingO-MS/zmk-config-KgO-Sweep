@@ -227,10 +227,10 @@
 // |  |  |  \  |  =  |  +  |  `  |    |  ~  |  -  |  _  |  /  |  "  |
 //       | _SYM(ESC) | _NAV(SPC) |    | _SYM(BSPC) | _NAV(RET) |
                         bindings = <
-   &kp EXCL      &kp AT        &kp HASH      &kp DLLR     &kp PRCNT     &kp CARET &kp AMPS     &kp STAR     &kp QMARK     &kp COLON
-   &hml LSHFT N1 &hml LCTRL N2 &hml LALT N3S &hml LGUI N4 &kp N5        &kp N6    &hmr LGUI N7 &hmr LALT N8 &hmr LCTRL N9 &hmr LSHFT N0
-   &kp PIPE      &kp BSLH      &kp EQUAL     &kp PLUS     &kp GRAVE     &kp TILDE &kp MINUS    &kp UNDER    &kp SLASH     &kp DQT
-                                     &tht _SYM ESC  &tht _NAV SPACE     &tht _SYM BSPC  &tht _NAV RET
+   &kp EXCL      &kp AT        &kp HASH     &kp DLLR     &kp PRCNT     &kp CARET &kp AMPS     &kp STAR     &kp QMARK     &kp COLON
+   &hml LSHFT N1 &hml LCTRL N2 &hml LALT N3 &hml LGUI N4 &kp N5        &kp N6    &hmr LGUI N7 &hmr LALT N8 &hmr LCTRL N9 &hmr LSHFT N0
+   &kp PIPE      &kp BSLH      &kp EQUAL    &kp PLUS     &kp GRAVE     &kp TILDE &kp MINUS    &kp UNDER    &kp SLASH     &kp DQT
+                                    &tht _SYM ESC  &tht _NAV SPACE     &tht _SYM BSPC  &tht _NAV RET
                         >;
                 };
 
