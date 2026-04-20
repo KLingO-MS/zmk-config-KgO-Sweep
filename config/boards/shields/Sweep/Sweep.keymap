@@ -242,9 +242,9 @@
 // | uTOG | uEFF | uSP- | uSP+ | CLR |    | F11 | F12 | F13 | F14 | F15 |
 //                       |     |     |    |    |     |
                         bindings = <
-   &bt BT_SEL 0.   &bt BT_SEL 1.   &bt BT_SEL 2.   &bt BT_SEL 3.   &bt BT_SEL 4   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5       
+   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5       
    &kp LSHIFT      &kp LCTRL       &kp LALT        &kp LGUI        &out OUT_TOG   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-   &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_SPD &rgb_ug RGB_SPI &BT_CLR        &kp F11 &kp F12 &kp F13 &kp F14 &kp F15         
+   &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_SPD &rgb_ug RGB_SPI &bt BT_CLR     &kp F11 &kp F12 &kp F13 &kp F14 &kp F15         
                                                             &none   &none         &none  &none
                         >;
                 };   
