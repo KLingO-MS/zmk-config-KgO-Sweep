@@ -137,7 +137,7 @@
         };
 
         combo_UNLCK {
-            timeout-ms = <40>;
+            timeout-ms = <200>;
             key-positions = <LTC LBC RTC RBC>;
             bindings = <&studio_unlock>;
             layers = <_BASE>;
