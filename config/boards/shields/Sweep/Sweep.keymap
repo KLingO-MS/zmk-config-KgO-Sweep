@@ -80,12 +80,6 @@
     combos {
         compatible = "zmk,combos";
 // ------------------------- LAYER COMBOS --------------------------------
-        combo_BOOT {
-            timeout-ms = <50>;
-            key-positions = <LBP LHI LHO>;
-            bindings = <&to_BOOT>;
-        };
-
         combo_BTF1 {
             timeout-ms = <50>;
             key-positions = <LHI RHI>;
@@ -133,6 +127,21 @@
             key-positions = <LMR LMM LMI>;
             bindings = <&to_BASE>;
             layers = <_NAV>;
+        };
+
+// ------------------------- UTILITY COMBOS --------------------------------
+        combo_BOOT {
+            timeout-ms = <50>;
+            key-positions = <LBP LHI LHO>;
+            bindings = <&to_BOOT>;
+        };
+
+        combo_UNLCK {
+            timeout-ms = <40>;
+            key-positions = <LTC LBC RTC RBC>;
+            bindings = <&studio_unlock>;
+            layers = <_BASE>;
+            require-prior-idle-ms = <200>;
         };
 
 // ------------------------- MODS COMBOS --------------------------------
